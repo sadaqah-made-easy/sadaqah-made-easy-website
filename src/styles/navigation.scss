@@ -1,0 +1,61 @@
+// navbar toggler
+input#nav-toggle:checked + label #show-button {
+  @apply hidden;
+}
+
+input#nav-toggle:checked + label #hide-button {
+  @apply block;
+}
+
+input#nav-toggle:checked ~ #nav-menu {
+  @apply max-md:block;
+}
+
+.header {
+  @apply bg-body py-4 px-7;
+}
+
+// navbar items
+.navbar {
+  @apply relative flex flex-wrap items-center justify-between;
+}
+
+.navbar-brand {
+  @apply text-xl font-semibold text-dark;
+  image {
+    @apply max-h-full max-w-full;
+  }
+}
+
+.navbar-nav {
+  @apply text-center lg:text-left text-lg max-lg:bg-white max-lg:py-8 rounded-md max-lg:drop-shadow-md max-lg:absolute top-16;
+}
+
+// .nav-item {
+//   @apply mx-3;
+// }
+
+.nav-link {
+  @apply text-dark hover:text-primary block p-3 font-semibold transition lg:px-2 lg:py-3;
+}
+
+.nav-dropdown {
+  @apply mr-0;
+}
+
+.nav-dropdown-list {
+  @apply z-10 min-w-[180px] rounded bg-body p-4 shadow;
+}
+
+.nav-dropdown-item {
+  @apply mb-2;
+}
+
+.nav-dropdown-link {
+  @apply block py-1 font-semibold text-dark transition hover:text-primary;
+}
+
+// herobanner
+.headerBg {
+  @apply bg-[url("/images/homepage/banner-2.jpeg")] bg-cover bg-center bg-no-repeat bg-blend-overlay bg-theme-light h-[950px] lg:h-[800px] bg-fixed;
+}

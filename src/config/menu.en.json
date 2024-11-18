@@ -1,0 +1,57 @@
+{
+  "main": [
+    {
+      "name": "Flood Affected",
+      "url": "/flood-affected"
+    },
+    {
+      "name": "App",
+      "url": "/app"
+    },
+    {
+      "name": "About us",
+      "url": "",
+      "hasChildren": false,
+      "children": [
+        {
+          "name": "Contact",
+          "url": "/contact"
+        },
+        {
+          "name": "Blog",
+          "url": "/blog"
+        },
+        {
+          "name": "Authors",
+          "url": "/authors"
+        },
+        {
+          "name": "Categories",
+          "url": "/categories"
+        },
+        {
+          "name": "Tags",
+          "url": "/tags"
+        },
+        {
+          "name": "404 Page",
+          "url": "/404"
+        }
+      ]
+    },
+    {
+      "name": "Orgs",
+      "url": "/orgs"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Elements",
+      "url": "/elements"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy-policy"
+    }
+  ]
+}
