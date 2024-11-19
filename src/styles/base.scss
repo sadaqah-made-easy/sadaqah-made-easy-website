@@ -57,12 +57,3 @@ code {
 blockquote > p {
   @apply my-0 #{!important};
 }
-
-@font-face {
-  font-family: "Fontspring";
-  src: url('/fonts/Fontspring-DEMO-organetto-semiextultrabold.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-

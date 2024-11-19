@@ -23,7 +23,7 @@ export default function RootLayout({
         {/* favicon */}
         <link rel="shortcut icon" href={config.site.favicon} />
         {/* theme meta */}
-        <meta name="theme-name" content="coming soon boilerplate" />
+        <meta name="theme-name" content="nextplate" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="theme-color"
@@ -43,13 +43,22 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""
-            }&display=swap`}
+          href={`https://fonts.googleapis.com/css2?family=${pf}${
+            sf ? "&family=" + sf : ""
+          }&display=swap`}
           rel="stylesheet"
         />
       </head>
 
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body
+        suppressHydrationWarning={true}
+        className="overflow-x-hidden"
+        style={{
+          fontFamily: "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

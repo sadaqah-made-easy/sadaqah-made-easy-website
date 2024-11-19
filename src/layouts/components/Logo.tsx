@@ -8,22 +8,32 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Logo = ({ src, lang }: { src?: string; lang: string }) => {
-  // Destructuring items from config object
+  // destructuring items from config object
   const {
     logo,
+    logo_darkmode,
     logo_width,
     logo_height,
     logo_text,
     title,
   }: {
     logo: string;
+    logo_darkmode: string;
     logo_width: any;
     logo_height: any;
     logo_text: string;
     title: string;
   } = config.site;
 
-  const logoPath = src || logo;
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const resolvedLogo =
+    mounted && (theme === "dark" || resolvedTheme === "dark")
+      ? logo_darkmode
+      : logo;
+  const logoPath = src ? src : resolvedLogo;
 
   return (
     <Link href={slugSelector(lang, "")} className="navbar-brand inline-block">

@@ -2,6 +2,8 @@
 
 import TwSizeIndicator from "@/helpers/TwSizeIndicator";
 import { useTranslate } from "@/hooks/useTranslate";
+import Footer from "@/partials/Footer";
+import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
 import Link from "next/link";
 
@@ -10,13 +12,16 @@ export default function NotFound() {
     page_not_found,
     page_not_found_content,
     back_to_home,
-
+    lang,
+    main,
+    footer,
   } = useTranslate();
 
   return (
     <>
       <TwSizeIndicator />
       <Providers>
+        <Header lang={lang} menu={{ main: main || [] }} />
         <main>
           <section className="section-sm text-center">
             <div className="container">
@@ -37,6 +42,7 @@ export default function NotFound() {
             </div>
           </section>
         </main>
+        <Footer lang={lang} menu={{ footer: footer || [] }} />
       </Providers>
     </>
   );

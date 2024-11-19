@@ -1,9 +1,10 @@
-import Logo from "@/components/Logo";
 import languages from "@/config/language.json";
 import { getListPage } from "@/lib/contentParser";
 import { getActiveLanguages } from "@/lib/languageParser";
-import { markdownify } from "@/lib/utils/textConverter";
+import FloodAffectedSection from "@/partials/FloodAffectedSection";
+import HeroBanner from "@/partials/HeroBanner";
 import SeoMeta from "@/partials/SeoMeta";
+import { Button, Feature } from "@/types";
 import path from "path";
 
 // remove dynamicParams
@@ -29,29 +30,15 @@ const Home = ({ params }: { params: { lang: string } }) => {
   const {
     banner
   }: {
-    banner: { title: string; image: string; content: string; };
+    banner: { title: string; image: string; content?: string; button?: Button };
+    features: Feature[];
   } = frontmatter;
 
   return (
     <>
       <SeoMeta />
-
-      <section
-        className="section h-screen"
-        style={{
-          backgroundImage: 'url(/images/bg-image.svg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="container h-full flex flex-col justify-center">
-          <Logo lang={lang} />
-          <div className="main-section ">
-            <h1 dangerouslySetInnerHTML={markdownify(banner.title)} />
-            <p dangerouslySetInnerHTML={markdownify(banner.content)} />
-          </div>
-        </div>
-      </section>
+      <HeroBanner banner={banner} />
+      <FloodAffectedSection lang={lang} />
     </>
   );
 };
