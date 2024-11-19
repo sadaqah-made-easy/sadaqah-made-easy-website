@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Sadaqahme",
-    "base_url": "https://nextplate.netlify.app",
+    "base_url": "https://sadaqahmadeeasy.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -10,7 +10,7 @@
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "200",
     "logo_height": "45",
-    "logo_text": "Nextplate"
+    "logo_text": "Sadaqah Made Easy"
   },
 
   "settings": {
