@@ -1,20 +1,18 @@
 {
   "site": {
     "title": "Sadaqahme",
-    "base_url": "https://nextplate.netlify.app",
+    "base_url": "https://example.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/nav-logo-dark.png",
-    "logo_scrolled": "/images/nav-logo-light.png",
-    "logo_darkmode": "/images/logo-darkmode.png",
-    "logo_width": "200",
-    "logo_height": "45",
-    "logo_text": "Nextplate"
+    "logo": "",
+    "logo_width": "300",
+    "logo_height": "27",
+    "logo_text": "Something Special"
   },
 
   "settings": {
-    "search": false,
+    "search": true,
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "light",
@@ -24,17 +22,6 @@
     "default_language": "en",
     "disable_languages": [],
     "default_language_in_subdir": false
-  },
-
-  "params": {
-    "contact_form_action": "#",
-    "copyright": "Copyright © 2024 SadaqahMadeEasy - All rights reserved - Donation doesn't wealth"
-  },
-
-  "navigation_button": {
-    "enable": true,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/nextplate"
   },
 
   "metadata": {

@@ -2,7 +2,8 @@
   "colors": {
     "default": {
       "theme_color": {
-        "primary": "#0b685c",
+        "primary": "#8C56FF",
+        "secondary": "#150F37",
         "body": "#fff",
         "border": "#eaeaea",
         "theme_light": "#f6f6f6",
@@ -10,18 +11,18 @@
       },
       "text_color": {
         "default": "#444444",
-        "dark": "#141414",
+        "dark": "#040404",
         "light": "#717171"
       }
     }
   },
   "fonts": {
     "font_family": {
-      "primary": "",
-      "primary_type": "",
-      "secondary": "",
-      "secondary_type": ""
+      "primary": "Heebo:wght@400;600",
+      "primary_type": "sans-serif",
+      "secondary": "Fontspring",
+      "secondary_type": "sans-serif"
     },
-    "font_size": { "base": "16", "scale": "1.22" }
+    "font_size": { "base": "16", "scale": "1.2" }
   }
 }

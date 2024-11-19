@@ -1,17 +1,21 @@
 {
   "main": [
     {
-      "name": "Flood Affected",
-      "url": "/flood-affected"
+      "name": "Home",
+      "url": "/"
     },
     {
-      "name": "App",
-      "url": "/app"
+      "name": "About",
+      "url": "/about"
     },
     {
-      "name": "About us",
+      "name": "Elements",
+      "url": "/elements"
+    },
+    {
+      "name": "Pages",
       "url": "",
-      "hasChildren": false,
+      "hasChildren": true,
       "children": [
         {
           "name": "Contact",
@@ -38,10 +42,6 @@
           "url": "/404"
         }
       ]
-    },
-    {
-      "name": "Orgs",
-      "url": "/orgs"
     }
   ],
   "footer": [
