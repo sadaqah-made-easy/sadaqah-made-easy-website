@@ -1,14 +1,14 @@
 {
   "site": {
     "title": "Sadaqahme",
-    "base_url": "https://example.com",
+    "base_url": "https://sadaqahmadeeasy.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "",
     "logo_width": "300",
     "logo_height": "27",
-    "logo_text": "Something Special"
+    "logo_text": "Sadaqah Made Easy"
   },
 
   "settings": {
