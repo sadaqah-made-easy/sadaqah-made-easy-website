@@ -1,18 +1,10 @@
 import FloodCard from "@/components/FloodCard";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
-import { getLanguageObj } from "@/lib/languageParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import path from "path";
 
-const FloodAffectedSection = ({ lang }: { lang: string }) => {
-  const language = getLanguageObj(lang);
-  const postIndex: any = getListPage(
-    path.join(language.contentDir, `flood-affected/_index.md`),
-  );
-  const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: any = getSinglePage(
-    path.join(language.contentDir, "flood-affected"),
-  );
+const FloodAffectedSection = () => {
+  const posts: any = getSinglePage(path.join("flood-affected"));
   const sortedPosts = sortByDate(posts).slice(0, 6);
 
   return (

@@ -10,7 +10,7 @@
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "200",
     "logo_height": "45",
-    "logo_text": "Sadaqah Made Easy"
+    "logo_text": "Sadaqahme"
   },
 
   "settings": {
@@ -20,10 +20,7 @@
     "default_theme": "light",
     "pagination": 2,
     "summary_length": 200,
-    "blog_folder": "blog",
-    "default_language": "en",
-    "disable_languages": [],
-    "default_language_in_subdir": false
+    "blog_folder": "blog"
   },
 
   "params": {

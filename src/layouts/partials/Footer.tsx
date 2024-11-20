@@ -2,18 +2,11 @@
 
 import Social from "@/components/Social";
 import config from "@/config/config.json";
-import { markdownify } from "@/lib/utils/textConverter";
-import { INavigationLink } from "@/types";
-import { FaEnvelope } from "react-icons/fa";
 import social from "@/config/social.json";
+import { markdownify } from "@/lib/utils/textConverter";
+import { FaEnvelope } from "react-icons/fa6";
 
-const Footer = ({
-  lang,
-  menu,
-}: {
-  lang: string;
-  menu: { footer: INavigationLink[] };
-}) => {
+const Footer = () => {
   const { copyright } = config.params;
 
   const orgs = [

@@ -1,5 +1,9 @@
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
+import TwSizeIndicator from "@/helpers/TwSizeIndicator";
+import Footer from "@/partials/Footer";
+import Header from "@/partials/Header";
+import Providers from "@/partials/Providers";
 import "@/styles/main.scss";
 
 export default function RootLayout({
@@ -23,7 +27,7 @@ export default function RootLayout({
         {/* favicon */}
         <link rel="shortcut icon" href={config.site.favicon} />
         {/* theme meta */}
-        <meta name="theme-name" content="nextplate" />
+        <meta name="theme-name" content="sadaqahme" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="theme-color"
@@ -57,7 +61,12 @@ export default function RootLayout({
           fontFamily: "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
         }}
       >
-        {children}
+        {/* <TwSizeIndicator /> */}
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

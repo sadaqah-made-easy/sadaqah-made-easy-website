@@ -2,28 +2,37 @@
 
 import Logo from "@/components/Logo";
 import config from "@/config/config.json";
-import { getActiveLanguages } from "@/lib/languageParser";
-import { slugSelector } from "@/lib/utils/slugSelector";
-import { INavigationLink } from "@/types";
+import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { IoSearch } from "react-icons/io5";
 
-const Header = ({
-  lang,
-  menu,
-}: {
-  lang: string;
-  menu: { main: INavigationLink[] };
-}) => {
+//  child navigation link interface
+export interface IChildNavigationLink {
+  name: string;
+  url: string;
+}
+
+// navigation link interface
+export interface INavigationLink {
+  name: string;
+  url: string;
+  hasChildren?: boolean;
+  children?: IChildNavigationLink[];
+}
+
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const activeLanguages = getActiveLanguages();
-  const { main }: { main: INavigationLink[] } = menu;
-  const { navigation_button, settings } = config;
-  const pathname = usePathname();
 
   const defaultLogoSrc = config.site.logo;
   const scrolledLogoSrc = config.site.logo_scrolled;
+
+  // distructuring the main menu from menu object
+  const { main }: { main: INavigationLink[] } = menu;
+  const { navigation_button, settings } = config;
+  // get current path
+  const pathname = usePathname();
 
   // scroll to top on route change
   useEffect(() => {
@@ -51,10 +60,7 @@ const Header = ({
       <nav className="navbar">
         {/* logo */}
         <div className="order-0">
-          <Logo
-            lang={lang}
-            src={isScrolled ? scrolledLogoSrc : defaultLogoSrc}
-          />
+          <Logo src={isScrolled ? scrolledLogoSrc : defaultLogoSrc} />
         </div>
         {/* navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
@@ -111,7 +117,7 @@ const Header = ({
                     {menu.children?.map((child, i) => (
                       <li className="nav-dropdown-item" key={`children-${i}`}>
                         <Link
-                          href={slugSelector(lang, child.url)}
+                          href={child.url}
                           className={`nav-dropdown-link block ${
                             (pathname === `${child.url}/` ||
                               pathname === child.url) &&
@@ -127,7 +133,7 @@ const Header = ({
               ) : (
                 <li className="nav-item">
                   <Link
-                    href={slugSelector(lang, menu.url)}
+                    href={menu.url}
                     className={`nav-link block ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&
                       "active"

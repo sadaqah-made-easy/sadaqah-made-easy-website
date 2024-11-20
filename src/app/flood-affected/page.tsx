@@ -1,21 +1,14 @@
-import Breadcrumbs from "@/components/Breadcrumbs";
 import FloodCard from "@/components/FloodCard";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
-import { getActiveLanguages, getLanguageObj } from "@/lib/languageParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
 import path from "path";
 
-const page = ({ params }: { params: { lang: string } }) => {
-  const language = getLanguageObj(params.lang);
-  const postIndex: any = getListPage(
-    path.join(language.contentDir, `flood-affected/_index.md`),
-  );
+const page = () => {
+  const postIndex: any = getListPage(path.join(`flood-affected/_index.md`));
   const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: any = getSinglePage(
-    path.join(language.contentDir, "flood-affected"),
-  );
+  const posts: any = getSinglePage(path.join("flood-affected"));
   const sortedPosts = sortByDate(posts);
 
   return (
@@ -27,9 +20,7 @@ const page = ({ params }: { params: { lang: string } }) => {
         image={image}
       />
 
-      <PageHeader title={postIndex.frontmatter.title}>
-        <Breadcrumbs lang={params.lang} />
-      </PageHeader>
+      <PageHeader title={postIndex.frontmatter.title} />
 
       <section className="section">
         <div className="container">
@@ -45,13 +36,3 @@ const page = ({ params }: { params: { lang: string } }) => {
 };
 
 export default page;
-
-// remove dynamicParams
-export const dynamicParams = false;
-
-// generate static params
-export async function generateStaticParams() {
-  return getActiveLanguages().map((language) => ({
-    lang: language.languageCode,
-  }));
-}
