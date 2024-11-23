@@ -15,10 +15,10 @@ const HeroBanner = ({ banner }: any) => {
   } = banner;
 
   return (
-    <section className="headerBg -mt-[102px] relative z-40">
+    <section className="headerBg -mt-[102px]">
       <div className="container">
         <div className="pt-[140px] lg:pt-[240px]">
-          <div className="row justify-center">
+          <div className="row justify-center relative z-10">
             <div className="col-11">
               <div className="row justify-center lg:justify-between">
                 {/* Text Content Section */}
@@ -45,7 +45,11 @@ const HeroBanner = ({ banner }: any) => {
                     )}
 
                     {google_play.enable && (
-                      <a href={google_play.link} target="__blank" rel="noreferrer">
+                      <a
+                        href={google_play.link}
+                        target="__blank"
+                        rel="noreferrer"
+                      >
                         <Image
                           src={google_play.image}
                           alt="playstore"
@@ -67,7 +71,9 @@ const HeroBanner = ({ banner }: any) => {
                         <p>Weekly Active Users</p>
                         <p
                           className="font-bold"
-                          dangerouslySetInnerHTML={markdownify(weekly_active_users)}
+                          dangerouslySetInnerHTML={markdownify(
+                            weekly_active_users,
+                          )}
                         />
                       </div>
                     </div>
@@ -82,7 +88,9 @@ const HeroBanner = ({ banner }: any) => {
                         <p>Last Month Donation</p>
                         <p
                           className="font-bold"
-                          dangerouslySetInnerHTML={markdownify(last_month_donation)}
+                          dangerouslySetInnerHTML={markdownify(
+                            last_month_donation,
+                          )}
                         />
                       </div>
                     </div>
@@ -97,7 +105,9 @@ const HeroBanner = ({ banner }: any) => {
                         <p>Last Month Shares</p>
                         <p
                           className="font-bold"
-                          dangerouslySetInnerHTML={markdownify(last_month_shares)}
+                          dangerouslySetInnerHTML={markdownify(
+                            last_month_shares,
+                          )}
                         />
                       </div>
                     </div>
@@ -119,7 +129,7 @@ const HeroBanner = ({ banner }: any) => {
           </div>
 
           {/* Decorative Gradient Layers */}
-          <div className="relative -top-[500px] -right-[500px] max-sm:hidden">
+          <div className="relative -top-[500px] -right-[500px] max-sm:hidden z-0">
             <div className="relative mx-auto h-[602px] w-[530px] sm:w-[130px]">
               <div className="absolute top-[-66.3%] left-[-84.6%] h-full w-full bg-[#0b7965b2] blur-[135px]"></div>
               <div className="absolute top-[-66.1%] right-[10%] h-full w-full bg-[#0da4eac7] opacity-60 blur-[100px]"></div>
