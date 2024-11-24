@@ -1,8 +1,8 @@
 ---
-title: বন্যা ইমারজেন্সি আপিল 2
+title: বন্যা ইমারজেন্সি আপিল Sanabil
 meta_title: ''
 description: this is meta description
-date: 2022-04-04T05:00:00.000Z
+date: '2022-04-04T05:00:00.000Z'
 image: /images/flood-affected/fenifloodts.jpg
 org_ref_type: Sab'a Sanabil Foundation
 categories:
