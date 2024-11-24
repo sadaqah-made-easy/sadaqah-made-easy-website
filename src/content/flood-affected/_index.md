@@ -1,5 +1,5 @@
 ---
-title: "Flood Affected"
-meta_title: ""
-description: "this is meta description"
+title: Projects
+meta_title: Projects
+description: this is meta description
 ---
