@@ -12,5 +12,14 @@
     "src/config/theme.json",
     "src/config/social.json"
   ],
-  "arrangement": []
+  "arrangement": [
+    {
+      "type": "folder",
+      "targetPath": "src/content/flood-affected",
+      "groupName": "Projects",
+      "include": "*.md",
+      "exclude": "!*index.md"
+    }
+  ],
+  "showCommitModal": false
 }
