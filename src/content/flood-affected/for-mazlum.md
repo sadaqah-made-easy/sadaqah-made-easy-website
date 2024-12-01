@@ -5,7 +5,7 @@ description: >-
   শাইখ হারুন ইজহার পরিচালিত আল কুরআন দারসের তত্ত্বাবধানে কারাগারে মজলুম মানুষের
   মুক্তির জন্য ফান্ডিং
 date: '2024-08-08'
-image: ''
+image: /images/formazlum.jpeg
 org_ref_type: Al Quraner Dars
 categories:
   - Bangladesh
@@ -15,3 +15,28 @@ tags:
 draft: true
 ---
 শাইখ হারুন ইজহার পরিচালিত আল কুরআন দারসের তত্ত্বাবধানে কারাগারে মজলুম মানুষের মুক্তির জন্য ফান্ডিং। আলহামদুলিল্লাহ মযলুমদের জামিন প্রক্রিয়া অব্যাহত আছে। জরুরী আর্থিক সহয়তায় এগিয়ে আসুন। শাইখ হারুন ইজহার হাফি।যাকাত দিতে চা ইলে রেফারেন্সে "zakat" উল্লেখ করতে হবে।
+
+* [Check referral link](https://www.facebook.com/tanzil.sshuvo)
+* [Check social link](https://www.facebook.com/share/3JMVoeTmEJd8uSwU/)
+
+***
+
+#### **Donation information**
+
+* Bank
+  * Name: Islami Bank Bangladesh Ltd.
+  * Account: 20502880201583913
+  * Account name: MD. AZIZ UDDIN
+  * Branch: Dewanhat, Chittagong
+
+***
+
+* Mobile banking
+  * Bkash 
+    * Number: 01913419607
+    * Ref: Sadaqah Made Easy
+    * Type: Personal
+  * Nagad
+    * Number: 01959454502
+    * Ref: Sadaqah Made Easy
+    * Type: Personal
