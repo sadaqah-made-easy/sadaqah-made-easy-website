@@ -16,7 +16,7 @@ description: >-
   সহায়তায়, ইনশাআল্লাহ, এই শীতে আমরা তাদের পাশে দাঁড়াতে পারবো। আপনার প্রতিটি
   ডোনেশন এই শিশুদের জন্য স্বস্তির বার্তা বয়ে আনবে।
 date: '2024-01-12'
-image: /images/flood-affected/fenifloodts.jpg
+image: /images/winter-mosalo.jpg
 org_ref_type: Moshal Alo Trust
 categories:
   - Winter
