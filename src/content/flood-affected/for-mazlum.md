@@ -12,11 +12,11 @@ categories:
 tags:
   - মযলুম
   - Oppressed
-draft: true
+draft: false
 ---
 শাইখ হারুন ইজহার পরিচালিত আল কুরআন দারসের তত্ত্বাবধানে কারাগারে মজলুম মানুষের মুক্তির জন্য ফান্ডিং। আলহামদুলিল্লাহ মযলুমদের জামিন প্রক্রিয়া অব্যাহত আছে। জরুরী আর্থিক সহয়তায় এগিয়ে আসুন। শাইখ হারুন ইজহার হাফি।যাকাত দিতে চা ইলে রেফারেন্সে "zakat" উল্লেখ করতে হবে।
 
-* [Check referral link](https://www.facebook.com/tanzil.sshuvo)
+* [Check referral link](https://www.facebook.com/aiman.kasir.94 "Google")
 * [Check social link](https://www.facebook.com/share/3JMVoeTmEJd8uSwU/)
 
 ***
