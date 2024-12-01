@@ -1,8 +1,8 @@
 {
   "main": [
     {
-      "name": "Flood Affected",
-      "url": "/flood-affected"
+      "name": "Projects",
+      "url": "/projects"
     },
     {
       "name": "App",
