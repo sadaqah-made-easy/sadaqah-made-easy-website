@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Sadaqahme",
+    "title": "Sadaqah Made Easy",
     "base_url": "https://sadaqahmadeeasy.com",
     "base_path": "/",
     "trailing_slash": false,
@@ -12,7 +12,6 @@
     "logo_height": "45",
     "logo_text": "Sadaqahme"
   },
-
   "settings": {
     "search": false,
     "sticky_header": true,
@@ -22,18 +21,15 @@
     "summary_length": 200,
     "blog_folder": "blog"
   },
-
   "params": {
     "contact_form_action": "#",
     "copyright": "Copyright © 2024 SadaqahMadeEasy - All rights reserved - Donation doesn't wealth"
   },
-
   "navigation_button": {
     "enable": true,
     "label": "Get Started",
     "link": "https://github.com/zeon-studio/nextplate"
   },
-
   "metadata": {
     "meta_author": "Themefisher",
     "meta_image": "/images/og-image.png",
