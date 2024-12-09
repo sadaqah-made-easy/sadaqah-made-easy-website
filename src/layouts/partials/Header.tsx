@@ -6,7 +6,6 @@ import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { IoSearch } from "react-icons/io5";
 
 //  child navigation link interface
 export interface IChildNavigationLink {
@@ -66,7 +65,7 @@ const Header = () => {
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           htmlFor="nav-toggle"
-          className="order-3 cursor-pointer flex items-center lg:hidden text-dark  lg:order-1"
+          className="order-3 cursor-pointer flex items-center lg:hidden text-dark lg:order-1"
         >
           <svg
             id="show-button"

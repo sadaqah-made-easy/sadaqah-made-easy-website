@@ -1,4 +1,4 @@
-import FloodCard from "@/components/FloodCard";
+import FloodCard from "@/components/ProjectCard";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
@@ -6,9 +6,9 @@ import SeoMeta from "@/partials/SeoMeta";
 import path from "path";
 
 const page = () => {
-  const postIndex: any = getListPage(path.join(`flood-affected/_index.md`));
+  const postIndex: any = getListPage(path.join(`projects/_index.md`));
   const { title, meta_title, description, image } = postIndex.frontmatter;
-  const posts: any = getSinglePage(path.join("flood-affected"));
+  const posts: any = getSinglePage(path.join("projects"));
   const sortedPosts = sortByDate(posts);
 
   return (

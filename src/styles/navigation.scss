@@ -8,7 +8,7 @@ input#nav-toggle:checked + label #hide-button {
 }
 
 input#nav-toggle:checked ~ #nav-menu {
-  @apply max-md:block;
+  @apply max-lg:block;
 }
 
 .header {

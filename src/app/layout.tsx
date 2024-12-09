@@ -54,14 +54,8 @@ export default function RootLayout({
         />
       </head>
 
-      <body
-        suppressHydrationWarning={true}
-        className="overflow-x-hidden"
-        style={{
-          fontFamily: "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
-        }}
-      >
-        {/* <TwSizeIndicator /> */}
+      <body suppressHydrationWarning={true}>
+        <TwSizeIndicator />
         <Providers>
           <Header />
           <main>{children}</main>

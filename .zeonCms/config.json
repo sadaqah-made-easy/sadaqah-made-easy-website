@@ -15,7 +15,7 @@
   "arrangement": [
     {
       "type": "folder",
-      "targetPath": "src/content/flood-affected",
+      "targetPath": "src/content/projects",
       "groupName": "Projects",
       "include": "*.md",
       "exclude": "!*index.md"

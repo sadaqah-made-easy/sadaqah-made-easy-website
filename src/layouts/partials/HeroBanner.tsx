@@ -15,7 +15,7 @@ const HeroBanner = ({ banner }: any) => {
   } = banner;
 
   return (
-    <section className="headerBg -mt-[102px]">
+    <section className="headerBg -mt-[102px] overflow-x-clip">
       <div className="container">
         <div className="pt-[140px] lg:pt-[240px]">
           <div className="row justify-center relative z-10">

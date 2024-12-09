@@ -17,10 +17,10 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "",
-      "primary_type": "",
-      "secondary": "",
-      "secondary_type": ""
+      "primary": "Lora:wght@400;600;700",
+      "primary_type": "sans-serif",
+      "secondary": "Signika:wght@500;700",
+      "secondary_type": "sans-serif"
     },
     "font_size": { "base": "16", "scale": "1.22" }
   }

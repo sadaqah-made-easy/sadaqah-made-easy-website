@@ -30,7 +30,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [{ pattern: /^swiper-/ }],
-  
+
   theme: {
     screens: {
       sm: "540px",
@@ -44,6 +44,9 @@ module.exports = {
       padding: "2rem",
     },
     extend: {
+      boxShadow: {
+        "3xl": "0 0px 20px rgba(0, 0, 0, 0.15)",
+      },
       colors: {
         text: theme.colors.default.text_color.default,
         light: theme.colors.default.text_color.light,
@@ -54,7 +57,6 @@ module.exports = {
         border: theme.colors.default.theme_color.border,
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
-        
       },
       fontSize: {
         base: font_base + "px",
