@@ -14,12 +14,15 @@
     "dev:worker": "wrangler dev --port 8771",
     "preview:worker": "npm run build:worker && npm run dev:worker",
     "deploy:worker": "npm run build:worker && wrangler deploy",
-    "format": "prettier -w ./src"
+    "format": "prettier -w ./src",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "deploy": "npm run pages:build && wrangler pages deploy"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.7",
     "@formatjs/intl-localematcher": "^0.5.7",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-label": "^2.1.0",
