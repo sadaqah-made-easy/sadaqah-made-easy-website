@@ -5,9 +5,14 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: config.base_path !== "/" ? config.base_path : "",
   trailingSlash: config.site.trailing_slash,
-  output: "standalone",
   images: {
-    domains: ["drive.google.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
