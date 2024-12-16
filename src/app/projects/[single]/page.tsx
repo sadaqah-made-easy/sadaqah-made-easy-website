@@ -1,4 +1,3 @@
-export const runtime = "edge";
 import GradientBg from "@/components/GradientBg";
 import Share from "@/components/Share";
 import ImageFallback from "@/helpers/ImageFallback";
