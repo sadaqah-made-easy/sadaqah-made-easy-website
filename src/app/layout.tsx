@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { Toaster } from "@/components/ui/sonner";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
