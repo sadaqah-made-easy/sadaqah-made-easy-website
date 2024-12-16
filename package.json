@@ -14,15 +14,12 @@
     "dev:worker": "wrangler dev --port 8771",
     "preview:worker": "npm run build:worker && npm run dev:worker",
     "deploy:worker": "npm run build:worker && wrangler deploy",
-    "format": "prettier -w ./src",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "deploy": "npm run pages:build && wrangler pages deploy"
+    "format": "prettier -w ./src"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@cloudflare/next-on-pages": "^1.13.7",
     "@formatjs/intl-localematcher": "^0.5.7",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-label": "^2.1.0",
@@ -30,7 +27,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "date-fns": "^3.0.0",
+    "date-fns": "^4.1.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.468.0",
@@ -42,7 +39,7 @@
     "next-themes": "^0.3.0",
     "nodemailer": "^6.9.16",
     "react": "18.3.1",
-    "react-day-picker": "^8.10.1",
+    "react-day-picker": "8.10.1",
     "react-dom": "18.3.1",
     "react-gtm-module": "^2.0.11",
     "react-hook-form": "^7.54.0",
