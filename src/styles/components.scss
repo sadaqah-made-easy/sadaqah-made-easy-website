@@ -13,11 +13,11 @@
 
 // form style
 .form-input {
-  @apply w-full rounded border-transparent bg-theme-light px-6 py-4 text-dark placeholder:text-light focus:border-primary focus:ring-transparent;
+  @apply w-full rounded border-transparent bg-theme-light px-6 py-3 text-dark placeholder:text-light focus:border-primary focus:ring-transparent;
 }
 
 .form-label {
-  @apply mb-4 block font-secondary text-xl font-normal text-dark;
+  @apply mb-4 block font-secondary !text-xl font-normal text-dark;
 }
 
 // social icons

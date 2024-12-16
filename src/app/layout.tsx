@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator";
@@ -56,6 +57,7 @@ export default function RootLayout({
 
       <body suppressHydrationWarning={true}>
         <TwSizeIndicator />
+        <Toaster />
         <Providers>
           <Header />
           <main>{children}</main>

@@ -144,6 +144,17 @@ const Header = () => {
               )}
             </React.Fragment>
           ))}
+
+          {navigation_button.enable && (
+            <li className="inline-block my-auto">
+              <Link
+                className="btn btn-primary btn-sm font-medium"
+                href={navigation_button.link}
+              >
+                {navigation_button.label}
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </header>
