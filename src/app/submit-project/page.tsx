@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import DonationForm from "@/components/DonationForm";
 import SeoMeta from "@/partials/SeoMeta";
 
