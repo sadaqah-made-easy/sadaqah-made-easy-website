@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Request for Promotion"
-    link: "#"
+    link: "/submit-project"
 
   google_play:
     enable: true
