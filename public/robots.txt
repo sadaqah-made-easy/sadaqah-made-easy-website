@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://example.com
+Host: https://sadaqahmadeeasy.com
 
 # Sitemaps
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://sadaqahmadeeasy.com/sitemap.xml

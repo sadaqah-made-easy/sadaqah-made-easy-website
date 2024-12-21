@@ -6,6 +6,7 @@ import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import Providers from "@/partials/Providers";
 import "@/styles/main.scss";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -55,7 +56,16 @@ export default function RootLayout({
         />
       </head>
 
+      <GoogleTagManager gtmId={config.params.gtag} />
       <body suppressHydrationWarning={true}>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${config.params.gtag}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <TwSizeIndicator />
         <Toaster />
         <Providers>

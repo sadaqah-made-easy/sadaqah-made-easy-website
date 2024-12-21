@@ -53,8 +53,8 @@ const Footer = () => {
           <div className="my-9">
             <h6 className="underline text-white mb-4">Disclaimer</h6>
             <p>
-              We don't collect money (sadaqah) and we aren't connected with any
-              organization/party/group.
+              We don&apos;t collect money (sadaqah) and we aren&apos;t connected
+              with any organization/party/group.
               <br />
               We just showcase authentic donation projects of any type.
             </p>

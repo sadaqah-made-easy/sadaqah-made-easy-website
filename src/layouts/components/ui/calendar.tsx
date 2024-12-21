@@ -45,16 +45,20 @@ function Calendar({
           "bg-neutral-900 text-neutral-50 hover:bg-neutral-900 hover:text-neutral-50 focus:bg-neutral-900 focus:text-neutral-50",
         day_today: "bg-neutral-100 text-neutral-900",
         day_outside:
-          "day-outside text-neutral-500 aria-selected:bg-neutral-100/50 aria-selected:text-neutral-500 ",
-        day_disabled: "text-neutral-500 opacity-50",
+          "day-outside text-neutral-500 aria-selected:bg-neutral-100/50 aria-selected:text-neutral-500",
+        day_disabled: "text-neutral-500 opacity-50 ",
         day_range_middle:
           "aria-selected:bg-neutral-100 aria-selected:text-neutral-900",
         day_hidden: "invisible",
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
+        IconLeft: ({ className, ...props }) => (
+          <ChevronLeft className={cn("h-4 w-4", className)} {...props} />
+        ),
+        IconRight: ({ className, ...props }) => (
+          <ChevronRight className={cn("h-4 w-4", className)} {...props} />
+        ),
       }}
       {...props}
     />

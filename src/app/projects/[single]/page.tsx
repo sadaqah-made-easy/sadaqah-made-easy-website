@@ -12,11 +12,10 @@ import { notFound } from "next/navigation";
 import path from "path";
 import { FaRegClock, FaRegFolder } from "react-icons/fa";
 
-const PostSingle = async ({
-  params,
-}: {
-  params: { single: string; lang: string };
+const PostSingle = async (props: {
+  params: Promise<{ single: string; lang: string }>;
 }) => {
+  const params = await props.params;
   const posts: Post[] = getSinglePage(path.join("projects"));
   const post = posts.find((page) => page.slug === params.single);
 

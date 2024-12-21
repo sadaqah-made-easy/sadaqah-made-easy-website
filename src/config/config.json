@@ -23,7 +23,8 @@
   },
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © 2024 SadaqahMadeEasy - All rights reserved - Donation doesn't wealth"
+    "copyright": "Copyright © 2024 SadaqahMadeEasy - All rights reserved - Donation doesn't wealth",
+    "gtag": "G-KYY79N1N2S"
   },
   "navigation_button": {
     "enable": true,
