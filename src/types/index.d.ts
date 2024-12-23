@@ -85,3 +85,9 @@ export interface INavigationLink {
   hasChildren?: boolean;
   children?: IChildNavigationLink[];
 }
+
+export type TMenuItem = {
+  name: string;
+  url: string;
+  icon?: string;
+};

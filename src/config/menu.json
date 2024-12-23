@@ -1,22 +1,38 @@
 {
   "main": [
     {
-      "name": "Projects",
+      "name": "Project",
       "url": "/projects"
     },
     {
       "name": "App",
-      "url": "/app"
+      "url": "/"
     }
   ],
-  "footer": [
+
+  "Navigation": [
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "About Us",
+      "url": "/"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Submit Project",
+      "url": "/submit-project"
+    }
+  ],
+
+  "Utility Pages": [
+    {
+      "name": "Privacy",
       "url": "/privacy-policy"
+    },
+    {
+      "name": "Terms & Conditions",
+      "url": "/terms-conditions"
+    },
+    {
+      "name": "Disclaimer",
+      "url": "/disclaimer"
     }
   ]
 }

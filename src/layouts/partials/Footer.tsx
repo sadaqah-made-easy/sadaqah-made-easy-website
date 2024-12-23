@@ -1,117 +1,134 @@
-"use client";
+"use client"
 
+import Logo from "@/components/Logo";
 import Social from "@/components/Social";
 import config from "@/config/config.json";
+import menu from "@/config/menu.json";
 import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
-import { FaEnvelope } from "react-icons/fa6";
+import { TMenuItem } from "@/types";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
-  const { copyright } = config.params;
+  const footerRef = useRef(null);
+  const bgRef = useRef(null);
+  const pathname = usePathname();
 
-  const orgs = [
-    {
-      id: 2,
-      orgName: "Al Manahil Foundation",
-      link: "https://sadaqahmadeeasy.com/org/al-manahil-foundation",
-    },
-    {
-      id: 3,
-      orgName: "Munir Foundation",
-      link: "https://sadaqahmadeeasy.com/org/munir-foundation",
-    },
-    {
-      id: 4,
-      orgName: "Sab'a Sanabil Foundation",
-      link: "https://sadaqahmadeeasy.com/org/saba-sanabil-foundation",
-    },
-    {
-      id: 1,
-      orgName: "অভিযাত্রিক সমাজ কল্যাণ সংস্থা",
-      link: "https://sadaqahmadeeasy.com/org/ovijatrik",
-    },
-    {
-      id: 5,
-      orgName: "JCI Dhaka West",
-      link: "https://sadaqahmadeeasy.com/org/jci-dhaka-west",
-    },
-  ];
+  useEffect(() => {
+    const initAnimation = () => {
+      const footer = footerRef.current;
+      const bg = bgRef.current;
+
+      if (!footer || !bg) return;
+
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.trigger === footer) {
+          trigger.kill();
+        }
+      });
+
+      gsap.set(bg, {
+        width: '100%',
+        position: 'absolute',
+        top: 0,
+        left: '50%',
+        transform: 'translateX(-50%)',
+        height: '100%',
+        backgroundColor: '#294E4A',
+        maxWidth: '1320px',
+      });
+
+      // Create new animation
+      gsap.to(bg, {
+        maxWidth: '100vw',
+        scrollTrigger: {
+          trigger: footer,
+          start: 'top bottom-=100',
+          end: 'bottom bottom',
+          scrub: true,
+          invalidateOnRefresh: true, // Recalculate on page resize
+          markers: false // Set to true for debugging
+        },
+      });
+    };
+
+    // Small delay to ensure DOM is ready after route change
+    const timer = setTimeout(() => {
+      initAnimation();
+    }, 100);
+
+    // Refresh ScrollTrigger when the route changes
+    ScrollTrigger.refresh();
+
+    // Clean up
+    return () => {
+      clearTimeout(timer);
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, [pathname]);
 
   return (
-    <footer className="bg-[#004B3E]">
-      <div className="container">
-        <div className="pt-9 pb-12 flex flex-col items-center justify-center text-white text-center">
-          <p className="mb-4">
-            <FaEnvelope className="inline mr-2" />
-            sadaqahmadeeasy@gmail.com
-          </p>
-          <p>
-            We are updating continuously. More important features will be added
-            soon.
-          </p>
+    <footer ref={footerRef} className="relative">
+      <div ref={bgRef} />
+      <div className="container relative">
+        <div className="section-sm pb-16">
+          <div className="row justify-center">
+            <div className="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
+              <Logo src={config.site.logo} />
+              <p
+                className="mt-8 mb-6 text-white/80 text-balance"
+                dangerouslySetInnerHTML={markdownify(config.params.footer_description)}
+              />
+              <Social source={social.main} className="social-icons" />
+            </div>
 
-          <div className="my-9">
-            <h6 className="underline text-white mb-4">Disclaimer</h6>
-            <p>
-              We don&apos;t collect money (sadaqah) and we aren&apos;t connected
-              with any organization/party/group.
-              <br />
-              We just showcase authentic donation projects of any type.
-            </p>
-          </div>
+            <div className="col-8 lg:col-5 columns-2">
+              {
+                Object.entries(menu)
+                  .filter(([key]) => key !== "main")
+                  .map(([sectionTitle, items]) => (
+                    <div className="mb-10 break-inside-avoid" key={sectionTitle}>
+                      <h5 className="mb-8 text-white font-primary font-medium">
+                        {sectionTitle.charAt(0).toUpperCase() +
+                          sectionTitle.slice(1)}
+                      </h5>
+                      <ul className="space-y-2.5">
+                        {items.map((item: TMenuItem, index: number) => (
+                          <li key={index}>
+                            <a
+                              className="flex items-center gap-2 text-white transition-all hover:underline"
+                              href={item.url}
+                            >
+                              {item.name}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+              }
+            </div>
 
-          <div className="mb-9">
-            <h6 className="underline text-white mb-4">Important</h6>
-            <p className="text-balance">
-              {" "}
-              If we find any suspicious activity in any of the enlisted
-              projects, we will remove the project without notifying and we may
-              send report to the distinguished authority to investigate that
-              certain project/org.{" "}
-            </p>
-          </div>
-
-          <div>
-            <h5 className="text-white">Help us building a better Bangladesh</h5>
-          </div>
-        </div>
-
-        <div className="row justify-center">
-          <div className="col-8">
-            <div className="relative">
-              <div className="bg-[#1aa78d] h-[1px]" />
-              <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 bg-[#1AA78D] w-[70%] h-1 flex justify-center items-center" />
+            <div className="col-6 lg:col-3">
+              <div className="bg-white p-8">
+                <h5 className="mb-6">We Work Together For a Beautiful World, ComeJoin Us Today!</h5>
+                <a href="#!" className="btn btn-primary">
+                  <div className="primary-button-text">Donate Now</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="my-11 flex justify-center">
-          <Social source={social.main} className="social-icons-footer" />
-        </div>
-
-        <div>
-          <h6 className="text-center mt-3 mb-4 text-white">
-            Organizations we trust
-          </h6>
-          <div className="flex flex-wrap justify-center gap-6 text-white/60">
-            {orgs.map((name) => (
-              <a
-                key={name.id}
-                href={name.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {name.orgName}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-7">
-        <div className="text-center text-white/70 bg-dark/70 text-[12px] py-2">
-          <p dangerouslySetInnerHTML={markdownify(copyright)} />
-        </div>
+        <p
+          className="border-t border-white py-8 text-white text-center [&>a]:underline"
+          dangerouslySetInnerHTML={markdownify(config.params.copyright)}
+        />
       </div>
     </footer>
   );
