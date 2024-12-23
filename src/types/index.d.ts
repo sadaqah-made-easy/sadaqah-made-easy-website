@@ -91,3 +91,15 @@ export type TMenuItem = {
   url: string;
   icon?: string;
 };
+
+export interface IChildNavigationLink {
+  name: string;
+  url: string;
+}
+
+export interface INavigationLink {
+  name: string;
+  url: string;
+  hasChildren?: boolean;
+  children?: IChildNavigationLink[];
+}

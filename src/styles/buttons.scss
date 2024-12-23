@@ -11,5 +11,9 @@
 }
 
 .btn-outline-primary {
-  @apply border-dark text-dark hover:bg-dark  bg-transparent hover:text-white;
+  @apply text-primary bg-transparent underline underline-offset-4 font-bold;
+}
+
+.btn-secondary {
+  @apply border-secondary bg-secondary text-primary hover:bg-primary hover:text-white duration-300 rounded-none text-center;
 }

@@ -3,66 +3,115 @@
 import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
+import { INavigationLink } from "@/types";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
-//  child navigation link interface
-export interface IChildNavigationLink {
-  name: string;
-  url: string;
-}
-
-// navigation link interface
-export interface INavigationLink {
-  name: string;
-  url: string;
-  hasChildren?: boolean;
-  children?: IChildNavigationLink[];
-}
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef(null);
+  const navMenuRef = useRef(null);
+  const logoRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  const defaultLogoSrc = config.site.logo;
-  const scrolledLogoSrc = config.site.logo_scrolled;
-
-  // distructuring the main menu from menu object
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
-  // get current path
   const pathname = usePathname();
 
-  // scroll to top on route change
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scrollTo(0, 0);
   }, [pathname]);
 
-  // Toggle background, shadow, and logo source on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+    const header = headerRef.current;
+    const navMenu = navMenuRef.current;
+    const logo = logoRef.current;
+    const button = buttonRef.current;
+
+    const updateStyles = (progress: number) => {
+      const isSmallScreen = window.innerWidth <= 1024;
+      const bgOpacity = Math.min(progress * 1.5, 1);
+      const yOffset = isSmallScreen ? 0 : Math.min(progress * 20, 20);
+      const shadowOpacity = Math.min(progress * 0.1, 0.1);
+      const scale = 1 - progress * 0.1;
+      const fontSize = 1.125 - progress * 0.125;
+      const paddingY = 1 - progress * 0.5;
+      const paddingX = 1.75 - progress * 0.75;
+
+      gsap.to(header, {
+        backgroundColor: `rgba(255, 255, 255, ${bgOpacity})`,
+        boxShadow: `0 0px 30px 5px rgba(0, 0, 0, ${shadowOpacity})`,
+        y: yOffset,
+        duration: 0.2,
+        ease: "power1.out",
+      });
+
+      if (!isSmallScreen) {
+        gsap.to(navMenu, {
+          padding: `${paddingY}rem ${paddingX}rem`,
+          duration: 0.2,
+        });
+      }
+
+      gsap.to(logo, { scale, duration: 0.2 });
+      gsap.to(button, { fontSize: `${fontSize}rem`, duration: 0.2 });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const scrollTrigger = ScrollTrigger.create({
+      start: "top top",
+      end: "top+=500",
+      onUpdate: (self) => updateStyles(self.progress),
+    });
+
+    return () => scrollTrigger.kill();
   }, []);
+
+  const toggleMenu = (isOpen: boolean) => {
+    const navMenu = navMenuRef.current;
+    const tl = gsap.timeline();
+
+    if (isOpen) {
+      tl.set(navMenu, { display: "block" }).fromTo(
+        navMenu,
+        { y: -20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+      );
+    } else {
+      tl.to(navMenu, {
+        y: -20,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power2.in",
+      }).set(navMenu, { display: "none" });
+    }
+  };
+
+  const isActive = (url: string) => pathname === url || pathname === `${url}/`;
 
   return (
     <header
-      className={`header z-50 ${
-        isScrolled
-          ? "bg-white shadow-md transition duration-300"
-          : "bg-transparent transition duration-300"
-      } ${settings.sticky_header && "sticky top-0"}`}
+      className={`header z-50 ${settings.sticky_header ? "sticky top-0" : ""} mx-auto bg-transparent`}
     >
-      <nav className="navbar">
-        {/* logo */}
-        <div className="order-0">
-          <Logo src={isScrolled ? scrolledLogoSrc : defaultLogoSrc} />
+      <nav
+        ref={headerRef}
+        className="navbar container relative flex flex-wrap items-center justify-between px-4 py-3"
+      >
+        {/* Logo */}
+        <div ref={logoRef} className="order-0">
+          <Logo src={config.site.logo} />
         </div>
-        {/* navbar toggler */}
-        <input id="nav-toggle" type="checkbox" className="hidden" />
+
+        {/* Navbar Toggler */}
+        <input
+          id="nav-toggle"
+          type="checkbox"
+          className="hidden"
+          onChange={(e) => toggleMenu(e.target.checked)}
+        />
         <label
           htmlFor="nav-toggle"
           className="order-3 cursor-pointer flex items-center lg:hidden text-dark lg:order-1"
@@ -87,11 +136,12 @@ const Header = () => {
             ></polygon>
           </svg>
         </label>
-        {/* /navbar toggler */}
 
+        {/* Navigation Menu */}
         <ul
           id="nav-menu"
-          className="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+          ref={navMenuRef}
+          className="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:pb-0 max-lg:bg-primary max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:right-0"
         >
           {main.map((menu, i) => (
             <React.Fragment key={`menu-${i}`}>
@@ -99,10 +149,7 @@ const Header = () => {
                 <li className="nav-item nav-dropdown group relative">
                   <span
                     className={`nav-link inline-flex items-center ${
-                      menu.children?.map(({ url }) => url).includes(pathname) ||
-                      menu.children
-                        ?.map(({ url }) => `${url}/`)
-                        .includes(pathname)
+                      menu.children?.some((child) => isActive(child.url))
                         ? "active"
                         : ""
                     }`}
@@ -112,15 +159,13 @@ const Header = () => {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </span>
-                  <ul className="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
+                  <ul className="nav-dropdown-list hidden group-hover:block lg:absolute lg:opacity-0 lg:group-hover:opacity-100">
                     {menu.children?.map((child, i) => (
-                      <li className="nav-dropdown-item" key={`children-${i}`}>
+                      <li key={`child-${i}`} className="nav-dropdown-item mb-2">
                         <Link
                           href={child.url}
-                          className={`nav-dropdown-link block ${
-                            (pathname === `${child.url}/` ||
-                              pathname === child.url) &&
-                            "active"
+                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${
+                            isActive(child.url) ? "active" : ""
                           }`}
                         >
                           {child.name}
@@ -133,9 +178,8 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     href={menu.url}
-                    className={`nav-link block ${
-                      (pathname === `${menu.url}/` || pathname === menu.url) &&
-                      "active"
+                    className={`nav-link block p-3 font-semibold transition lg:px-2 lg:py-3 ${
+                      isActive(menu.url) ? "active" : ""
                     }`}
                   >
                     {menu.name}
@@ -146,10 +190,10 @@ const Header = () => {
           ))}
 
           {navigation_button.enable && (
-            <li className="inline-block my-auto">
+            <li ref={buttonRef} className="inline-block my-auto">
               <Link
-                className="btn btn-primary btn-sm font-medium"
                 href={navigation_button.link}
+                className="btn btn-outline-primary max-lg:text-white"
               >
                 {navigation_button.label}
               </Link>

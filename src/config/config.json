@@ -23,7 +23,7 @@
   },
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © 2024 SadaqahMadeEasy - All rights reserved - Donation doesn't wealth",
+    "copyright": "Copyright © 2024 SadaqahMadeEasy - All rights reserved - Donation doesn't decrease wealth",
     "footer_description": "We don't collect money (sadaqah) and we aren't connected with any organization/party/group. We just showcase authentic donation projects of any type.",
     "gtag": "G-KYY79N1N2S"
   },
@@ -35,6 +35,6 @@
   "metadata": {
     "meta_author": "Themefisher",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+    "meta_description": "Donation doesn't wealth"
   }
 }
