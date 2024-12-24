@@ -34,7 +34,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               alt={title}
               width={445}
               height={277}
-              priority={false}
+              priority={true}
             />
           </figure>
         )}

@@ -1,4 +1,5 @@
 import GradientBg from "@/components/GradientBg";
+import ProjectEndTimer from "@/components/ProjectEndTimer";
 import Share from "@/components/Share";
 import ImageFallback from "@/helpers/ImageFallback";
 import MDXContent from "@/helpers/MDXContent";
@@ -7,6 +8,7 @@ import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import { Post } from "@/types";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import path from "path";
@@ -22,7 +24,7 @@ const PostSingle = async (props: {
   if (!post) return notFound();
 
   const { frontmatter, content } = post;
-  const { title, meta_title, description, image, categories, date, tags } =
+  const { title, meta_title, description, image, categories, date } =
     frontmatter;
 
   return (
@@ -36,7 +38,7 @@ const PostSingle = async (props: {
       <section className="section-sm overflow-x-clip">
         <div className="container relative">
           <div className="row justify-center relative z-10">
-            <article className="lg:col-10">
+            <article className="lg:col-8">
               <h1
                 className="h2 mb-4"
                 dangerouslySetInnerHTML={{ __html: humanize(title) }}
@@ -72,7 +74,7 @@ const PostSingle = async (props: {
                     height={700}
                     width={1200}
                     alt={title}
-                    className="rounded aspect-[16/9] object-fill"
+                    className="aspect-[16/9] object-fill"
                   />
                 </div>
               )}
@@ -82,7 +84,7 @@ const PostSingle = async (props: {
               </div>
 
               <div className="row items-start justify-between">
-                {tags?.length > 0 && (
+                {/* {tags?.length > 0 && (
                   <div className="mb-10 flex items-center lg:col-5 lg:mb-0">
                     <h5 className="mr-3">Tags :</h5>
                     <ul>
@@ -98,8 +100,8 @@ const PostSingle = async (props: {
                       ))}
                     </ul>
                   </div>
-                )}
-                <div className="flex items-center lg:col-4">
+                )} */}
+                <div className="flex items-center">
                   <h5 className="mr-3">Share :</h5>
                   <Share
                     className="social-icons"
@@ -110,6 +112,93 @@ const PostSingle = async (props: {
                 </div>
               </div>
             </article>
+
+            <aside className="lg:col-4 hidden">
+              <div className="max-w-md bg-white shadow-lg p-6 sticky mt-10 lg:top-28 mx-auto">
+                {/* End Date Section */}
+                <ProjectEndTimer endDate="2024-12-28T12:00:00" />
+
+                {/* Donations Section */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-medium text-gray-700 mb-2">Donations</h3>
+                  <div className="mb-1 border p-3">
+                    <div className="text-xs text-gray-500">Goals</div>
+                    <div className="text-lg font-bold">$27,000</div>
+                  </div>
+                </div>
+
+                {/* Payment Methods Section */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-medium text-gray-700 mb-3">Payment methods</h3>
+
+                  {/* Bkash */}
+                  <div className="flex items-center gap-3 mb-3 p-3 bg-gray-50">
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      <Image
+                        src="/images/projects/bkash.png"
+                        alt="Bkash"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium">Bkash</div>
+                      <div className="text-xs text-gray-500">0000000000</div>
+                    </div>
+                  </div>
+
+                  {/* Nagad */}
+                  <div className="flex items-center gap-3 mb-3 p-3 bg-gray-50">
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      <Image
+                        src="/images/projects/nagad.png"
+                        alt="Bkash"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium">Nagad</div>
+                      <div className="text-xs text-gray-500">00000000000</div>
+                    </div>
+                  </div>
+
+                  {/* Bank */}
+                  <div className="flex gap-3 p-3 bg-gray-50">
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      <Image
+                        src="/images/projects/bank.png"
+                        alt="Bkash"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium">Bank</div>
+                      <div className="text-xs text-gray-500">
+                        <div>A/C: 0000000000000</div>
+                        <div>Name: Kathryn Murphy</div>
+                        <div>Bank: City Bank</div>
+                        <div>Branch: Shyamoli, Dhaka</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Organizer Section */}
+                <div className="flex items-center gap-4">
+                  <img src="https://placehold.co/400" alt="John Terry" className="w-14 h-14" />
+                  <div>
+                    <div className="font-medium">John Terry</div>
+                    <div className="text-xs text-gray-500">Organizer</div>
+
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mt-2">
+                  Voluntatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
+                </p>
+              </div>
+            </aside>
           </div>
 
           {/* Decorative Gradient Layers */}
