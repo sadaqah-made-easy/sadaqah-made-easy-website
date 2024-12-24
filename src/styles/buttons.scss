@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
+  @apply inline-block border border-transparent px-5 py-2 font-semibold capitalize transition;
 }
 
 .btn-sm {
@@ -10,8 +10,12 @@
   @apply border-primary bg-primary text-white;
 }
 
-.btn-outline-primary {
+.btn-underline {
   @apply text-primary bg-transparent underline underline-offset-4 font-bold;
+}
+
+.btn-outline-primary {
+  @apply border-primary/20 bg-transparent text-primary hover:bg-primary hover:text-white duration-300 rounded-none text-center;
 }
 
 .btn-secondary {

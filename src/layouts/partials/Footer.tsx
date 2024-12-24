@@ -108,10 +108,10 @@ const Footer = () => {
               {filteredMenu.map(renderMenuSection)}
             </div>
 
-            <div className="col-8 md:col-6 lg:col-3 lg:ml-auto max-lg:mb-10">
+            <div className="col-8 md:col-6 lg:col-4 lg:ml-auto max-lg:mb-10">
               <div className="bg-white p-8">
                 <h5 className="mb-6 leading-9">
-                  We Work Together For a Beautiful World, ComeJoin Us Today!
+                  We Work Together For a Beautiful World, Come Join Us Today!
                 </h5>
                 <a href="#!" className="btn btn-secondary text-lg w-full py-4">
                   Donate Now
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
 
         <p
-          className="border-t border-white/10 py-5 text-white text-center [&>a]:underline"
+          className="border-t border-white/10 py-5 text-white text-center [&>a]:underline text-sm"
           dangerouslySetInnerHTML={markdownify(config.params.copyright)}
         />
       </div>

@@ -29,7 +29,7 @@ const Home = () => {
 
           <div className="row mx-auto g-4 relative z-20">
             {sortedPosts?.map((post: any) => (
-              <ProjectCard key={post.slug} data={post} />
+              <ProjectCard key={post.slug} project={post} />
             ))}
           </div>
         </div>

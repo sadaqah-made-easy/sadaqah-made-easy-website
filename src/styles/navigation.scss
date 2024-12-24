@@ -29,7 +29,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply text-white lg:text-primary block p-3 font-semibold transition lg:px-2 lg:py-3 mr-7;
+  @apply text-white lg:text-primary block p-3 font-semibold transition lg:px-2 mr-7;
 }
 
 // herobanner
@@ -43,7 +43,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-list {
-  @apply z-10 min-w-[180px] rounded bg-body p-4 shadow transition-all duration-300;
+  @apply z-0 rounded bg-body p-4 shadow transition-all duration-300;
 }
 
 .nav-dropdown-item {
@@ -53,16 +53,3 @@ input#nav-toggle:checked ~ #nav-menu {
 .nav-dropdown-link {
   @apply block py-1 font-semibold text-white transition hover:text-primary;
 }
-
-/* Toggle functionality */
-// input#nav-toggle:checked + label #show-button {
-//   @apply hidden;
-// }
-
-// input#nav-toggle:checked + label #hide-button {
-//   @apply block;
-// }
-
-// input#nav-toggle:checked ~ #nav-menu {
-//   @apply max-lg:block;
-// }

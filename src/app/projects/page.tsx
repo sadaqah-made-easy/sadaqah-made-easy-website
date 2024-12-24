@@ -1,4 +1,4 @@
-import FloodCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
@@ -26,7 +26,7 @@ const page = () => {
         <div className="container">
           <div className="row g-5">
             {sortedPosts?.map((post: any, index: number) => (
-              <FloodCard key={index} data={post} />
+              <ProjectCard key={index} project={post} />
             ))}
           </div>
         </div>

@@ -23,6 +23,6 @@
       "secondary": "Signika:wght@500;700",
       "secondary_type": "sans-serif"
     },
-    "font_size": { "base": "16", "scale": "1.22" }
+    "font_size": { "base": "18", "scale": "1.2" }
   }
 }

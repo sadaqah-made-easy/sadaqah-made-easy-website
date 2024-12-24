@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { INavigationLink } from "@/types";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,21 +17,13 @@ const Header = () => {
   const navMenuRef = useRef(null);
   const logoRef = useRef(null);
   const buttonRef = useRef(null);
+  const pathname = usePathname();
 
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
-  const pathname = usePathname();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  useEffect(() => {
-    const header = headerRef.current;
-    const navMenu = navMenuRef.current;
-    const logo = logoRef.current;
-    const button = buttonRef.current;
-
+  // Function to setup the scroll-triggered animation for the header
+  const setupAnimation = (header: HTMLElement, navMenu: HTMLElement, logo: HTMLElement, button: HTMLElement) => {
     const updateStyles = (progress: number) => {
       const isSmallScreen = window.innerWidth <= 1024;
       const bgOpacity = Math.min(progress * 1.5, 1);
@@ -39,7 +31,6 @@ const Header = () => {
       const shadowOpacity = Math.min(progress * 0.1, 0.1);
       const scale = 1 - progress * 0.1;
       const fontSize = 1.125 - progress * 0.125;
-      const paddingY = 1 - progress * 0.5;
       const paddingX = 1.75 - progress * 0.75;
 
       gsap.to(header, {
@@ -52,7 +43,7 @@ const Header = () => {
 
       if (!isSmallScreen) {
         gsap.to(navMenu, {
-          padding: `${paddingY}rem ${paddingX}rem`,
+          padding: `${0}rem ${paddingX}rem`,
           duration: 0.2,
         });
       }
@@ -61,14 +52,40 @@ const Header = () => {
       gsap.to(button, { fontSize: `${fontSize}rem`, duration: 0.2 });
     };
 
+    // Initialize ScrollTrigger for header
     const scrollTrigger = ScrollTrigger.create({
       start: "top top",
       end: "top+=500",
       onUpdate: (self) => updateStyles(self.progress),
     });
 
-    return () => scrollTrigger.kill();
-  }, []);
+    // Cleanup ScrollTrigger on unmount or when pathname changes
+    return scrollTrigger;
+  };
+
+  useEffect(() => {
+    const header = headerRef.current;
+    const navMenu = navMenuRef.current;
+    const logo = logoRef.current;
+    const button = buttonRef.current;
+
+    if (!header || !navMenu || !logo || !button) return;
+
+    // Kill any existing ScrollTrigger on the header before setting up a new one
+    ScrollTrigger.getAll().forEach((trigger) => {
+      if (trigger.vars.trigger === header) trigger.kill();
+    });
+
+    // Set up new animation
+    const scrollTrigger = setupAnimation(header, navMenu, logo, button);
+    ScrollTrigger.refresh();  // Ensure ScrollTrigger recalculates when pathname changes
+
+    // Cleanup on unmount or pathname change
+    return () => {
+      scrollTrigger.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [pathname]);  // Re-run the effect on pathname change
 
   const toggleMenu = (isOpen: boolean) => {
     const navMenu = navMenuRef.current;
@@ -94,12 +111,10 @@ const Header = () => {
 
   return (
     <header
-      className={`header z-50 ${settings.sticky_header ? "sticky top-0" : ""} mx-auto bg-transparent`}
+      ref={headerRef}
+      className={`header z-50 ${settings.sticky_header ? "sticky top-0" : ""} mx-auto bg-transparent container`}
     >
-      <nav
-        ref={headerRef}
-        className="navbar container relative flex flex-wrap items-center justify-between px-4 py-3"
-      >
+      <nav className="navbar relative flex flex-wrap items-center justify-between px-4 py-3">
         {/* Logo */}
         <div ref={logoRef} className="order-0">
           <Logo src={config.site.logo} />
@@ -139,20 +154,18 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <ul
-          id="nav-menu"
           ref={navMenuRef}
-          className="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:pb-0 max-lg:bg-primary max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:right-0"
+          className="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:pb-0 max-lg:py-3 max-lg:bg-primary max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:right-0"
         >
           {main.map((menu, i) => (
             <React.Fragment key={`menu-${i}`}>
               {menu.hasChildren ? (
                 <li className="nav-item nav-dropdown group relative">
                   <span
-                    className={`nav-link inline-flex items-center ${
-                      menu.children?.some((child) => isActive(child.url))
-                        ? "active"
-                        : ""
-                    }`}
+                    className={`nav-link inline-flex items-center ${menu.children?.some((child) => isActive(child.url))
+                      ? "active"
+                      : ""
+                      }`}
                   >
                     {menu.name}
                     <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
@@ -164,9 +177,8 @@ const Header = () => {
                       <li key={`child-${i}`} className="nav-dropdown-item mb-2">
                         <Link
                           href={child.url}
-                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${
-                            isActive(child.url) ? "active" : ""
-                          }`}
+                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${isActive(child.url) ? "active" : ""
+                            }`}
                         >
                           {child.name}
                         </Link>
@@ -178,9 +190,8 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     href={menu.url}
-                    className={`nav-link block p-3 font-semibold transition lg:px-2 lg:py-3 ${
-                      isActive(menu.url) ? "active" : ""
-                    }`}
+                    className={`nav-link block p-3 font-semibold transition lg:px-2 lg:py-3 ${isActive(menu.url) ? "active" : ""
+                      }`}
                   >
                     {menu.name}
                   </Link>
@@ -193,7 +204,7 @@ const Header = () => {
             <li ref={buttonRef} className="inline-block my-auto">
               <Link
                 href={navigation_button.link}
-                className="btn btn-outline-primary max-lg:text-white"
+                className="btn btn-underline max-lg:text-white"
               >
                 {navigation_button.label}
               </Link>
