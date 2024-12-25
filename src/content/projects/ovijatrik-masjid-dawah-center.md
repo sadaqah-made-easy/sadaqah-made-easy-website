@@ -25,21 +25,20 @@ image: /images/ovijatrikmasjid.jpeg
 organizer: avijatrik-jame-masjid-and-dawa-center
 project_end_date:
   enable: true
-  end_date: "2025-01-21T12:00:00"
-
+  end_date: '2025-01-21T12:00:00'
 donation_goals:
   enable: true
-  amount: "৳20,000"
+  amount: ৳20,000
   payment_methods:
     mobileBanking:
       - type: Bkash
         image: /images/projects/bkash.png
-        number: "01720803305"
+        number: '01720803305'
         reference: Sadaqah Made Easy
         accountType: Personal
       - type: Nagad
         image: /images/projects/nagad.png
-        number: "01720803305"
+        number: '01720803305'
         reference: Sadaqah Made Easy
         accountType: Personal
     bank:
@@ -47,11 +46,10 @@ donation_goals:
       image: /images/projects/bank.png
       details:
         name: Al-Arafa Islami Bank
-        account: "0751120062152"
+        account: '0751120062152'
         accountName: Avijatrik Jame Masjid and Dawa Center
         branch: Dinajpur Branch
         reference: Sadaqah Made Easy
-
 categories:
   - Mosque
   - Dawah
@@ -64,7 +62,7 @@ draft: false
 
 রমাদ্বান মাস দান করার সবচেয়ে উপযুক্ত সময় আলহামদুলিল্লাহ। আপনারা সবাই আল্লাহর ঘরের জন্য এগিয়ে আসেন ইনশাআল্লাহ। অভিযাত্রিক মাসজিদটি দিনাজপুর শহরের বিরল উপজেলার ভারতীয় সীমান্তবর্তী এলাকা শালবনের পাশে অবস্থিত। সেখানে অনেক উপজাতি বসবাস করে। নির্মাণ কাজ সমাপ্ত করার পাশাপাশি মাসজিদের দাওয়া সেন্টারের মাধ্যমে স্থানীয় গ্রামবাসী ও উপজাতীদের মধ্যে দাওয়াতের কাজ শুরু করা হবে। গ্রামের আশেপাশের বাচ্চারা মাসজিদের দাওয়া সেন্টারে দ্বীনের জ্ঞান অর্জন করার সুযোগ পাবে ইনশাআল্লাহ।
 
-এজন্য জরুরী ভিত্তিতে মাসজিদের দ্বিতীয় তলার কাজ সম্পন্ন করা প্রয়োজন। বি:দ্র: আপনারা চাইলে সরাসরি মাসজিদের ব্যাংক একাউন্টে টাকা দিতে পারেন। ১০০/৫০০/১০০০/৫০০০/১০০০০/১০০০০০ টাকা ইত্যাদি যার যতটুকু দানের ইচ্ছা, আপনারা প্লিজ সহযোগিতার হাত বাড়িয়ে দিন। এছাড়া পোস্টের সাথে সংযুক্ত ছবি/ফ্লায়ারের মোবাইল নম্বর গুলিতে টাকা পাঠাবেন না।
+এজন্য জরুরী ভিত্তিতে মাসজিদের দ্বিতীয় তলার কাজ সম্পন্ন করা প্রয়োজন। বি:দ্র: আপনারা চাইলে সরাসরি মাসজিদের ব্যাংক একাউন্টে টাকা দিতে পারেন। ১০০/৫০০/১০০০/৫০০০/১০০০০ টাকা ইত্যাদি যার যতটুকু দানের ইচ্ছা, আপনারা প্লিজ সহযোগিতার হাত বাড়িয়ে দিন। এছাড়া পোস্টের সাথে সংযুক্ত ছবি/ফ্লায়ারের মোবাইল নম্বর গুলিতে টাকা পাঠাবেন না।
 
 * [Check referral link](https://www.facebook.com/md.arifulhuq "Google")
 * [Check web](https://www.facebook.com/share/p/1BJX8foYrF/ "Google")
