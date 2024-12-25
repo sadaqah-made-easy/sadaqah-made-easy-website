@@ -12,6 +12,21 @@
     "src/config/social.json",
     "src/config/theme.json"
   ],
-  "arrangement": [],
+  "arrangement": [
+    {
+      "type": "folder",
+      "targetPath": "src/content/projects",
+      "groupName": "Projects",
+      "include": "*.md",
+      "exclude": "-*.md"
+    },
+    {
+      "type": "folder",
+      "targetPath": "src/content/organizer",
+      "groupName": "Organizers",
+      "include": "*.md",
+      "exclude": "-*.md"
+    }
+  ],
   "showCommitModal": false
 }
