@@ -19,6 +19,13 @@
       "groupName": "Projects",
       "include": "*.md",
       "exclude": "!*index.md"
+    },
+    {
+      "type": "folder",
+      "targetPath": "src/content/organizer",
+      "groupName": "Organizers",
+      "include": "",
+      "exclude": ""
     }
   ],
   "showCommitModal": false
