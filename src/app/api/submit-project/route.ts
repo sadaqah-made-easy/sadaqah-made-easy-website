@@ -6,6 +6,7 @@ type FormData = {
   description: string;
   date: string;
   image: string;
+  referral_link: string;
   organizer: string;
   categories: string[];
   tags: string[];
@@ -25,8 +26,16 @@ const transporter = nodemailer.createTransport({
 export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
     const formData: FormData = await req.json();
-    const { title, description, date, image, organizer, categories, tags } =
-      formData;
+    const {
+      title,
+      description,
+      date,
+      image,
+      referral_link,
+      organizer,
+      categories,
+      tags,
+    } = formData;
 
     const formattedDescription = description
       .split("\n")
@@ -42,9 +51,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
           <tr>
             <th>Title</th>
-            <th>Date</th>
+            <th>Project Will End</th>
             <th>Image URL</th>
-            <th>Organization Reference Type</th>
+            <th>Organization</th>
+            <th>Referral Link</th>
             <th>Categories</th>
             <th>Tags</th>
             <th>Description</th>
@@ -54,6 +64,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             <td>${date}</td>
             <td><a href="${image}" target="_blank">View Image</a></td>
             <td>${organizer}</td>
+            <td><a href="${referral_link}" target="_blank">View Link</a></td>
             <td>${categories.join(", ")}</td>
             <td>${tags.join(", ")}</td>
             <td>${formattedDescription}</td>

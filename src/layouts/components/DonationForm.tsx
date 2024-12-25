@@ -32,6 +32,7 @@ const formSchema = z.object({
   description: z.string().min(10, { message: "Description is required." }),
   date: z.string().min(1, { message: "Date is required." }),
   image: z.string().url({ message: "Invalid image URL" }),
+  referral_link: z.string().url({ message: "Invalid referral link" }),
   organizer: z
     .string()
     .min(1, { message: "Organization reference type is required." }),
@@ -52,6 +53,7 @@ const DonationForm = () => {
       title: "",
       description: "",
       date: "",
+      referral_link: "",
       image: "",
       organizer: "",
       categories: [],
@@ -124,7 +126,9 @@ const DonationForm = () => {
                 name="date"
                 render={({ field }) => (
                   <FormItem className="mb-6">
-                    <FormLabel className="form-label">Date</FormLabel>
+                    <FormLabel className="form-label">
+                      Project End Date
+                    </FormLabel>
                     <FormControl>
                       <Popover>
                         <PopoverTrigger asChild>
@@ -152,6 +156,7 @@ const DonationForm = () => {
                                 format(date || new Date(), "yyyy-MM-dd"),
                               );
                             }}
+                            disabled={(date) => date < new Date()} // Disable past dates
                             initialFocus
                           />
                         </PopoverContent>
@@ -182,7 +187,6 @@ const DonationForm = () => {
                 )}
               />
             </div>
-
             <div className="md:col-6">
               {/* Organization Reference Type */}
               <FormField
@@ -250,6 +254,27 @@ const DonationForm = () => {
               />
             </div>
 
+            {/* Referral link */}
+            <FormField
+              control={form.control}
+              name="referral_link"
+              render={({ field }) => (
+                <FormItem className="mb-6">
+                  <FormLabel className="form-label">
+                    Referral Link (For Varification)
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      className="form-input"
+                      type="url"
+                      placeholder="https://your-referral-link.com"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-sm text-red-600 pt-1" />
+                </FormItem>
+              )}
+            />
             {/* Description */}
             <FormField
               control={form.control}
@@ -268,7 +293,6 @@ const DonationForm = () => {
                 </FormItem>
               )}
             />
-
             {/* Submit Button */}
             <div className="flex justify-end">
               <Button
