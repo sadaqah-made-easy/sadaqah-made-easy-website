@@ -9,7 +9,7 @@ description: >-
   সানাবিল ফাউন্ডেশনের স্থায়ী কার্যালয়। 
 date: '2024-02-12'
 image: https://drive.google.com/uc?export=view&id=1P_36HG4BD1QRSHxnbJHadMC_C2m28Xvf
-org_ref_type: Sab'a Sanabil Foundation
+organizer: saba-sanabil-foundation
 categories:
   - Mosque
 tags:

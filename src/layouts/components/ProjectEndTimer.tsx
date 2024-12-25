@@ -12,7 +12,9 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
 
     if (timeDiff > 0) {
       const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
       const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
@@ -21,7 +23,8 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
     return null;
   }, [endDate]);
 
-  const [timeLeft, setTimeLeft] = useState<ReturnType<typeof calculateTimeLeft>>(null);
+  const [timeLeft, setTimeLeft] =
+    useState<ReturnType<typeof calculateTimeLeft>>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -35,7 +38,7 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
   if (!mounted) {
     return (
       <div className="mb-6">
-        <h3 className="text-sm font-medium text-gray-700 mb-3">End Date</h3>
+        <h3 className="text-sm font-medium mb-3">Project Will End</h3>
         <div className="flex gap-5 justify-between border p-3">
           {[...Array(4)].map((_, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
@@ -50,39 +53,33 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
 
   return (
     <div className="mb-6">
-      <h3 className="text-sm font-medium text-gray-700 mb-3">End Date</h3>
+      <h3 className="text-sm font-medium text-dark/80 mb-3">
+        Project Will End
+      </h3>
       <div className="flex gap-5 justify-between border p-3">
         <div className="text-center">
-          <div className="text-2xl font-bold">
-            {timeLeft ? timeLeft.days : "0"}
-          </div>
-          <div className="text-xs text-gray-500">
+          <h5>{timeLeft ? timeLeft.days : "0"}</h5>
+          <p className="text-xs text-light">
             {timeLeft?.days === 1 ? "Day" : "Days"}
-          </div>
+          </p>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold">
-            {timeLeft ? timeLeft.hours : "0"}
-          </div>
-          <div className="text-xs text-gray-500">
+          <h5>{timeLeft ? timeLeft.hours : "0"}</h5>
+          <p className="text-xs text-light">
             {timeLeft?.hours === 1 ? "Hour" : "Hours"}
-          </div>
+          </p>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold">
-            {timeLeft ? timeLeft.minutes : "0"}
-          </div>
-          <div className="text-xs text-gray-500">
+          <h5>{timeLeft ? timeLeft.minutes : "0"}</h5>
+          <p className="text-xs text-light">
             {timeLeft?.minutes === 1 ? "Minute" : "Minutes"}
-          </div>
+          </p>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold">
-            {timeLeft ? timeLeft.seconds : "0"}
-          </div>
-          <div className="text-xs text-gray-500">
+          <h5>{timeLeft ? timeLeft.seconds : "0"}</h5>
+          <p className="text-xs text-light">
             {timeLeft?.seconds === 1 ? "Second" : "Seconds"}
-          </div>
+          </p>
         </div>
       </div>
     </div>

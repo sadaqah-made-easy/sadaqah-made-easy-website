@@ -17,7 +17,7 @@ description: >-
   ডোনেশন এই শিশুদের জন্য স্বস্তির বার্তা বয়ে আনবে।
 date: '2024-01-12'
 image: /images/winter-mosalo.jpg
-org_ref_type: Moshal Alo Trust
+organizer: moshal-alo-trust
 categories:
   - Winter
 tags:
@@ -47,7 +47,7 @@ draft: false
 ***
 
 * Mobile banking
-  * Bkash 
+  * Bkash
     * Number: 01636817977
     * Ref: Sadaqah Made Easy - WR
     * Type: Personal

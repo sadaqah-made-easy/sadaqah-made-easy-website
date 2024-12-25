@@ -1,8 +1,8 @@
-import dateFormat from '@/lib/utils/dateFormat';
-import { plainify } from '@/lib/utils/textConverter';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
+import dateFormat from "@/lib/utils/dateFormat";
+import { plainify } from "@/lib/utils/textConverter";
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
 
 interface ProjectFrontmatter {
   title: string;
@@ -47,16 +47,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           )}
 
           <h4 className="mb-4 font-secondary h5 text-primary">
-            <Link
-              href={projectUrl}
-            >
-              {title}
-            </Link>
+            <Link href={projectUrl}>{title}</Link>
           </h4>
 
-          <p className="mb-6 line-clamp-2">
-            {plainify(project.content)}
-          </p>
+          <p className="mb-6 line-clamp-2">{plainify(project.content)}</p>
 
           <div className="mt-auto">
             <Link
@@ -64,7 +58,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
               href={projectUrl}
               rel="noopener noreferrer"
             >
-              Donate
+              Details
             </Link>
           </div>
         </div>

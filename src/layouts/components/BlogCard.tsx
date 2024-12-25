@@ -4,11 +4,11 @@ import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Post } from "@/types";
 import Link from "next/link";
-import { FaRegFolder, FaRegUserCircle } from "react-icons/fa";
+import { FaRegFolder } from "react-icons/fa";
 
 const BlogCard = ({ data }: { data: Post }) => {
   const { summary_length, blog_folder } = config.settings;
-  const { title, image, author, categories, date } = data.frontmatter;
+  const { title, image, categories, date } = data.frontmatter;
   return (
     <div className="bg-body ">
       {image && (
@@ -24,12 +24,12 @@ const BlogCard = ({ data }: { data: Post }) => {
         <Link href={`/${blog_folder}/${data.slug}`}>{title}</Link>
       </h4>
       <ul className="mb-4">
-        <li className="mr-4 inline-block">
+        {/* <li className="mr-4 inline-block">
           <Link href={`/authors/${slugify(author)}`}>
             <FaRegUserCircle className={"-mt-1 mr-2 inline-block"} />
             {humanize(author)}
           </Link>
-        </li>
+        </li> */}
         <li className="mr-4 inline-block">
           <FaRegFolder className={"-mt-1 mr-2 inline-block"} />
           {categories?.map((category: string, index: number) => (

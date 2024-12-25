@@ -9,6 +9,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { TMenuItem } from "@/types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef } from "react";
 
@@ -94,7 +95,7 @@ const Footer = () => {
         <div className="section-sm pb-16">
           <div className="row max-lg:justify-center g-4">
             <div className="mb-8 text-center lg:col-4 lg:mb-0 lg:text-left">
-              <Logo src={config.site.logo} />
+              <Logo src={config.site.logo_footer} />
               <p
                 className="mt-8 mb-6 text-white text-balance"
                 dangerouslySetInnerHTML={markdownify(
@@ -113,16 +114,19 @@ const Footer = () => {
                 <h5 className="mb-6 leading-9">
                   We Work Together For a Beautiful World, Come Join Us Today!
                 </h5>
-                <a href="#!" className="btn btn-secondary text-lg w-full py-4">
+                <Link
+                  href="/projects"
+                  className="btn btn-secondary text-lg w-full py-4"
+                >
                   Donate Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
         <p
-          className="border-t border-white/10 py-5 text-white text-center [&>a]:underline text-sm"
+          className="border-t border-white/10 py-5 text-white/80 text-center [&>a]:underline text-sm"
           dangerouslySetInnerHTML={markdownify(config.params.copyright)}
         />
       </div>

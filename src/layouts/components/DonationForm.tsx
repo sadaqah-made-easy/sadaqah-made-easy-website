@@ -32,7 +32,7 @@ const formSchema = z.object({
   description: z.string().min(10, { message: "Description is required." }),
   date: z.string().min(1, { message: "Date is required." }),
   image: z.string().url({ message: "Invalid image URL" }),
-  org_ref_type: z
+  organizer: z
     .string()
     .min(1, { message: "Organization reference type is required." }),
   categories: z
@@ -53,7 +53,7 @@ const DonationForm = () => {
       description: "",
       date: "",
       image: "",
-      org_ref_type: "",
+      organizer: "",
       categories: [],
       tags: [],
     },
@@ -187,7 +187,7 @@ const DonationForm = () => {
               {/* Organization Reference Type */}
               <FormField
                 control={form.control}
-                name="org_ref_type"
+                name="organizer"
                 render={({ field }) => (
                   <FormItem className="mb-6">
                     <FormLabel className="form-label">

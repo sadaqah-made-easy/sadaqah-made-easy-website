@@ -4,7 +4,6 @@ import theme from "@/config/theme.json";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator";
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
-import Providers from "@/partials/Providers";
 import "@/styles/main.scss";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -68,11 +67,9 @@ export default function RootLayout({
         </noscript>
         <TwSizeIndicator />
         <Toaster />
-        <Providers>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

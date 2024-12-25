@@ -11,6 +11,33 @@ export type RegularPage = {
   slug?: string;
 };
 
+export type TPaymentMethod = {
+  mobileBanking: {
+    type: string;
+    image: string;
+    number: string;
+    reference: string;
+    accountType: string;
+  }[];
+  bank: {
+    type: string;
+    image: string;
+    details: {
+      name: string;
+      account: string;
+      accountName: string;
+      branch: string;
+      reference: string;
+    };
+  };
+};
+
+export type TDonationGoals = {
+  enable: boolean;
+  amount: string;
+  payment_methods: TPaymentMethod;
+};
+
 export type Post = {
   frontmatter: {
     title: string;
@@ -18,13 +45,30 @@ export type Post = {
     description?: string;
     image?: string;
     categories: string[];
-    author: string;
+    organizer: string;
     tags: string[];
     date?: string;
     draft?: boolean;
+    project_end_date?: { enable: boolean; end_date: string };
+    donation_goals?: TDonationGoals;
   };
   slug?: string;
   content?: string;
+};
+
+export type TOrganizer = {
+  slug: string;
+  frontmatter: {
+    title: string;
+    image: string;
+    description: string;
+    website: string;
+    facebook: string;
+    twitter: string;
+    draft: boolean;
+    email: string;
+  };
+  content: string;
 };
 
 export type Author = {

@@ -36,7 +36,7 @@
     },
     {
       "label": "Org Ref Type",
-      "name": "org_ref_type",
+      "name": "organizer",
       "type": "string",
       "value": ""
     },

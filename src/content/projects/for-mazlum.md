@@ -6,7 +6,7 @@ description: >-
   মুক্তির জন্য ফান্ডিং
 date: '2024-08-08'
 image: /images/formazlum.jpeg
-org_ref_type: Al Quraner Dars
+organizer: al-quraner-dars
 categories:
   - Bangladesh
 tags:
@@ -32,7 +32,7 @@ draft: false
 ***
 
 * Mobile banking
-  * Bkash 
+  * Bkash
     * Number: 01913419607
     * Ref: Sadaqah Made Easy
     * Type: Personal

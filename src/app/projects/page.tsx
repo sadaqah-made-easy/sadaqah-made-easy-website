@@ -24,7 +24,7 @@ const page = () => {
 
       <section className="section">
         <div className="container">
-          <div className="row g-5">
+          <div className="row g-4 max-md:justify-center">
             {sortedPosts?.map((post: any, index: number) => (
               <ProjectCard key={index} project={post} />
             ))}

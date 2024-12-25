@@ -1,12 +1,8 @@
 {
   "main": [
     {
-      "name": "Project",
+      "name": "Projects",
       "url": "/projects"
-    },
-    {
-      "name": "App",
-      "url": "/"
     }
   ],
 

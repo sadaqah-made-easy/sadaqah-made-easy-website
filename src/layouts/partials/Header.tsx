@@ -19,11 +19,21 @@ const Header = () => {
   const buttonRef = useRef(null);
   const pathname = usePathname();
 
+  // scroll to top on route change
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [pathname]);
+
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
 
   // Function to setup the scroll-triggered animation for the header
-  const setupAnimation = (header: HTMLElement, navMenu: HTMLElement, logo: HTMLElement, button: HTMLElement) => {
+  const setupAnimation = (
+    header: HTMLElement,
+    navMenu: HTMLElement,
+    logo: HTMLElement,
+    button: HTMLElement,
+  ) => {
     const updateStyles = (progress: number) => {
       const isSmallScreen = window.innerWidth <= 1024;
       const bgOpacity = Math.min(progress * 1.5, 1);
@@ -78,14 +88,14 @@ const Header = () => {
 
     // Set up new animation
     const scrollTrigger = setupAnimation(header, navMenu, logo, button);
-    ScrollTrigger.refresh();  // Ensure ScrollTrigger recalculates when pathname changes
+    ScrollTrigger.refresh(); // Ensure ScrollTrigger recalculates when pathname changes
 
     // Cleanup on unmount or pathname change
     return () => {
       scrollTrigger.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [pathname]);  // Re-run the effect on pathname change
+  }, [pathname]); // Re-run the effect on pathname change
 
   const toggleMenu = (isOpen: boolean) => {
     const navMenu = navMenuRef.current;
@@ -162,10 +172,11 @@ const Header = () => {
               {menu.hasChildren ? (
                 <li className="nav-item nav-dropdown group relative">
                   <span
-                    className={`nav-link inline-flex items-center ${menu.children?.some((child) => isActive(child.url))
-                      ? "active"
-                      : ""
-                      }`}
+                    className={`nav-link inline-flex items-center ${
+                      menu.children?.some((child) => isActive(child.url))
+                        ? "active"
+                        : ""
+                    }`}
                   >
                     {menu.name}
                     <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
@@ -177,8 +188,9 @@ const Header = () => {
                       <li key={`child-${i}`} className="nav-dropdown-item mb-2">
                         <Link
                           href={child.url}
-                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${isActive(child.url) ? "active" : ""
-                            }`}
+                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${
+                            isActive(child.url) ? "active" : ""
+                          }`}
                         >
                           {child.name}
                         </Link>
@@ -190,8 +202,9 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     href={menu.url}
-                    className={`nav-link block p-3 font-semibold transition lg:px-2 lg:py-3 ${isActive(menu.url) ? "active" : ""
-                      }`}
+                    className={`nav-link block p-3 font-semibold transition lg:px-2 lg:py-3 ${
+                      isActive(menu.url) ? "active" : ""
+                    }`}
                   >
                     {menu.name}
                   </Link>
