@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         <p
-          className="border-t border-white/10 py-5 text-white/80 text-center [&>a]:underline text-sm"
+          className="border-t border-white/10 py-5 text-white text-center [&>a]:font-bold text-sm"
           dangerouslySetInnerHTML={markdownify(config.params.copyright)}
         />
       </div>
