@@ -1,0 +1,60 @@
+{
+  "file": "src/content/projects/for-mazlum.md",
+  "name": "projects",
+  "fileType": "md",
+  "fmType": "yaml",
+  "template": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Meta Title",
+      "name": "meta_title",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Description",
+      "name": "description",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Date",
+      "name": "date",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Image",
+      "name": "image",
+      "type": "media",
+      "value": ""
+    },
+    {
+      "label": "Organizer",
+      "name": "organizer",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Categories",
+      "name": "categories",
+      "type": "Array"
+    },
+    {
+      "label": "Tags",
+      "name": "tags",
+      "type": "Array"
+    },
+    {
+      "label": "Draft",
+      "name": "draft",
+      "type": "boolean",
+      "value": ""
+    }
+  ]
+}
