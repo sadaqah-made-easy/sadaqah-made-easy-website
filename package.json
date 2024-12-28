@@ -11,10 +11,6 @@
     "build": "next build",
     "preview": "next start",
     "postbuild": "next-sitemap",
-    "build:worker": "cloudflare",
-    "dev:worker": "wrangler dev --port 8771",
-    "preview:worker": "npm run build:worker && npm run dev:worker",
-    "deploy:worker": "npm run build:worker && wrangler deploy",
     "format": "prettier -w ./src"
   },
   "engines": {
@@ -58,7 +54,6 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^0.3.1",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "@types/marked": "^6.0.0",
