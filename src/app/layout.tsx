@@ -1,11 +1,11 @@
 import { Toaster } from "@/components/ui/sonner";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
+import GoogleTagManager from "@/helpers/GoogleTagManager";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator";
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
 import "@/styles/main.scss";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -18,6 +18,7 @@ export default function RootLayout({
 
   return (
     <html suppressHydrationWarning={true} lang="en">
+      <GoogleTagManager />
       <head>
         {/* responsive meta */}
         <meta
@@ -55,16 +56,7 @@ export default function RootLayout({
         />
       </head>
 
-      <GoogleTagManager gtmId={config.params.gtag} />
       <body suppressHydrationWarning={true}>
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${config.params.gtag}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
         <TwSizeIndicator />
         <Toaster />
         <Header />

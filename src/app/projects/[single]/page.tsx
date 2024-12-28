@@ -121,19 +121,19 @@ const PostSingle = async (props: { params: Promise<{ single: string }> }) => {
                           organizer.frontmatter.image || "/images/avatar.png"
                         }
                         alt={organizer.frontmatter.title}
-                        className="w-14 h-14 object-cover"
+                        className="w-16 h-16 object-cover"
                         fallback="/images/avatar.png"
                         width={56}
                         height={56}
                       />
                       <div>
-                        <h6 className="font-medium">
+                        <h6 className="font-medium mb-2">
                           {organizer.frontmatter.title}
                         </h6>
-                        <p className="text-xs text-gray-500">Organizer</p>
+                        <p>Organizer</p>
                       </div>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">
+                    <p className="text-xs mt-4 text-light">
                       {organizer.frontmatter.description}
                     </p>
                   </>

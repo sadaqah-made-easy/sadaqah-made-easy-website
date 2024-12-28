@@ -20,9 +20,9 @@
     "font_family": {
       "primary": "Outfit:wght@400;600;700",
       "primary_type": "sans-serif",
-      "secondary": "Signika:wght@500;700",
-      "secondary_type": "sans-serif"
+      "secondary": "",
+      "secondary_type": ""
     },
-    "font_size": { "base": "18", "scale": "1.2" }
+    "font_size": { "base": "16", "scale": "1.2" }
   }
 }

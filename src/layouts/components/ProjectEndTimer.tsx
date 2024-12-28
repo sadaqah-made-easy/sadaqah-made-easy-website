@@ -38,7 +38,7 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
   if (!mounted) {
     return (
       <div className="mb-6">
-        <h3 className="text-sm font-medium mb-3">Project Will End</h3>
+        <h3 className="h6 text-dark/80 mb-4">Project Will End</h3>
         <div className="flex gap-5 justify-between border p-3">
           {[...Array(4)].map((_, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
@@ -53,10 +53,8 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
 
   return (
     <div className="mb-6">
-      <h3 className="text-sm font-medium text-dark/80 mb-3">
-        Project Will End
-      </h3>
-      <div className="flex gap-5 justify-between border p-3">
+      <h3 className="h6 text-dark/80 mb-4">Project Will End</h3>
+      <div className="flex gap-5 justify-between border p-4">
         <div className="text-center">
           <h5>{timeLeft ? timeLeft.days : "0"}</h5>
           <p className="text-xs text-light">

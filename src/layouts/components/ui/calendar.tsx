@@ -53,9 +53,11 @@ function Calendar({
         ...classNames,
       }}
       components={{
+        // @ts-expect-error
         IconLeft: ({ className, ...props }) => (
           <ChevronLeft className={cn("h-4 w-4", className)} {...props} />
         ),
+        // @ts-expect-error
         IconRight: ({ className, ...props }) => (
           <ChevronRight className={cn("h-4 w-4", className)} {...props} />
         ),
