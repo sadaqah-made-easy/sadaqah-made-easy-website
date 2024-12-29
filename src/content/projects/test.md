@@ -1,8 +1,8 @@
 ---
 title: test
-meta_title: ''
-description: ''
-date: ''
+meta_title: asdfdasf
+description: dasfadsf
+date: 12.12.2025
 image: ''
 organizer: ''
 project_end_date:
@@ -29,5 +29,5 @@ donation_goals:
                 reference: ''
 categories: []
 tags: []
-draft: true
+draft: false
 ---
