@@ -30,7 +30,7 @@ donation_goals:
   enable: true
   amount: ৳5,00,000
   payment_methods:
-    mobileBanking:
+    mobile_banking:
       - type: Bkash
         image: /images/projects/bkash.png
         number: "01720803305"

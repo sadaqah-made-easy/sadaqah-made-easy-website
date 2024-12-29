@@ -10,6 +10,33 @@ description: >-
 date: '2024-02-12'
 image: https://drive.google.com/uc?export=view&id=1P_36HG4BD1QRSHxnbJHadMC_C2m28Xvf
 organizer: saba-sanabil-foundation
+project_end_date:
+  enable: true
+  end_date: ""
+donation_goals:
+  enable: true
+  amount: ""
+  payment_methods:
+    mobile_banking:
+      - type: Bkash
+        image: /images/projects/bkash.png
+        number: ""
+        reference: ""
+        accountType: ""
+      - type: Nagad
+        image: /images/projects/nagad.png
+        number: ""
+        reference: ""
+        accountType: ""
+    bank:
+      type: Bank
+      image: /images/projects/bank.png
+      details:
+        name: ""
+        account: ""
+        accountName: ""
+        branch: ""
+        reference: ""
 categories:
   - Mosque
 tags:

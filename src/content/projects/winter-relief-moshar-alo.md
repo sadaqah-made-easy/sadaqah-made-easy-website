@@ -18,6 +18,33 @@ description: >-
 date: '2024-01-12'
 image: /images/winter-mosalo.jpg
 organizer: moshal-alo-trust
+project_end_date:
+  enable: true
+  end_date: ""
+donation_goals:
+  enable: true
+  amount: ""
+  payment_methods:
+    mobile_banking:
+      - type: Bkash
+        image: /images/projects/bkash.png
+        number: ""
+        reference: ""
+        accountType: ""
+      - type: Nagad
+        image: /images/projects/nagad.png
+        number: ""
+        reference: ""
+        accountType: ""
+    bank:
+      type: Bank
+      image: /images/projects/bank.png
+      details:
+        name: ""
+        account: ""
+        accountName: ""
+        branch: ""
+        reference: ""
 categories:
   - Winter
 tags:

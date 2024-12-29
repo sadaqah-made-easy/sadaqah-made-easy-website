@@ -12,7 +12,7 @@ export type RegularPage = {
 };
 
 export type TPaymentMethod = {
-  mobileBanking: {
+  mobile_banking: {
     type: string;
     image: string;
     number: string;

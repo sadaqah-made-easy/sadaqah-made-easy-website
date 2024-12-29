@@ -19,13 +19,13 @@ const DonationGoals = ({
       )}
 
       {/* Payment Methods Section */}
-      {donationGoals?.payment_methods.mobileBanking.length > 0 &&
+      {donationGoals?.payment_methods.mobile_banking.length > 0 &&
         donationGoals?.payment_methods.bank && (
           <div className="mb-6">
             <h3 className="h6 text-dark/80 mb-4">Donation methods</h3>
 
             {/* Mobile Banking Methods */}
-            {donationGoals?.payment_methods.mobileBanking.map(
+            {donationGoals?.payment_methods.mobile_banking.map(
               (method, index) => (
                 <div
                   key={index}

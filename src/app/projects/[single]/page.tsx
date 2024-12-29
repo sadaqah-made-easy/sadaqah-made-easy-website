@@ -78,7 +78,7 @@ const PostSingle = async (props: { params: Promise<{ single: string }> }) => {
               </ul>
 
               {image && (
-                <div className="my-14">
+                <div className="py-14">
                   <ImageFallback
                     src={image}
                     height={700}
