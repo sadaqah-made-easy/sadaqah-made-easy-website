@@ -11,10 +11,10 @@ date: '2024-02-12'
 image: https://drive.google.com/uc?export=view&id=1P_36HG4BD1QRSHxnbJHadMC_C2m28Xvf
 organizer: saba-sanabil-foundation
 project_end_date:
-  enable: true
+  enable: false
   end_date: ""
 donation_goals:
-  enable: true
+  enable: false
   amount: ""
   payment_methods:
     mobile_banking:

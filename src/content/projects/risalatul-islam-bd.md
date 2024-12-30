@@ -62,7 +62,7 @@ donation_goals:
           - ''
           - ''
     bank:
-      type: আল আরাফাহ ইসলামী ব্যাংক লিমিটেড
+      type: Bank
       image: /images/projects/bank.png
       details:
         name: আল আরাফাহ ইসলামী ব্যাংক লিমিটেড
