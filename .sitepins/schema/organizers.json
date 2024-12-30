@@ -1,0 +1,56 @@
+{
+  "file": "src/content/organizer/avijatrik-jame-masjid-and-dawa-center.md",
+  "name": "organizers",
+  "fileType": "md",
+  "fmType": "yaml",
+  "template": [
+    {
+      "label": "Title",
+      "name": "title",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Email",
+      "name": "email",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Website",
+      "name": "website",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Twitter",
+      "name": "twitter",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Facebook",
+      "name": "facebook",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Description",
+      "name": "description",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Image",
+      "name": "image",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "label": "Draft",
+      "name": "draft",
+      "type": "boolean",
+      "value": ""
+    }
+  ]
+}
