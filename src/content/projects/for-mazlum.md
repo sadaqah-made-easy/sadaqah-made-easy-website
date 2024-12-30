@@ -8,32 +8,32 @@ date: '2024-08-08'
 image: /images/formazlum.jpeg
 organizer: al-quraner-dars
 project_end_date:
-  enable: true
-  end_date: ""
+  enable: false
+  end_date: ''
 donation_goals:
-  enable: true
-  amount: ""
+  enable: false
+  amount: ''
   payment_methods:
     mobile_banking:
       - type: Bkash
         image: /images/projects/bkash.png
-        number: ""
-        reference: ""
-        accountType: ""
+        number: ''
+        reference: ''
+        accountType: ''
       - type: Nagad
         image: /images/projects/nagad.png
-        number: ""
-        reference: ""
-        accountType: ""
+        number: ''
+        reference: ''
+        accountType: ''
     bank:
       type: Bank
       image: /images/projects/bank.png
       details:
-        name: ""
-        account: ""
-        accountName: ""
-        branch: ""
-        reference: ""
+        name: ''
+        account: ''
+        accountName: ''
+        branch: ''
+        reference: ''
 categories:
   - Bangladesh
 tags:
