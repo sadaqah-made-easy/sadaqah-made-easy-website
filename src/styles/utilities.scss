@@ -18,3 +18,7 @@
 .shadow {
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
 }
+
+.stretched-link {
+  @apply after:absolute after:inset-0;
+}

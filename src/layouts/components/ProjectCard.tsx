@@ -25,7 +25,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <article className="col-11 md:col-6 lg:col-4">
-      <div className="flex flex-col h-full bg-body border border-primary/20 group">
+      <div className="flex flex-col h-full bg-body border border-primary/20 group relative">
         {image && (
           <figure className="aspect-video overflow-hidden">
             <Image
@@ -47,7 +47,9 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           )}
 
           <h4 className="mb-4 font-secondary h5 text-primary">
-            <Link href={projectUrl}>{title}</Link>
+            <Link className="stretched-link" href={projectUrl}>
+              {title}
+            </Link>
           </h4>
 
           <p className="mb-6 line-clamp-2">{plainify(project.content)}</p>
