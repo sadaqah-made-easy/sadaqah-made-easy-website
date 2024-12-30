@@ -36,7 +36,7 @@ date: '2023-04-22'
 image: /images/RisalatulIslam.jpeg
 organizer: Risalatul Islam BD - RIBD
 project_end_date:
-  enable: true
+  enable: false
   end_date: ''
 donation_goals:
   enable: false
@@ -62,14 +62,14 @@ donation_goals:
           - ''
           - ''
     bank:
-      type: Bank
+      type: আল আরাফাহ ইসলামী ব্যাংক লিমিটেড
       image: /images/projects/bank.png
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
+        name: আল আরাফাহ ইসলামী ব্যাংক লিমিটেড
+        account: ০৩৭১১২০১৩৪৮৭৯
+        accountName: জামিয়াতুল উলূমিল ইসলামিয়া ঢাকা
+        branch: কৃষি মার্কেট শাখা
+        reference: Sadaqah Made Easy
 categories: []
 tags: []
 draft: false
