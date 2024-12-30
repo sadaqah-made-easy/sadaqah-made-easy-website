@@ -261,7 +261,7 @@ const DonationForm = () => {
               render={({ field }) => (
                 <FormItem className="mb-6">
                   <FormLabel className="form-label">
-                    Referral Link (For Varification)
+                    Referral Link (For Verification)
                   </FormLabel>
                   <FormControl>
                     <Input
