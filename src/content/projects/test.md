@@ -1,10 +1,10 @@
 ---
 title: test
-meta_title: ''
-description: ''
-date: ''
-image: ''
-organizer: ''
+meta_title: asdf
+description: asdf
+date: 12.12.2025
+image: /images/banner.png
+organizer: sadf
 project_end_date:
   - enable: true
     end_date: ''
@@ -29,5 +29,6 @@ donation_goals:
                 reference: ''
 categories: []
 tags: []
-draft: true
+draft: false
 ---
+adsxfdsf
