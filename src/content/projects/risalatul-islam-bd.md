@@ -34,7 +34,7 @@ description: >-
   ডরমেটরি জামে মসজিদ
 date: '2023-04-22'
 image: /images/RisalatulIslam.jpeg
-organizer: Risalatul Islam BD - RIBD
+organizer: ' risalatul-islam-bd'
 project_end_date:
   enable: false
   end_date: ''
