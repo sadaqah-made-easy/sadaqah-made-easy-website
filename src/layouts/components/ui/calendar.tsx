@@ -46,18 +46,16 @@ function Calendar({
         day_today: "bg-neutral-100 text-neutral-900",
         day_outside:
           "day-outside text-neutral-500 aria-selected:bg-neutral-100/50 aria-selected:text-neutral-500",
-        day_disabled: "text-neutral-500 opacity-50 ",
+        day_disabled: "text-neutral-500 opacity-50",
         day_range_middle:
           "aria-selected:bg-neutral-100 aria-selected:text-neutral-900",
         day_hidden: "invisible",
         ...classNames,
       }}
       components={{
-        // @ts-expect-error
         IconLeft: ({ className, ...props }) => (
           <ChevronLeft className={cn("h-4 w-4", className)} {...props} />
         ),
-        // @ts-expect-error
         IconRight: ({ className, ...props }) => (
           <ChevronRight className={cn("h-4 w-4", className)} {...props} />
         ),
