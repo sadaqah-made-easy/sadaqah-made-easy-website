@@ -30,6 +30,7 @@ const formSchema = z.object({
     message: "Title must be at least 2 characters.",
   }),
   description: z.string().min(10, { message: "Description is required." }),
+  payment_info: z.string().min(1, { message: "Payment info is required." }),
   date: z.string().min(1, { message: "Date is required." }),
   image: z.string().url({ message: "Invalid image URL" }),
   referral_link: z.string().url({ message: "Invalid referral link" }),
@@ -52,6 +53,7 @@ const DonationForm = () => {
     defaultValues: {
       title: "",
       description: "",
+      payment_info: "",
       date: "",
       referral_link: "",
       image: "",
@@ -275,6 +277,27 @@ const DonationForm = () => {
                 </FormItem>
               )}
             />
+            {/* Bkash, Rocket and Banking information */}
+            <FormField
+              control={form.control}
+              name="payment_info"
+              render={({ field }) => (
+                <FormItem className="mb-6">
+                  <FormLabel className="form-label">
+                    Bkash, Rocket and Banking information
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      className="form-input"
+                      placeholder={`Type: Bkash\nNumber: 00*********\nReference: Sadaqah Made Easy\nAccount Type: Personal`}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-sm text-red-600 pt-1" />
+                </FormItem>
+              )}
+            />
+
             {/* Description */}
             <FormField
               control={form.control}

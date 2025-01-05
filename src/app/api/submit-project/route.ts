@@ -4,6 +4,7 @@ import nodemailer from "nodemailer";
 type FormData = {
   title: string;
   description: string;
+  payment_info: string;
   date: string;
   image: string;
   referral_link: string;
@@ -29,6 +30,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     const {
       title,
       description,
+      payment_info,
       date,
       image,
       referral_link,
@@ -37,17 +39,18 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       tags,
     } = formData;
 
-    const formattedDescription = description
-      .split("\n")
-      .map((line) => `<p>${line.trim()}</p>`)
-      .join("");
+    const formatTextToHTML = (text: string): string =>
+      text
+        .split("\n")
+        .map((line) => `<p>${line.trim()}</p>`)
+        .join("");
 
     const mailOptions = {
       from: "murad.themefisher@gmail.com",
       to: "murad.themefisher@gmail.com",
       subject: `New Form Submission: ${title}`,
       html: `
-        <p>You have a new project request:</p>
+        <h2>You have a new project request:</h2>
         <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
           <tr>
             <th>Title</th>
@@ -57,7 +60,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             <th>Referral Link</th>
             <th>Categories</th>
             <th>Tags</th>
-            <th>Description</th>
+            <th>Payment Info</th>
           </tr>
           <tr>
             <td>${title}</td>
@@ -67,8 +70,17 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             <td><a href="${referral_link}" target="_blank">View Link</a></td>
             <td>${categories.join(", ")}</td>
             <td>${tags.join(", ")}</td>
-            <td>${formattedDescription}</td>
+            <td>${formatTextToHTML(payment_info)}</td>
           </tr>
+        </table>
+
+        <h3>Project Description</h3>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
+          <tr>
+            <td>${formatTextToHTML(description)}</td>
+          </tr>
+          
         </table>
       `,
     };
