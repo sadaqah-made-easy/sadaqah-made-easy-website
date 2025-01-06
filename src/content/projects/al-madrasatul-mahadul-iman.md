@@ -18,27 +18,22 @@ donation_goals:
   - enable: false
     amount: ''
     payment_methods:
-      - mobile_banking:
-          - type: ''
-            image: ''
-            number: ''
-            reference: ''
-            accountType: ''
+        mobile_banking: []
         bank:
-          - type: ''
-            image: ''
-            details:
-              - name: ''
-                account: ''
-                accountName: ''
-                branch: ''
-                reference: ''
+          type: Bank
+          image: ""
+          details:
+            name: ""
+            account: ""
+            accountName: ""
+            branch: ""
+            reference: ""
 categories:
   - মাদরাসা
 tags:
   - মাদরাসা
   - Madrasa
-draft: false
+draft: true
 ---
 দ্বীন-দরদী এবং বিত্তবান ভাইয়েরা এগিয়ে আসুন।জেনারেল ভাইদের ইলম অর্জন  করার এই প্রতিষ্ঠানের স্থায়ী জমি এবং স্থায়ী ভবনের পরিকল্পনা আরো আগে থেকে। সেই পরিকল্পনাকে  বাস্তবে রূপ দেয়ার কার্যক্রম শুরু করেছে আলহামদুলিল্লাহ। বাজেট সংগ্রহ:  এই কাজের বাজেট সংগ্রহ কমিটির পরামর্শক্রমে  শুরু হয়েছে। সবাই নিজ নিজ জায়গা থেকে এই বড় এবং মহৎ কাজের জন্য এগিয়ে আসুন।বিশ্বস্ততার জন্য সরাসরি মাদ্রাসায় যোগাযোগ করুন।
 
