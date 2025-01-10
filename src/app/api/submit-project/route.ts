@@ -46,8 +46,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         .join("");
 
     const mailOptions = {
-      from: "murad.themefisher@gmail.com",
-      to: "murad.themefisher@gmail.com",
+      from: "sadaqahmadeeasy@gmail.com",
+      to: "sadaqahmadeeasy@gmail.com",
       subject: `New Form Submission: ${title}`,
       html: `
         <h2>You have a new project request:</h2>
