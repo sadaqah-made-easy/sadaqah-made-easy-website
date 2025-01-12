@@ -3,196 +3,157 @@
   "name": "projects",
   "fileType": "md",
   "fmType": "yaml",
-  "template": [
-    {
-      "label": "Title",
-      "name": "title",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "label": "Meta Title",
-      "name": "meta_title",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "label": "Description",
-      "name": "description",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "label": "Date",
-      "name": "date",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "label": "Image",
-      "name": "image",
-      "type": "media",
-      "value": ""
-    },
-    {
-      "label": "Organizer",
-      "name": "organizer",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "label": "Project End Date",
-      "name": "project_end_date",
-      "type": "object",
-      "fields": [
-        {
-          "label": "Enable",
-          "name": "enable",
-          "type": "boolean",
-          "value": ""
-        },
-        {
-          "label": "End Date",
-          "name": "end_date",
-          "type": "string",
-          "value": ""
+  "template": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "label": "Title"
+      },
+      "meta_title": {
+        "type": "string",
+        "label": "Meta Title"
+      },
+      "description": {
+        "type": "string",
+        "label": "Description"
+      },
+      "date": {
+        "type": "string",
+        "label": "Date"
+      },
+      "image": {
+        "type": "string",
+        "label": "Image",
+        "format": "media"
+      },
+      "organizer": {
+        "type": "string",
+        "label": "Organizer"
+      },
+      "project_end_date": {
+        "type": "object",
+        "label": "Project End Date",
+        "properties": {
+          "enable": {
+            "type": "boolean",
+            "label": "Enable"
+          },
+          "end_date": {
+            "type": "string",
+            "label": "End Date"
+          }
         }
-      ]
-    },
-    {
-      "label": "Donation Goals",
-      "name": "donation_goals",
-      "type": "object",
-      "fields": [
-        {
-          "label": "Enable",
-          "name": "enable",
-          "type": "boolean",
-          "value": ""
-        },
-        {
-          "label": "Amount",
-          "name": "amount",
-          "type": "string",
-          "value": ""
-        },
-        {
-          "label": "Payment Methods",
-          "name": "payment_methods",
-          "type": "object",
-          "fields": [
-            {
-              "label": "Mobile Banking",
-              "name": "mobile_banking",
-              "type": "Array",
-              "fields": [
-                {
-                  "label": "Type",
-                  "name": "type",
-                  "type": "string",
-                  "value": ""
-                },
-                {
-                  "label": "Image",
-                  "name": "image",
-                  "type": "media",
-                  "value": ""
-                },
-                {
-                  "label": "Number",
-                  "name": "number",
-                  "type": "string",
-                  "value": ""
-                },
-                {
-                  "label": "Reference",
-                  "name": "reference",
-                  "type": "string",
-                  "value": ""
-                },
-                {
-                  "label": "AccountType",
-                  "name": "accountType",
-                  "type": "string",
-                  "value": ""
-                }
-              ]
-            },
-            {
-              "label": "Bank",
-              "name": "bank",
-              "type": "object",
-              "fields": [
-                {
-                  "label": "Type",
-                  "name": "type",
-                  "type": "string",
-                  "value": ""
-                },
-                {
-                  "label": "Image",
-                  "name": "image",
-                  "type": "media",
-                  "value": ""
-                },
-                {
-                  "label": "Al Arafa islami bank",
-                  "name": "details",
+      },
+      "donation_goals": {
+        "type": "object",
+        "label": "Donation Goals",
+        "properties": {
+          "enable": {
+            "type": "boolean",
+            "label": "Enable"
+          },
+          "amount": {
+            "type": "string",
+            "label": "Amount"
+          },
+          "payment_methods": {
+            "type": "object",
+            "label": "Payment Methods",
+            "properties": {
+              "mobile_banking": {
+                "type": "array",
+                "label": "Mobile Banking",
+                "items": {
                   "type": "object",
-                  "fields": [
-                    {
-                      "label": "Name",
-                      "name": "name",
+                  "properties": {
+                    "type": {
                       "type": "string",
-                      "value": ""
+                      "label": "Type"
                     },
-                    {
-                      "label": "Account",
-                      "name": "account",
+                    "image": {
                       "type": "string",
-                      "value": ""
+                      "label": "Image",
+                      "format": "media"
                     },
-                    {
-                      "label": "AccountName",
-                      "name": "accountName",
+                    "number": {
                       "type": "string",
-                      "value": ""
+                      "label": "Number"
                     },
-                    {
-                      "label": "Branch",
-                      "name": "branch",
+                    "reference": {
                       "type": "string",
-                      "value": ""
+                      "label": "Reference"
                     },
-                    {
-                      "label": "Reference",
-                      "name": "reference",
+                    "accountType": {
                       "type": "string",
-                      "value": ""
+                      "label": "AccountType"
                     }
-                  ]
+                  }
                 }
-              ]
+              },
+              "bank": {
+                "type": "object",
+                "label": "Bank",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "label": "Type"
+                  },
+                  "image": {
+                    "type": "string",
+                    "label": "Image",
+                    "format": "media"
+                  },
+                  "details": {
+                    "type": "object",
+                    "label": "Al Arafa islami bank",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "label": "Name"
+                      },
+                      "account": {
+                        "type": "string",
+                        "label": "Account"
+                      },
+                      "accountName": {
+                        "type": "string",
+                        "label": "AccountName"
+                      },
+                      "branch": {
+                        "type": "string",
+                        "label": "Branch"
+                      },
+                      "reference": {
+                        "type": "string",
+                        "label": "Reference"
+                      }
+                    }
+                  }
+                }
+              }
             }
-          ]
+          }
         }
-      ]
-    },
-    {
-      "label": "Categories",
-      "name": "categories",
-      "type": "Array"
-    },
-    {
-      "label": "Tags",
-      "name": "tags",
-      "type": "Array"
-    },
-    {
-      "label": "Draft",
-      "name": "draft",
-      "type": "boolean",
-      "value": ""
+      },
+      "categories": {
+        "type": "array",
+        "label": "Categories",
+        "items": {
+          "type": "string"
+        }
+      },
+      "tags": {
+        "type": "array",
+        "label": "Tags",
+        "items": {
+          "type": "string"
+        }
+      },
+      "draft": {
+        "type": "boolean",
+        "label": "Draft"
+      }
     }
-  ]
+  }
 }
