@@ -9,7 +9,7 @@ description: >-
   জায়গা থেকে এই বড় এবং মহৎ কাজের জন্য এগিয়ে আসুন।বিশ্বস্ততার জন্য সরাসরি
   মাদ্রাসায় যোগাযোগ করুন।
 date: '2022-02-09'
-image: /images/472711285_2954555371361573_6598504064396737170_n.jpg
+image: /images/madrasamahaduliman.jpg
 organizer: madrasa-mahadul-iman
 project_end_date:
   - enable: false
