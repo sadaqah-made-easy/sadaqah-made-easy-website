@@ -6,8 +6,8 @@ date: '2025-01-20T00:00:00.000Z'
 image: /images/aafia.jpg
 organizer: saba-sanabil-foundation
 project_end_date:
-  enable: false
-  end_date: '2025-01-21T06:00:00.000Z'
+  enable: true
+  end_date: '2025-02-28T06:00:00.000Z'
 donation_goals:
   enable: false
   amount: ''
