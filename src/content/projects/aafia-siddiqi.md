@@ -1,42 +1,32 @@
 ---
 title: Aafia Movement - Justice for Aafia
 meta_title: Aafia Movement - Justice for Aafia
-description: ''
-date: '2025-01-20T00:00:00.000Z'
+description: ""
+date: "2025-01-20"
 image: /images/aafia.jpg
 organizer: saba-sanabil-foundation
 project_end_date:
-  enable: true
-  end_date: '2025-02-28T06:00:00.000Z'
+  enable: false
+  end_date: "2025-01-21T12:00:00"
 donation_goals:
   enable: false
-  amount: ''
+  amount: ""
   payment_methods:
     mobile_banking:
-      - type:
-          value: ''
-          id: 1e6eaa93-80f3-44b4-9204-393305671aae
-        image:
-          value: ''
-          id: 9e38c9d6-f1f5-4b54-8f3d-1689e31c6436
-        number:
-          value: ''
-          id: dd732d88-a811-45c5-ae12-1733f251473c
-        reference:
-          value: ''
-          id: c5fb8b20-a7f2-457d-b64c-152fed67653d
-        accountType:
-          value: ''
-          id: 92efcb7a-0b33-43fc-8089-df11357e01bc
+      - type: ""
+        image: ""
+        number: ""
+        reference: ""
+        accountType: ""
     bank:
       type: Bank
       image: /images/projects/bank.png
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
+        name: ""
+        account: ""
+        accountName: ""
+        branch: ""
+        reference: ""
 categories:
   - Ummah
 tags:
@@ -44,15 +34,16 @@ tags:
   - Aafia
 draft: false
 ---
+
 ডাঃ আফিয়া সিদ্দিকীর নাম শুনেনি এমন মানুষ খুবই কম আছে। আফিয়া সিদ্দিকী, আমেরিকার কারাগারের মিথ্যা মামলায় ৮৬ বছরের কারাদণ্ডে শাস্তি ভোগ করছেন। তাকে মুক্ত করতে কাজ করছেন তার বোন 'ফাওজিয়া সিদ্দিকী' এবং হিউম্যান রাইটস অ্যাক্টিভিস্টরা।
 তাদের Aafia Movement - Justice for Aafia নামক একটি ফাউন্ডেশন ও রয়েছে। সম্প্রতি তাকে মুক্ত করতে, ব্রিটিশ আইনজীবী 'Clive Stafford Smith' কাজ শুরু করেছেন এবং তিনি সহযোগিতায় এনেছেন বাগ্রাম-গুয়ানতানামোর মানবিক বন্দী এবং CAGE এর ফাউন্ডার 'Moazzem Beg'।
 
 Aafia Movement এর পক্ষ থেকে ফান্ড সংগ্রহ করা হচ্ছে। তাদের লক্ষ্য £৭৬,০০০, যার মধ্যে এখন পর্যন্ত উঠে এসেছে £৩৩,০০০। এই অর্থের সম্ভাব্য খরচ নিম্নরূপঃ
 
-* Legal & Paralegal
-* Advocacy
-* Travel
-* Medical & Psychological Therapy
+- Legal & Paralegal
+- Advocacy
+- Travel
+- Medical & Psychological Therapy
 
 আমরা ব্যক্তিগতভাবে গবেষণা করেছি এবং নিশ্চিত হয়েছি যে [https://aafiamovement.com](https://aafiamovement.com) একটি অর্গানাইজড এবং বৈধ সংস্থা। তাদের ফান্ডরাইজিং ক্যাম্পেইন [https://www.muslimgiving.org/freeaafia](https://www.muslimgiving.org/freeaafia) একটি বিশ্বস্ত প্ল্যাটফর্মে চলছে। কারও যদি এ বিষয়ে সরাসরি জানতে ইচ্ছা হয়, তাহলে টুইটারে আফিয়া সিদ্দিকীর পক্ষে কর্মরত আইনজীবী ক্লাইভ স্টাফোর্ড স্মিথের সাথে যোগাযোগ করতে পারেন।
 টুইটার প্রোফাইল: [https://x.com/CliveSSmith](https://x.com/CliveSSmith)
