@@ -1,10 +1,10 @@
 ---
 title: test
-meta_title: ''
-description: ''
-date: ''
-image: ''
-organizer: ''
+meta_title: asdf
+description: addsf
+date: '2025-02-01'
+image: /images/472711285_2954555371361573_6598504064396737170_n.jpg
+organizer: al-quraner-dars
 project_end_date:
   enable: true
   end_date: ''
@@ -13,11 +13,65 @@ donation_goals:
   amount: ''
   payment_methods:
     mobile_banking:
-      - type: ''
-        image: ''
-        number: ''
-        reference: ''
-        accountType: ''
+      - type: Mobile Banking
+        image: /images/CellFin.png
+        number: '1234214234'
+        reference: asdf
+        accountType: Personal
+        categories:
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+        tags:
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
+          - ''
     bank:
       type: ''
       image: ''
@@ -29,5 +83,6 @@ donation_goals:
         reference: ''
 categories: []
 tags: []
-draft: true
+draft: false
 ---
+asddfasdkfdskf;kfkdsafa
