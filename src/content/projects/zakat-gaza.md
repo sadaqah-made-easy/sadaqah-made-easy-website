@@ -12,7 +12,7 @@ date: '2025-03-13'
 image: media/public/images/Screenshot 2025-03-13 at 1.09.01 AM.png
 organizer: saba-sanabil-foundation
 project_end_date:
-  enable: true
+  enable: false
   end_date: '2025-03-03'
 donation_goals:
   enable: false
