@@ -6,7 +6,7 @@ description: >-
   এবার  Ahmad Kaoser ভাই উদ্যোগ নিয়েছেন লক্ষীপুরের কয়েকটা মাদ্রাসার ছাত্রদের
   ইফতারের আয়োজন এর। আগ্রহীরা কন্ট্রিবিউট করতে পারেন ইন শা আল্লাহ।
 date: '2025-03-03'
-image: media/public/images/2000iftar.jpg
+image: /images/2000iftar.jpg
 organizer: ahmad-kaoser
 project_end_date:
   enable: true
