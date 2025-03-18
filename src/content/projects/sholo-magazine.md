@@ -36,7 +36,7 @@ categories:
   - সামাজিক
 tags:
   - তরুণ
-  - তরুণী
+  - ''
   - কিশোর
   - কিশোরী
 draft: false
