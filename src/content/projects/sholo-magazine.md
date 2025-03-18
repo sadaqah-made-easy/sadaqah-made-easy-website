@@ -6,7 +6,7 @@ description: >-
   আসার লোক অনেক কম। বছরে আমাদের পরিকিল্পিত খরচ ১৪ লাখের বেশি, যেখানে ম্যাগাজিন
   রয়ালটি এবং বিজ্ঞাপন থেকে আমরা বড়জোর ২-২.৫০ লাখ টাকা পেতে পারি
 date: '2025-03-18'
-image: media/public/images/sholo.jpg
+image: /images/sholo.jpg
 organizer: sholo
 project_end_date:
   enable: false
