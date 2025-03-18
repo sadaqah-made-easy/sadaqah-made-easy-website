@@ -4,7 +4,8 @@ email: ''
 website: ''
 twitter: ''
 facebook: ''
-description: ''
+description: Magazine for teens.
 image: ''
-draft: true
+draft: false
 ---
+Magazine for teens.
