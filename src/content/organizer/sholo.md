@@ -1,10 +1,11 @@
 ---
 title: sholo
-email: ''
-website: ''
+email: editor.sholo@gmail.com
+website: https://sholo.info/
 twitter: ''
-facebook: ''
-description: ''
+facebook: https://www.facebook.com/sholo.official
+description: Magazine for teens.
 image: ''
-draft: true
+draft: false
 ---
+Magazine for teens.
