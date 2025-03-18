@@ -1,5 +1,5 @@
 ---
-title: sholo
+title: Sholo
 email: editor.sholo@gmail.com
 website: https://sholo.info/
 twitter: ''
