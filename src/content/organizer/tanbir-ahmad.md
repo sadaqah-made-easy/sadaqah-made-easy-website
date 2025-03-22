@@ -1,5 +1,5 @@
 ---
-title: Tanbir-ahmad
+title: Tanbir Ahmad
 email: ''
 website: ''
 twitter: ''
