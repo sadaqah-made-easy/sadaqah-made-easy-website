@@ -29,7 +29,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         {image && (
           <figure className="aspect-video overflow-hidden">
             <Image
-              className="size-full object-cover group-hover:scale-110 transition-transform duration-500"
+              className="size-full object-fill group-hover:scale-110 transition-transform duration-500"
               src={image}
               alt={title}
               width={445}

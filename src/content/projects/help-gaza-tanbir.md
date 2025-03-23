@@ -3,7 +3,7 @@ title: গাজায় কেউ সহায়তা করতে ইচ্ছু
 meta_title: গাজায় কেউ সহায়তা করতে ইচ্ছুক হলে
 description: গাজায় কেউ সাদাকাহ পাঠাতে চাইলে তানবির আহমাদ ভাইয়ের মাধ্যমে পাঠাতে পারেন
 date: '2025-03-23'
-image: media/public/images/gazatanbir.jpg
+image: /images/gazatanbir.jpg
 organizer: tanbir-ahmad
 project_end_date:
   enable: false

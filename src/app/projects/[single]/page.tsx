@@ -84,7 +84,7 @@ const PostSingle = async (props: { params: Promise<{ single: string }> }) => {
                     height={700}
                     width={1200}
                     alt={title}
-                    className="aspect-[16/9] object-fill"
+                    className="aspect-auto object-cover"
                   />
                 </div>
               )}
