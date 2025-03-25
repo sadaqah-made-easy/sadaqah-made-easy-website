@@ -3,7 +3,7 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import HeroBanner from "@/partials/HeroBanner";
 import SeoMeta from "@/partials/SeoMeta";
-import { Button, Feature } from "@/types";
+import { Button, Feature, Post } from "@/types";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
@@ -15,7 +15,7 @@ const Home = () => {
     features: Feature[];
   } = frontmatter;
 
-  const posts: any = getSinglePage("projects");
+  const posts: Post[] = getSinglePage("projects");
   const sortedPosts = sortByDate(posts);
 
   return (
@@ -28,9 +28,15 @@ const Home = () => {
           <h2 className="text-center mb-16">Projects</h2>
 
           <div className="row mx-auto g-4 relative z-20">
-            {sortedPosts?.map((post: any) => (
-              <ProjectCard key={post.slug} project={post} />
-            ))}
+            {sortedPosts.length > 0 ? (
+              sortedPosts.map((post: Post) => (
+                <ProjectCard key={post.slug} project={post} />
+              ))
+            ) : (
+              <p className="text-center text-gray-500">
+                Currently, there are no projects available.
+              </p>
+            )}
           </div>
         </div>
       </section>

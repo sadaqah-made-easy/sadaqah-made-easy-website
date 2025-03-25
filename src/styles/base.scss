@@ -57,3 +57,15 @@ code {
 blockquote > p {
   @apply my-0 #{!important};
 }
+
+::selection {
+  @apply bg-secondary text-primary;
+}
+
+/* change input autofield color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px theme("colors.secondary") inset !important;
+}

@@ -1,3 +1,4 @@
+import CopyToClipboardTooltip from "@/components/CopyToClipboardTooltip"; // Import the reusable tooltip
 import { TDonationGoals } from "@/types";
 import Image from "next/image";
 
@@ -50,21 +51,33 @@ const DonationGoals = ({
                     alt={method.type}
                     width={40}
                     height={40}
+                    className="w-10 h-10"
                   />
-                  <div className="space-y-2">
-                    <h5 className="text-base font-normal">{method.type}</h5>
+                  <div className="flex flex-col items-start">
+                    <h5 className="text-base font-normal mb-2">{method.type}</h5>
                     {method.number && (
-                      <p className="font-medium">{method.number}</p>
+                      <CopyToClipboardTooltip
+                        text={method.number}
+                        fieldId={`mobile_number_${index}`}
+                      >
+                        {method.number}
+                      </CopyToClipboardTooltip>
                     )}
                     {method.reference && (
-                      <p className="text-xs text-light">
-                        Ref: {method.reference}
-                      </p>
+                      <CopyToClipboardTooltip
+                        text={method.reference}
+                        fieldId={`mobile_reference_${index}`}
+                      >
+                        <span className="text-xs text-light">Ref: {method.reference}</span>
+                      </CopyToClipboardTooltip>
                     )}
                     {method.accountType && (
-                      <p className="text-xs text-light">
-                        Type: {method.accountType}
-                      </p>
+                      <CopyToClipboardTooltip
+                        text={method.accountType}
+                        fieldId={`mobile_accountType_${index}`}
+                      >
+                        <span className="text-xs text-light">Type: {method.accountType}</span>
+                      </CopyToClipboardTooltip>
                     )}
                   </div>
                 </div>
@@ -84,36 +97,55 @@ const DonationGoals = ({
                 <h5 className="text-base font-normal mb-2">
                   {donationGoals.payment_methods.bank.type}
                 </h5>
-                <div className="font-medium space-y-2">
+                <div className="font-medium flex flex-col items-start">
                   {donationGoals.payment_methods.bank.details.account && (
-                    <p>
+                    <CopyToClipboardTooltip
+                      text={donationGoals.payment_methods.bank.details.account}
+                      fieldId="bank_account"
+                    >
                       <span className="font-normal text-sm">A/C:</span>{" "}
                       {donationGoals.payment_methods.bank.details.account}
-                    </p>
+                    </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.name && (
-                    <p>
+                    <CopyToClipboardTooltip
+                      text={donationGoals.payment_methods.bank.details.name}
+                      fieldId="bank_name"
+                    >
                       <span className="font-normal text-sm">Name:</span>{" "}
                       {donationGoals.payment_methods.bank.details.name}
-                    </p>
+                    </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.accountName && (
-                    <p>
+                    <CopyToClipboardTooltip
+                      text={
+                        donationGoals.payment_methods.bank.details.accountName
+                      }
+                      fieldId="bank_accountName"
+                    >
                       <span className="font-normal text-sm">Account Name:</span>{" "}
                       {donationGoals.payment_methods.bank.details.accountName}
-                    </p>
+                    </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.branch && (
-                    <p>
+                    <CopyToClipboardTooltip
+                      text={donationGoals.payment_methods.bank.details.branch}
+                      fieldId="bank_branch"
+                    >
                       <span className="font-normal text-sm">Branch:</span>{" "}
                       {donationGoals.payment_methods.bank.details.branch}
-                    </p>
+                    </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.reference && (
-                    <p>
+                    <CopyToClipboardTooltip
+                      text={
+                        donationGoals.payment_methods.bank.details.reference
+                      }
+                      fieldId="bank_reference"
+                    >
                       <span className="font-normal text-sm">Reference:</span>{" "}
                       {donationGoals.payment_methods.bank.details.reference}
-                    </p>
+                    </CopyToClipboardTooltip>
                   )}
                 </div>
               </div>

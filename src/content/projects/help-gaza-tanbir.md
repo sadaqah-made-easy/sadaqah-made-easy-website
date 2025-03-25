@@ -2,31 +2,31 @@
 title: গাজায় কেউ সহায়তা করতে ইচ্ছুক হলে
 meta_title: গাজায় কেউ সহায়তা করতে ইচ্ছুক হলে
 description: গাজায় কেউ সাদাকাহ পাঠাতে চাইলে তানবির আহমাদ ভাইয়ের মাধ্যমে পাঠাতে পারেন
-date: '2025-03-23'
+date: "2025-03-23"
 image: /images/gazatanbir.jpg
 organizer: tanbir-ahmad
 project_end_date:
   enable: false
-  end_date: ''
+  end_date: ""
 donation_goals:
   enable: false
-  amount: ''
+  amount: ""
   payment_methods:
     mobile_banking:
       - type: Bkash
         image: /images/projects/bkash.png
-        number: '01568085580'
+        number: "01568085580"
         reference: Sadaqah Made Easy
         accountType: Personal
     bank:
-      type: ''
-      image: ''
+      type: ""
+      image: ""
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
+        name: ""
+        account: ""
+        accountName: ""
+        branch: ""
+        reference: ""
 categories:
   - Gaza
   - Palestine
@@ -36,6 +36,7 @@ tags:
   - Sadaqah
 draft: false
 ---
+
 গাজায় খাবার বিতরণ: [ভিডিও দেখুন](https://www.facebook.com/share/v/161veZUzfC/)
 
 গাজায় একটা শহিদ পরিবারে কিছু হাদিয়াঃ [ভিডিও দেখুন](https://www.facebook.com/share/v/16Ey84exQP/)

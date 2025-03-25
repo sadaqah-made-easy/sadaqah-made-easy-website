@@ -11,6 +11,10 @@ const MDXContent = ({ content }: { content: any }) => {
     remarkPlugins: [remarkGfm],
   };
 
+  if (!content) {
+    return null;
+  }
+
   return (
     <>
       {/* @ts-ignore */}

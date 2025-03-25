@@ -19,8 +19,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.AUTH_EMAIL,
-    pass: process.env.AUTH_PASSWORD,
+    user: process.env.SENDER_EMAIL,
+    pass: process.env.SENDER_PASSWORD,
   },
 });
 
@@ -46,8 +46,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         .join("");
 
     const mailOptions = {
-      from: "sadaqahmadeeasy@gmail.com",
-      to: "sadaqahmadeeasy@gmail.com",
+      from: process.env.SENDER_EMAIL,
+      to: process.env.SENDER_EMAIL,
       subject: `New Form Submission: ${title}`,
       html: `
         <h2>You have a new project request:</h2>
@@ -80,7 +80,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           <tr>
             <td>${formatTextToHTML(description)}</td>
           </tr>
-          
+
         </table>
       `,
     };

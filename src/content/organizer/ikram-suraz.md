@@ -1,10 +1,10 @@
 ---
 title: Ikram Suraz
-email: ''
+email: ""
 website: https://www.facebook.com/share/p/1Az36S9hr7/
-twitter: ''
+twitter: ""
 facebook: https://www.facebook.com/ikram.suraz
-description: ''
-image: ''
+description: ""
+image: ""
 draft: false
 ---

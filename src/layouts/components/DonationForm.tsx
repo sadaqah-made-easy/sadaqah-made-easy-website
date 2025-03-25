@@ -142,7 +142,7 @@ const DonationForm = () => {
                             {selectedDate ? (
                               format(selectedDate, "PPP")
                             ) : (
-                              <span className="text-light md:text-sm">
+                              <span className="text-text/40 md:text-sm">
                                 Pick a date
                               </span>
                             )}

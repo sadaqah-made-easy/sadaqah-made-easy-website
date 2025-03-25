@@ -1,21 +1,13 @@
 import dateFormat from "@/lib/utils/dateFormat";
 import { plainify } from "@/lib/utils/textConverter";
+import { Post } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-interface ProjectFrontmatter {
-  title: string;
-  image?: string;
-  date?: string;
-}
 
 interface ProjectCardProps {
-  project: {
-    frontmatter: ProjectFrontmatter;
-    content: string;
-    slug: string;
-  };
+  project: Post;
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
@@ -29,7 +21,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         {image && (
           <figure className="aspect-video overflow-hidden">
             <Image
-              className="size-full object-fill group-hover:scale-110 transition-transform duration-500"
+              className="size-full object-cover group-hover:scale-110 transition-transform duration-500"
               src={image}
               alt={title}
               width={445}
@@ -52,11 +44,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             </Link>
           </h4>
 
-          <p className="mb-6 line-clamp-2">{plainify(project.content)}</p>
+          <p className="mb-6 line-clamp-2">{plainify(project?.content!)}</p>
 
           <div className="mt-auto">
             <Link
-              className="btn btn-outline-primary"
+              className="btn btn-outline-primary group-hover:btn-secondary"
               href={projectUrl}
               rel="noopener noreferrer"
             >

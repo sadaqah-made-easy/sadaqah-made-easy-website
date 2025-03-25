@@ -1,10 +1,10 @@
 ---
 title: Tanbir Ahmad
-email: ''
-website: ''
-twitter: ''
+email: ""
+website: ""
+twitter: ""
 facebook: https://www.facebook.com/tanbir.ahmad.336
-description: ''
-image: ''
+description: ""
+image: ""
 draft: false
 ---
