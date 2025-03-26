@@ -9,7 +9,7 @@ description: >-
   মানবতার পাশে দাঁড়ানো আমাদের নৈতিক দায়িত্ব। পূর্বেও আল্লাহর ইচ্ছায় দুই দফায়
   ফিলিস্তিনের মজলুম মানুষের পাশে দাঁড়িয়েছি। 
 date: '2025-03-25'
-image: media/public/images/mosharalogaza.png
+image: /images/mosharalogaza.png
 organizer: moshal-alo-trust
 project_end_date:
   enable: true
