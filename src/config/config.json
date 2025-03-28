@@ -12,7 +12,7 @@
     "logo_text": "Sadaqahme"
   },
   "settings": {
-    "search": false,
+    "search": true,
     "sticky_header": true,
     "pagination": 2,
     "summary_length": 200,

@@ -5,13 +5,14 @@
   "author": "Themefisher",
   "license": "MIT",
   "packageManager": "yarn@1.22.22",
-  "type": "commonjs",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "yarn generate-json && next dev --turbopack",
+    "build": "yarn generate-json && next build",
+    "generate-json": "node scripts/jsonGenerator.mjs",
     "preview": "next start",
     "postbuild": "next-sitemap",
-    "format": "prettier -w ./src"
+    "format": "prettier -w ./src",
+    "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
   },
   "engines": {
     "node": ">=18.0.0"

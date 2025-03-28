@@ -54,7 +54,9 @@ const DonationGoals = ({
                     className="w-10 h-10"
                   />
                   <div className="flex flex-col items-start">
-                    <h5 className="text-base font-normal mb-2">{method.type}</h5>
+                    <h5 className="text-base font-normal mb-2">
+                      {method.type}
+                    </h5>
                     {method.number && (
                       <CopyToClipboardTooltip
                         text={method.number}
@@ -68,7 +70,9 @@ const DonationGoals = ({
                         text={method.reference}
                         fieldId={`mobile_reference_${index}`}
                       >
-                        <span className="text-xs text-light">Ref: {method.reference}</span>
+                        <span className="text-xs text-light">
+                          Ref: {method.reference}
+                        </span>
                       </CopyToClipboardTooltip>
                     )}
                     {method.accountType && (
@@ -76,7 +80,9 @@ const DonationGoals = ({
                         text={method.accountType}
                         fieldId={`mobile_accountType_${index}`}
                       >
-                        <span className="text-xs text-light">Type: {method.accountType}</span>
+                        <span className="text-xs text-light">
+                          Type: {method.accountType}
+                        </span>
                       </CopyToClipboardTooltip>
                     )}
                   </div>

@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef } from "react";
+import { IoSearch } from "react-icons/io5";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -165,8 +166,21 @@ const Header = () => {
         {/* Navigation Menu */}
         <ul
           ref={navMenuRef}
-          className="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:pb-0 max-lg:py-3 max-lg:bg-primary max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:right-0"
+          className="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:pb-0 max-lg:py-3 max-lg:bg-primary max-lg:absolute max-lg:top-full max-lg:left-0 max-lg:right-0 "
         >
+          {/* search button */}
+          {settings.search && (
+            <li className="flex items-center max-lg:p-4">
+              <button
+                className="text-primary transition-all duration-300 border-primary/20 mr-7 inline-block lg:border-r pr-5 text-xl"
+                aria-label="search"
+                data-search-trigger
+              >
+                <IoSearch />
+              </button>
+            </li>
+          )}
+
           {main.map((menu, i) => (
             <React.Fragment key={`menu-${i}`}>
               {menu.hasChildren ? (
@@ -202,7 +216,7 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     href={menu.url}
-                    className={`nav-link block p-3 font-semibold transition lg:px-2 lg:py-3 ${
+                    className={`nav-link block font-semibold transition px-4 lg:px-2 lg:py-3 ${
                       isActive(menu.url) ? "active" : ""
                     }`}
                   >

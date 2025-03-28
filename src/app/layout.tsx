@@ -1,3 +1,4 @@
+import SearchModal from "@/components/SearchModal";
 import { Toaster } from "@/components/ui/sonner";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
@@ -60,6 +61,7 @@ export default function RootLayout({
         <TwSizeIndicator />
         <Toaster />
         <Header />
+        <SearchModal />
         <main>{children}</main>
         <Footer />
       </body>
