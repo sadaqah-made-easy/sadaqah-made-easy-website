@@ -14,22 +14,7 @@ donation_goals:
   enable: false
   amount: ''
   payment_methods:
-    mobile_banking:
-      - type: Bkash
-        image: /images/projects/bkash.png
-        number: '01759958939'
-        reference: Sadaqah Made Easy
-        accountType: Personal
-      - type: Nagad
-        image: /images/projects/nagad.png
-        number: '01759958939'
-        reference: Sadaqah Made Easy
-        accountType: Personal
-      - type: Rocket
-        image: /images/rocket.png
-        number: '019221060756'
-        reference: Sadaqah Made Easy
-        accountType: Personal
+    mobile_banking: []
     bank:
       type: ''
       image: ''
@@ -45,7 +30,7 @@ categories:
   - Eid al-fitr
 tags:
   - ফিতরা
-draft: true
+draft: false
 ---
 সাদাকাতুল ফিতর ফান্ড ২০২৫
 
