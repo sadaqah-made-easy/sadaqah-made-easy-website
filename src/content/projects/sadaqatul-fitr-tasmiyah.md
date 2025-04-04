@@ -30,7 +30,7 @@ categories:
   - Eid al-fitr
 tags:
   - ফিতরা
-draft: false
+draft: true
 ---
 সাদাকাতুল ফিতর ফান্ড ২০২৫
 
