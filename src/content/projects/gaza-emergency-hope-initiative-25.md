@@ -33,11 +33,11 @@ donation_goals:
       type: Bank
       image: /images/projects/bank.png
       details:
-        name: Agrani Bank PLC
-        account: '0200021485744'
-        accountName: Moshal Alo Trust
-        branch: Karatia Branch, Tangail
-        reference: Sadaqah Made Easy 313
+        name: ''
+        account: ''
+        accountName: ''
+        branch: ''
+        reference: ''
 categories:
   - Gaza
   - Ummah
