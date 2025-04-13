@@ -26,6 +26,11 @@
       "groupName": "Organizers",
       "include": "*.md",
       "exclude": "-*.md"
+    },
+    {
+      "type": "file",
+      "targetPath": "src/content/pages/about.md",
+      "groupName": "About Us"
     }
   ],
   "showCommitModal": false
