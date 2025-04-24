@@ -172,7 +172,7 @@ const Header = () => {
           {settings.search && (
             <li className="flex items-center max-lg:p-4">
               <button
-                className="text-primary transition-all duration-300 border-primary/20 mr-7 inline-block lg:border-r pr-5 text-xl"
+                className="text-white lg:text-primary transition-all duration-300 border-primary/20 mr-7 inline-block lg:border-r pr-5 text-xl"
                 aria-label="search"
                 data-search-trigger
               >
