@@ -12,26 +12,25 @@ project_end_date:
   enable: true
   end_date: "2025-06-06"
 donation_goals:
-  id: 2849432a-c832-4e0f-8007-ef27dfaff58f
-  value:
-    enable: false
-    amount: ""
-    payment_methods:
-      mobile_banking:
-        - type: Bkash
-          image: /images/projects/bkash.png
-          number: "01309336883"
-          reference: Sadaqah Made Easy
-          accountType: Personal
-      bank:
-        type: Bank
-        image: /images/projects/bank.png
-        details:
-          name: Islami Bank Bangladesh Ltd.
-          account: "20507310100010403"
-          accountName: Saba Sanabil Foundation
-          branch: Kalampur SME
-          reference: Sadaqah Made Easy
+  enable: false
+  amount: ""
+  payment_methods:
+    mobile_banking:
+      - type: Bkash
+        image: /images/projects/bkash.png
+        number: "01309336883"
+        reference: Sadaqah Made Easy
+        accountType: Personal
+    bank:
+      type: Bank
+      image: /images/projects/bank.png
+      details:
+        name: Islami Bank Bangladesh Ltd.
+        account: "20507310100010403"
+        accountName: Saba Sanabil Foundation
+        branch: Kalampur SME
+        reference: Sadaqah Made Easy
+
 categories:
   - Qurbani
   - কুরবানী
