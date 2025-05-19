@@ -1,33 +1,61 @@
 ---
 title: Support Rahmi's Journey to Beat Leukemia
-meta_title: ''
-description: ''
-date: ''
-image: ''
+meta_title: >-
+  আমাদের আইইউটিয়ান ফ্রেন্ড এর ভাগ্নী, রাহমি, সাত বছর বয়সী মেধাবী ও সাহসী ছোট
+  মেয়ে, এখন সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালে (NUH) সংকটাপন্ন অবস্থায়
+  আছে। 
+description: >-
+  আমাদের আইইউটিয়ান ফ্রেন্ড এর ভাগ্নী, রাহমি, সাত বছর বয়সী মেধাবী ও সাহসী ছোট
+  মেয়ে, এখন সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালে (NUH) সংকটাপন্ন অবস্থায়
+  আছে। 
+date: '2025-05-19'
+image: /images/supportrahmi.png
 organizer: ''
 project_end_date:
   enable: true
   end_date: ''
 donation_goals:
-  enable: true
+  enable: false
   amount: ''
   payment_methods:
     mobile_banking:
-      - type: ''
-        image: ''
-        number: ''
-        reference: ''
-        accountType: ''
+      - type: Bkash
+        image: /images/projects/bkash.png
+        number: '01316055720'
+        reference: Sadaqah Made Easy - Rahmi
+        accountType: Personal
     bank:
-      type: ''
-      image: ''
+      type: Bank
+      image: /images/projects/bank.png
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
-categories: []
-tags: []
-draft: true
+        name: Pubali Bank PLC
+        account: '2905101051044'
+        accountName: Syed Abdul Mazid
+        branch: Foreign Exchange Branch, Motijheel
+        reference: Sadaqah Made Easy - Rahmi
+categories:
+  - Treatment
+  - Leukemia
+  - চিকিৎসা
+tags:
+  - Treatment
+  - Baby
+  - Kid
+  - Donate
+draft: false
 ---
+রাহমি, সাত বছর বয়সী এক মেধাবী ও সাহসী ছোট্ট মেয়ে, বর্তমানে সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালের (NUH) নিবিড় পরিচর্যা কেন্দ্রে সংকটাপন্ন অবস্থায় রয়েছে। তার লিউকেমিয়া ধরা পড়েছে এবং কেমোথেরাপি দেয়া শুরু হয়েছিল। কিন্তু মাত্র কয়েক সপ্তাহের মধ্যেই তার শরীরে মারাত্মক জটিলতা দেখা দেয় — প্যানক্রিয়াটাইটিস, সংক্রমণ এবং অঙ্গ-সংক্রান্ত বিভিন্ন সমস্যা।
+
+২৮শে মার্চ থেকে সে একাধিকবার আইসিইউতে ভর্তি হয়েছে, এবং তার চিকিৎসাজনিত লড়াই আগের চেয়ে অনেক বেশি জটিল হয়ে উঠেছে। তার বাবা-মা — দুজনেই চার্টার্ড অ্যাকাউন্ট্যান্ট — মূল চিকিৎসার খরচ মেটানোর জন্য প্রস্তুত ছিলেন। কিন্তু অতিরিক্ত জটিলতা, জরুরি চিকিৎসা এবং দীর্ঘস্থায়ী হাসপাতালে থাকার কারণে তারা আর্থিকভাবে সম্পূর্ণরূপে নিঃস্ব হয়ে গেছেন। তারা তাদের সঞ্চয় শেষ করেছেন, মূল্যবান জিনিস বিক্রি করেছেন, এবং পরিচিত সকল উৎস ব্যবহার করে ফেলেছেন।
+
+এখন, তারা আমাদের সাহায্যের জন্য জরুরিভাবে আবেদন করছেন। সম্পূর্ণ চিকিৎসা ব্যয় ৬০০,০০০ সিঙ্গাপুর ডলারেরও বেশি হতে পারে বলে ধারণা করা হচ্ছে।
+
+আপনি যদি পারেন, দয়া করে রাহমির চিকিৎসার জন্য সাহায্য করুন — বিশেষ করে যদি আপনি এই মাসে যাকাত বা সদকা দেওয়ার পরিকল্পনা করে থাকেন।
+
+আপনার দান সাহায্য করবে: • জরুরি ও নিবিড় পরিচর্যা ব্যয় মেটাতে • দীর্ঘমেয়াদি হাসপাতালে থাকার খরচে • কেমোথেরাপি পুনরায় শুরু করতে • চলমান পরীক্ষা ও ওষুধের খরচে • রাহমির পুনর্বাসন ও সুস্থতায়
+
+প্রবাস থেকে ডোনেট করুন: GoFundMe – রাহমি'র সহায়তায় এগিয়ে আসুন-[https://gofund.me/2e03ab2f](https://gofund.me/2e03ab2f?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExb05YR3NtOXA5SUVobFV0NwEepbHr76s2GDJwCWNyPvJrwi90IQ9Y1P4RI3Y3HIlIRTLsDC3J8RQGS_qt8_M_aem_X6f7v01rx62200SsYrJ5uA)
+
+এই কঠিন সময়ে দয়া করে রাহমি ও তার পরিবারের জন্য দোয়া করুন। 
+
+আল্লাহ যেন রাহমিকে শিফা দান করেন, এবং তার ও তার পরিবারের জন্য সবকিছু সহজ করে দেন।
