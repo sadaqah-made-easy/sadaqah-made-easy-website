@@ -7,7 +7,7 @@ meta_title: >-
 description: >-
   আমাদের আইইউটিয়ান ফ্রেন্ড এর ভাগ্নী, রাহমি, সাত বছর বয়সী মেধাবী ও সাহসী ছোট
   মেয়ে, এখন সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালে (NUH) সংকটাপন্ন অবস্থায়
-  আছে। 
+  আছে।
 date: '2025-05-19'
 image: /images/supportrahmi.png
 organizer: ''
@@ -56,6 +56,6 @@ draft: false
 
 প্রবাস থেকে ডোনেট করুন: GoFundMe – রাহমি'র সহায়তায় এগিয়ে আসুন-[https://gofund.me/2e03ab2f](https://gofund.me/2e03ab2f?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExb05YR3NtOXA5SUVobFV0NwEepbHr76s2GDJwCWNyPvJrwi90IQ9Y1P4RI3Y3HIlIRTLsDC3J8RQGS_qt8_M_aem_X6f7v01rx62200SsYrJ5uA)
 
-এই কঠিন সময়ে দয়া করে রাহমি ও তার পরিবারের জন্য দোয়া করুন। 
+এই কঠিন সময়ে দয়া করে রাহমি ও তার পরিবারের জন্য দোয়া করুন।
 
 আল্লাহ যেন রাহমিকে শিফা দান করেন, এবং তার ও তার পরিবারের জন্য সবকিছু সহজ করে দেন।
