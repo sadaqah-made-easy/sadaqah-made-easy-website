@@ -14,12 +14,14 @@ interface CopyToClipboardTooltipProps {
   fieldId: string;
   message?: string;
   children: React.ReactNode;
+  className?: string;
 }
 
 const CopyToClipboardTooltip = ({
   text,
   message = "Click to copy",
   children,
+  className = "",
 }: CopyToClipboardTooltipProps) => {
   const copyToClipboard = useCallback((text: string) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -32,10 +34,13 @@ const CopyToClipboardTooltip = ({
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger>
-          <p className="cursor-pointer" onClick={() => copyToClipboard(text)}>
+        <TooltipTrigger className="w-full text-left">
+          <div 
+            className={`cursor-pointer text-left ${className}`} 
+            onClick={() => copyToClipboard(text)}
+          >
             {children}
-          </p>
+          </div>
         </TooltipTrigger>
         <TooltipContent>
           <p className="text-xs">{message}</p>

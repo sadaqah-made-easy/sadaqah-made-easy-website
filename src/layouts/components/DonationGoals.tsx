@@ -1,4 +1,4 @@
-import CopyToClipboardTooltip from "@/components/CopyToClipboardTooltip"; // Import the reusable tooltip
+import CopyToClipboardTooltip from "@/components/CopyToClipboardTooltip";
 import { TDonationGoals } from "@/types";
 import Image from "next/image";
 
@@ -91,7 +91,7 @@ const DonationGoals = ({
             },
           )}
 
-          {hasBank && (
+        {hasBank && (
             <div className="flex items-start gap-4 p-4 bg-gray-50">
               <Image
                 src={donationGoals.payment_methods.bank.image}
@@ -99,58 +99,69 @@ const DonationGoals = ({
                 width={40}
                 height={40}
               />
-              <div>
+              <div className="w-full">
                 <h5 className="text-base font-normal mb-2">
                   {donationGoals.payment_methods.bank.type}
                 </h5>
-                <div className="font-medium flex flex-col items-start">
+                <div className="font-medium flex flex-col gap-1 items-start w-full">
                   {donationGoals.payment_methods.bank.details.account && (
                     <CopyToClipboardTooltip
                       text={donationGoals.payment_methods.bank.details.account}
                       fieldId="bank_account"
+                      className="w-full text-left"
                     >
-                      <span className="font-normal text-sm">A/C:</span>{" "}
-                      {donationGoals.payment_methods.bank.details.account}
+                      <div className="text-left w-full break-words">
+                        <span className="font-normal text-sm">A/C:</span>{" "}
+                        {donationGoals.payment_methods.bank.details.account}
+                      </div>
                     </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.name && (
                     <CopyToClipboardTooltip
                       text={donationGoals.payment_methods.bank.details.name}
                       fieldId="bank_name"
+                      className="w-full text-left"
                     >
-                      <span className="font-normal text-sm">Name:</span>{" "}
-                      {donationGoals.payment_methods.bank.details.name}
+                      <div className="text-left w-full break-words">
+                        <span className="font-normal text-sm">Name:</span>{" "}
+                        {donationGoals.payment_methods.bank.details.name}
+                      </div>
                     </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.accountName && (
                     <CopyToClipboardTooltip
-                      text={
-                        donationGoals.payment_methods.bank.details.accountName
-                      }
+                      text={donationGoals.payment_methods.bank.details.accountName}
                       fieldId="bank_accountName"
+                      className="w-full text-left"
                     >
-                      <span className="font-normal text-sm">Account Name:</span>{" "}
-                      {donationGoals.payment_methods.bank.details.accountName}
+                      <div className="text-left w-full break-words">
+                        <span className="font-normal text-sm">Account Name:</span>{" "}
+                        {donationGoals.payment_methods.bank.details.accountName}
+                      </div>
                     </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.branch && (
                     <CopyToClipboardTooltip
                       text={donationGoals.payment_methods.bank.details.branch}
                       fieldId="bank_branch"
+                      className="w-full text-left"
                     >
-                      <span className="font-normal text-sm">Branch:</span>{" "}
-                      {donationGoals.payment_methods.bank.details.branch}
+                      <div className="text-left w-full break-words">
+                        <span className="font-normal text-sm">Branch:</span>{" "}
+                        {donationGoals.payment_methods.bank.details.branch}
+                      </div>
                     </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.reference && (
                     <CopyToClipboardTooltip
-                      text={
-                        donationGoals.payment_methods.bank.details.reference
-                      }
+                      text={donationGoals.payment_methods.bank.details.reference}
                       fieldId="bank_reference"
+                      className="w-full text-left"
                     >
-                      <span className="font-normal text-sm">Reference:</span>{" "}
-                      {donationGoals.payment_methods.bank.details.reference}
+                      <div className="text-left w-full break-words">
+                        <span className="font-normal text-sm">Reference:</span>{" "}
+                        {donationGoals.payment_methods.bank.details.reference}
+                      </div>
                     </CopyToClipboardTooltip>
                   )}
                 </div>
