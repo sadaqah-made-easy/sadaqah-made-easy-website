@@ -1,21 +1,46 @@
 import Pagination from "@/components/Pagination";
 import ProjectCard from "@/components/ProjectCard";
+import config from "@/config/config.json";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
 import { Project } from "@/types";
-import path from "path";
-import config from "@/config/config.json";
+
 const { pagination } = config.settings;
 
-const page = () => {
-  const postIndex = getListPage(path.join("projects/_index.md"));
+// remove dynamicParams
+export const dynamicParams = false;
+
+// generate static params
+export const generateStaticParams = () => {
+  const allProject: Project[] = getSinglePage("projects");
+  const allSlug: string[] = allProject.map((item) => item.slug!);
+  const totalPages = Math.ceil(allSlug.length / pagination);
+  let paths: { page: string }[] = [];
+
+  for (let i = 1; i < totalPages; i++) {
+    paths.push({
+      page: (i + 1).toString(),
+    });
+  }
+
+  return paths;
+};
+
+// for all regular pages
+const Projects = async (props: { params: Promise<{ page: number }> }) => {
+  const params = await props.params;
+  const postIndex: Project = getListPage(`${"projects"}/_index.md`);
   const { title, meta_title, description, image } = postIndex.frontmatter;
-  const projects: Project[] = getSinglePage(path.join("projects"));
+  const projects: Project[] = getSinglePage("projects");
   const sortedProjects = sortByDate(projects);
-  const totalPages = Math.ceil(sortedProjects.length / pagination);
-  const currentProjects = sortedProjects.slice(0, pagination);
+  const totalPages = Math.ceil(projects.length / pagination);
+  const currentPage =
+    params.page && !isNaN(Number(params.page)) ? Number(params.page) : 1;
+  const indexOfLastPost = currentPage * pagination;
+  const indexOfFirstPost = indexOfLastPost - pagination;
+  const currentProjects = sortedProjects.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
     <>
@@ -43,7 +68,7 @@ const page = () => {
 
             <Pagination
               section={"projects"}
-              currentPage={1}
+              currentPage={currentPage}
               totalPages={totalPages}
             />
           </div>
@@ -53,4 +78,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;

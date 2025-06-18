@@ -14,16 +14,47 @@ const Pagination = ({
   const hasPrevPage = currentPage > 1;
   const hasNextPage = totalPages > currentPage;
 
-  let pageList = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageList.push(i);
-  }
+  const getPageNumbers = () => {
+    const delta = 2; // Number of pages to show before and after current page
+    let pages = [];
+
+    // Always include first page
+    pages.push(1);
+
+    let leftBound = Math.max(2, currentPage - delta);
+    let rightBound = Math.min(totalPages - 1, currentPage + delta);
+
+    if (currentPage - delta < 2 && totalPages > 5) {
+      rightBound = Math.min(totalPages - 1, 5);
+    }
+    if (currentPage + delta > totalPages - 1 && totalPages > 5) {
+      leftBound = Math.max(2, totalPages - 4);
+    }
+
+    if (leftBound > 2) {
+      pages.push("left-ellipsis");
+    }
+
+    for (let i = leftBound; i <= rightBound; i++) {
+      pages.push(i);
+    }
+
+    if (rightBound < totalPages - 1) {
+      pages.push("right-ellipsis");
+    }
+
+    if (totalPages > 1) {
+      pages.push(totalPages);
+    }
+
+    return pages;
+  };
 
   return (
     <>
       {totalPages > 1 && (
         <nav
-          className="flex items-center justify-center space-x-3"
+          className="flex flex-wrap items-center justify-center space-x-1 sm:space-x-3 mt-10"
           aria-label="Pagination"
         >
           {/* previous */}
@@ -34,15 +65,17 @@ const Pagination = ({
                   ? `${section ? "/" + section : "/"}`
                   : `${section ? "/" + section : ""}/page/${currentPage - 1}`
               }
-              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light  "
+              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light"
+              aria-label="Previous page"
             >
               <span className="sr-only">Previous</span>
               <svg
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
-                height="30"
-                width="30"
+                height="24"
+                width="24"
+                className="sm:h-[30px] sm:w-[30px]"
               >
                 <path
                   fillRule="evenodd"
@@ -58,8 +91,9 @@ const Pagination = ({
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
-                height="30"
-                width="30"
+                height="24"
+                width="24"
+                className="sm:h-[30px] sm:w-[30px]"
               >
                 <path
                   fillRule="evenodd"
@@ -71,45 +105,51 @@ const Pagination = ({
           )}
 
           {/* page index */}
-          {pageList.map((pagination, i) => (
-            <React.Fragment key={`page-${i}`}>
-              {pagination === currentPage ? (
-                <span
-                  aria-current="page"
-                  className="rounded bg-primary px-4 py-2 text-white  "
-                >
-                  {pagination}
-                </span>
-              ) : (
-                <Link
-                  href={
-                    i === 0
-                      ? `${section ? "/" + section : "/"}`
-                      : `${section ? "/" + section : ""}/page/${pagination}`
-                  }
-                  passHref
-                  aria-current="page"
-                  className="rounded px-4 py-2 text-dark hover:bg-theme-light  "
-                >
-                  {pagination}
-                </Link>
-              )}
-            </React.Fragment>
-          ))}
+          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
+            {getPageNumbers().map((pagination, i) => (
+              <React.Fragment key={`page-${i}`}>
+                {pagination === "left-ellipsis" || pagination === "right-ellipsis" ? (
+                  <span className="px-2 py-1 text-dark">...</span>
+                ) : pagination === currentPage ? (
+                  <span
+                    aria-current="page"
+                    className="rounded bg-primary px-3 py-1 sm:px-4 sm:py-2 text-white text-sm sm:text-base"
+                  >
+                    {pagination}
+                  </span>
+                ) : (
+                  <Link
+                    href={
+                      Number(pagination) === 1
+                        ? `${section ? "/" + section : "/"}`
+                        : `${section ? "/" + section : ""}/page/${pagination}`
+                    }
+                    passHref
+                    aria-current="page"
+                    className="rounded px-3 py-1 sm:px-4 sm:py-2 text-dark hover:bg-theme-light text-sm sm:text-base"
+                  >
+                    {pagination}
+                  </Link>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
 
           {/* next page */}
           {hasNextPage ? (
             <Link
               href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
-              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light  "
+              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light"
+              aria-label="Next page"
             >
               <span className="sr-only">Next</span>
               <svg
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
-                height="30"
-                width="30"
+                height="24"
+                width="24"
+                className="sm:h-[30px] sm:w-[30px]"
               >
                 <path
                   fillRule="evenodd"
@@ -125,8 +165,9 @@ const Pagination = ({
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
-                height="30"
-                width="30"
+                height="24"
+                width="24"
+                className="sm:h-[30px] sm:w-[30px]"
               >
                 <path
                   fillRule="evenodd"

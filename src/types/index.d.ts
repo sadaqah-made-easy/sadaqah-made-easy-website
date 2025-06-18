@@ -38,7 +38,7 @@ export type TDonationGoals = {
   payment_methods: TPaymentMethod;
 };
 
-export type Post = {
+export type Project = {
   frontmatter: {
     title: string;
     meta_title?: string;

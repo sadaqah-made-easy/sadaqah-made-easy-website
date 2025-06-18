@@ -8,14 +8,14 @@ import { getSinglePage } from "@/lib/contentParser";
 import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
-import { Post, TDonationGoals, TOrganizer } from "@/types";
+import { Project, TDonationGoals, TOrganizer } from "@/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaRegClock, FaRegFolder } from "react-icons/fa";
 
 const PostSingle = async (props: { params: Promise<{ single: string }> }) => {
   const params = await props.params;
-  const posts: Post[] = getSinglePage("projects");
+  const posts: Project[] = getSinglePage("projects");
   const post = posts.find((page) => page.slug === params.single);
 
   const organizers: TOrganizer[] = getSinglePage("organizer");
@@ -156,7 +156,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams = () => {
-  const posts: Post[] = getSinglePage("projects");
+  const posts: Project[] = getSinglePage("projects");
 
   return posts.map((post) => ({
     single: post.slug!,
