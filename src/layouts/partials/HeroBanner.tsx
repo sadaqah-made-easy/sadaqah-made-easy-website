@@ -25,11 +25,11 @@ const HeroBanner = ({ banner }: any) => {
                 {/* Text Content Section */}
                 <div className="lg:col-7 order-2 lg:order-1">
                   <h1
-                    className="font-medium text-dark"
+                    className="font-medium text-text-dark"
                     dangerouslySetInnerHTML={markdownify(title)}
                   />
                   <p
-                    className="text-2xl text-dark mt-2 mb-4"
+                    className="text-2xl text-text-dark mt-2 mb-4"
                     dangerouslySetInnerHTML={markdownify(content)}
                   />
                   <div className="flex flex-wrap items-center gap-6">

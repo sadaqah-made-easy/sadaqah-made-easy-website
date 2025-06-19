@@ -35,8 +35,8 @@ const CopyToClipboardTooltip = ({
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger className="w-full text-left">
-          <div 
-            className={`cursor-pointer text-left ${className}`} 
+          <div
+            className={`cursor-pointer text-left ${className}`}
             onClick={() => copyToClipboard(text)}
           >
             {children}

@@ -1,12 +1,12 @@
 import Accordion from "./Accordion";
 import Button from "./Button";
+import Event from "./Event";
 import Notice from "./Notice";
 import Tab from "./Tab";
 import Tabs from "./Tabs";
+import Timeline from "./Timeline";
 import Video from "./Video";
 import Youtube from "./Youtube";
-import Timeline from "./Timeline";
-import Event from "./Event";
 
 const shortcodes = {
   Button,
@@ -17,7 +17,7 @@ const shortcodes = {
   Notice,
   Youtube,
   Timeline,
-  Event
+  Event,
 };
 
 export default shortcodes;

@@ -14,24 +14,27 @@
   "settings": {
     "search": true,
     "sticky_header": true,
-    "pagination": 9,
-    "summary_length": 200,
-    "blog_folder": "blog"
+    "pagination": 9
   },
   "params": {
-    "contact_form_action": "#",
-    "copyright": "Copyright © 2025 [SadaqahMadeEasy](https://sadaqahmadeeasy.com) - All rights reserved - Donation doesn't decrease wealth",
-    "footer_description": "We don't collect money (sadaqah) and we aren't connected with any organization/party/group. We just showcase authentic donation projects of any type.",
-    "tag_manager_id": "G-KYY79N1N2S"
+    "copyright": "Copyright © 2025 [SadaqahMadeEasy](https://sadaqahmadeeasy.com) - Donation doesn't decrease wealth",
+    "footer_description": "We don't collect money (sadaqah) and we aren't connected with any organization/party/group. We just showcase authentic donation projects of any type."
   },
+
   "navigation_button": {
     "enable": true,
     "label": "Submit Project",
     "link": "/submit-project"
   },
+
+  "google_tag_manager": {
+    "enable": true,
+    "gtm_id": "G-KYY79N1N2S"
+  },
+
   "metadata": {
     "meta_author": "Sadaqah Made Easy",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Donation doesn't decrease wealth"
+    "meta_description": "Donation doesn't decrease wealth - Sadaqah Made Easy"
   }
 }

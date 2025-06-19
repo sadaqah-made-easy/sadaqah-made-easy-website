@@ -24,7 +24,8 @@ const Footer = () => {
 
   useEffect(() => {
     // Only run on client-side and if IntersectionObserver is supported
-    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+    if (typeof window === "undefined" || !("IntersectionObserver" in window))
+      return;
 
     // Use intersection observer to only load GSAP when footer is visible
     const observer = new IntersectionObserver(
@@ -33,8 +34,8 @@ const Footer = () => {
           observer.disconnect();
 
           // Dynamically import GSAP only when needed
-          const gsapModule = await import('gsap');
-          const ScrollTriggerModule = await import('gsap/ScrollTrigger');
+          const gsapModule = await import("gsap");
+          const ScrollTriggerModule = await import("gsap/ScrollTrigger");
           const gsap = gsapModule.default;
           const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
 
@@ -47,7 +48,7 @@ const Footer = () => {
 
           // Kill any existing ScrollTriggers first
           const triggers = ScrollTrigger.getAll().filter(
-            (trigger: any) => trigger.vars.trigger === footer
+            (trigger: any) => trigger.vars.trigger === footer,
           );
           triggers.forEach((trigger: any) => trigger.kill());
 
@@ -85,11 +86,11 @@ const Footer = () => {
               ScrollTrigger.getAll()
                 .filter((trigger: any) => trigger.vars.trigger === footer)
                 .forEach((trigger: any) => trigger.kill());
-            }
+            },
           };
         }
       },
-      { threshold: 0.1 } // Trigger when footer is 10% visible
+      { threshold: 0.1 }, // Trigger when footer is 10% visible
     );
 
     if (footerRef.current) {

@@ -37,7 +37,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             </ul>
           )}
 
-          <h4 className="mb-4 font-secondary h5 text-primary">
+          <h4 className="mb-4 h5 text-primary">
             <Link className="stretched-link" href={projectUrl}>
               {title}
             </Link>
@@ -47,7 +47,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
 
           <div className="mt-auto">
             <Link
-              className="btn btn-outline-primary group-hover:btn-secondary"
+              className="btn btn-outline-primary group-hover:bg-secondary group-hover:border-secondary"
               href={projectUrl}
               rel="noopener noreferrer"
             >

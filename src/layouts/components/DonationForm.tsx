@@ -95,7 +95,7 @@ const DonationForm = () => {
   };
 
   return (
-    <div className="row justify-center">
+    <div className="row justify-center relative z-10">
       <div className="md:col-9">
         <h1 className="text-primary mb-14">
           Share Your Sadaqah Project for Crowdfunding!

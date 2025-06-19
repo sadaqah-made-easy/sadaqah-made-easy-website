@@ -2,11 +2,11 @@ import SearchModal from "@/components/SearchModal";
 import { Toaster } from "@/components/ui/sonner";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
-import GoogleTagManager from "@/helpers/GoogleTagManager";
 import TwSizeIndicator from "@/helpers/TwSizeIndicator";
 import Footer from "@/partials/Footer";
 import Header from "@/partials/Header";
-import "@/styles/main.scss";
+import { GoogleTagManager } from "@next/third-parties/google";
+import "@/styles/main.css";
 
 export default function RootLayout({
   children,
@@ -15,11 +15,14 @@ export default function RootLayout({
 }) {
   // import google font css
   const pf = theme.fonts.font_family.primary;
-  const sf = theme.fonts.font_family.secondary;
 
   return (
     <html suppressHydrationWarning={true} lang="en">
-      <GoogleTagManager />
+      {/* google tag manager */}
+      {config.google_tag_manager.enable && (
+        <GoogleTagManager gtmId={config.google_tag_manager.gtm_id} />
+      )}
+
       <head>
         {/* responsive meta */}
         <meta
@@ -50,9 +53,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href={`https://fonts.googleapis.com/css2?family=${pf}${
-            sf ? "&family=" + sf : ""
-          }&display=swap`}
+          href={`https://fonts.googleapis.com/css2?family=${pf}&display=swap`}
           rel="stylesheet"
         />
       </head>

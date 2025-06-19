@@ -23,9 +23,9 @@ const DonationGoals = ({
     <>
       {donationGoals?.enable && donationGoals?.amount && (
         <div className="mb-8">
-          <h3 className="h6 text-dark/80 mb-4">Donations</h3>
-          <div className="mb-1 border p-4">
-            <p className="text-xs text-light">Goals</p>
+          <h3 className="h6 text-text-dark/80 mb-4">Donations</h3>
+          <div className="mb-1 border border-border p-4">
+            <p className="text-xs text-text-light">Goals</p>
             <p className="h5">{donationGoals.amount}</p>
           </div>
         </div>
@@ -33,7 +33,7 @@ const DonationGoals = ({
 
       {shouldShowPaymentMethods && (
         <div className="mb-6">
-          <h3 className="h6 text-dark/80 mb-4">Donation methods</h3>
+          <h3 className="h6 text-text-dark/80 mb-4">Donation methods</h3>
 
           {donationGoals?.payment_methods?.mobile_banking?.map(
             (method, index) => {
@@ -70,7 +70,7 @@ const DonationGoals = ({
                         text={method.reference}
                         fieldId={`mobile_reference_${index}`}
                       >
-                        <span className="text-xs text-light">
+                        <span className="text-xs text-text-light">
                           Ref: {method.reference}
                         </span>
                       </CopyToClipboardTooltip>
@@ -80,7 +80,7 @@ const DonationGoals = ({
                         text={method.accountType}
                         fieldId={`mobile_accountType_${index}`}
                       >
-                        <span className="text-xs text-light">
+                        <span className="text-xs text-text-light">
                           Type: {method.accountType}
                         </span>
                       </CopyToClipboardTooltip>
@@ -111,7 +111,9 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm text-light">A/C:</span>{" "}
+                        <span className="font-normal text-sm text-text-light">
+                          A/C:
+                        </span>{" "}
                         {donationGoals.payment_methods.bank.details.account}
                       </div>
                     </CopyToClipboardTooltip>
@@ -123,19 +125,25 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm text-light">Name:</span>{" "}
+                        <span className="font-normal text-sm text-text-light">
+                          Name:
+                        </span>{" "}
                         {donationGoals.payment_methods.bank.details.name}
                       </div>
                     </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.accountName && (
                     <CopyToClipboardTooltip
-                      text={donationGoals.payment_methods.bank.details.accountName}
+                      text={
+                        donationGoals.payment_methods.bank.details.accountName
+                      }
                       fieldId="bank_accountName"
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm text-light">Account Name:</span>{" "}
+                        <span className="font-normal text-sm text-text-light">
+                          Account Name:
+                        </span>{" "}
                         {donationGoals.payment_methods.bank.details.accountName}
                       </div>
                     </CopyToClipboardTooltip>
@@ -147,19 +155,25 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm text-light">Branch:</span>{" "}
+                        <span className="font-normal text-sm text-text-light">
+                          Branch:
+                        </span>{" "}
                         {donationGoals.payment_methods.bank.details.branch}
                       </div>
                     </CopyToClipboardTooltip>
                   )}
                   {donationGoals.payment_methods.bank.details.reference && (
                     <CopyToClipboardTooltip
-                      text={donationGoals.payment_methods.bank.details.reference}
+                      text={
+                        donationGoals.payment_methods.bank.details.reference
+                      }
                       fieldId="bank_reference"
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm text-light">Reference:</span>{" "}
+                        <span className="font-normal text-sm text-text-light">
+                          Reference:
+                        </span>{" "}
                         {donationGoals.payment_methods.bank.details.reference}
                       </div>
                     </CopyToClipboardTooltip>

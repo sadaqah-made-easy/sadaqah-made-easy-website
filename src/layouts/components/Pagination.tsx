@@ -65,7 +65,7 @@ const Pagination = ({
                   ? `${section ? "/" + section : "/"}`
                   : `${section ? "/" + section : ""}/page/${currentPage - 1}`
               }
-              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light"
+              className="rounded px-2 py-1.5 text-text-dark hover:bg-light"
               aria-label="Previous page"
             >
               <span className="sr-only">Previous</span>
@@ -85,7 +85,7 @@ const Pagination = ({
               </svg>
             </Link>
           ) : (
-            <span className="rounded px-2 py-1.5 text-light">
+            <span className="rounded px-2 py-1.5 text-text-light">
               <span className="sr-only">Previous</span>
               <svg
                 viewBox="0 0 20 20"
@@ -108,8 +108,9 @@ const Pagination = ({
           <div className="flex flex-wrap items-center gap-1 sm:gap-2">
             {getPageNumbers().map((pagination, i) => (
               <React.Fragment key={`page-${i}`}>
-                {pagination === "left-ellipsis" || pagination === "right-ellipsis" ? (
-                  <span className="px-2 py-1 text-dark">...</span>
+                {pagination === "left-ellipsis" ||
+                  pagination === "right-ellipsis" ? (
+                  <span className="px-2 py-1 text-text-dark">...</span>
                 ) : pagination === currentPage ? (
                   <span
                     aria-current="page"
@@ -126,7 +127,7 @@ const Pagination = ({
                     }
                     passHref
                     aria-current="page"
-                    className="rounded px-3 py-1 sm:px-4 sm:py-2 text-dark hover:bg-theme-light text-sm sm:text-base"
+                    className="rounded px-3 py-1 sm:px-4 sm:py-2 text-text-dark hover:bg-light text-sm sm:text-base"
                   >
                     {pagination}
                   </Link>
@@ -139,7 +140,7 @@ const Pagination = ({
           {hasNextPage ? (
             <Link
               href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
-              className="rounded px-2 py-1.5 text-dark hover:bg-theme-light"
+              className="rounded px-2 py-1.5 text-text-dark hover:bg-light"
               aria-label="Next page"
             >
               <span className="sr-only">Next</span>
@@ -159,7 +160,7 @@ const Pagination = ({
               </svg>
             </Link>
           ) : (
-            <span className="rounded px-2 py-1.5 text-light">
+            <span className="rounded px-2 py-1.5 text-text-light">
               <span className="sr-only">Next</span>
               <svg
                 viewBox="0 0 20 20"

@@ -5,11 +5,7 @@ interface TimelineProps {
 }
 
 const Timeline: React.FC<TimelineProps> = ({ children }) => {
-  return (
-    <ul className="list-none border-l border-border pl-0">
-      {children}
-    </ul>
-  );
+  return <ul className="list-none border-l border-border pl-0">{children}</ul>;
 };
 
 export default Timeline;

@@ -1,10 +1,7 @@
 import config from "@/config/config.json";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
-import {
-  IoLogoFacebook,
-  IoLogoLinkedin
-} from "react-icons/io5";
+import { IoLogoFacebook, IoLogoLinkedin } from "react-icons/io5";
 
 const Share = ({
   title,

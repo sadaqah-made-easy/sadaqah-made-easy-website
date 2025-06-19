@@ -4,7 +4,7 @@ meta_title: সাদাকাতুল ফিতর ফান্ড ২০২�
 description: >-
   সদকাতুল ফিতর প্রজেক্টের প্যাকেজ মূল্যে ১১৫০ টাকা। তাই ১১৫০/২৩০০/৩৪৫০ টাকা
   অর্থাৎ ১১৫০ টাকার মাল্টিপল এমাউন্ট দিতে পারবেন
-date: '2025-03-26'
+date: "2025-03-26"
 image: /images/fitratasmiyah.jpg
 organizer: tasmiyah
 project_end_date:
@@ -12,18 +12,18 @@ project_end_date:
   end_date: 28-03-2025
 donation_goals:
   enable: false
-  amount: ''
+  amount: ""
   payment_methods:
     mobile_banking: []
     bank:
-      type: ''
-      image: ''
+      type: ""
+      image: ""
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
+        name: ""
+        account: ""
+        accountName: ""
+        branch: ""
+        reference: ""
 categories:
   - Fitra
   - ফিতরা
@@ -32,6 +32,7 @@ tags:
   - ফিতরা
 draft: true
 ---
+
 সাদাকাতুল ফিতর ফান্ড ২০২৫
 
 তাসমিয়াহ আয়োজন

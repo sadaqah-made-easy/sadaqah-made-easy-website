@@ -1,0 +1,33 @@
+@utility bg-gradient {
+  @apply bg-gradient-to-t from-primary/15 from-[0.53%] to-light/10 to-[83.28%];
+}
+
+.rounded-sm {
+  @apply rounded-[4px];
+}
+.rounded {
+  @apply rounded-[6px];
+}
+.rounded-lg {
+  @apply rounded-[12px];
+}
+.rounded-xl {
+  @apply rounded-[16px];
+}
+
+@utility shadow {
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+}
+
+@utility stretched-link {
+  @apply after:absolute after:inset-0;
+}
+
+/* form style */
+@utility form-input {
+  @apply w-full rounded border-transparent bg-light px-6 py-3 text-text-dark placeholder:text-text-light focus:border-primary focus:ring-transparent;
+}
+
+@utility form-label {
+  @apply mb-4 block !text-xl font-normal text-text-dark;
+}

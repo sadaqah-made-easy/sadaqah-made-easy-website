@@ -40,7 +40,10 @@ const Projects = async (props: { params: Promise<{ page: number }> }) => {
     params.page && !isNaN(Number(params.page)) ? Number(params.page) : 1;
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
-  const currentProjects = sortedProjects.slice(indexOfFirstPost, indexOfLastPost);
+  const currentProjects = sortedProjects.slice(
+    indexOfFirstPost,
+    indexOfLastPost,
+  );
 
   return (
     <>

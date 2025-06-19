@@ -12,10 +12,16 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-bold leading-tight text-dark;
-  span {
-    @apply text-primary;
-  }
+  @apply font-bold leading-tight text-text-dark;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  @apply text-primary;
 }
 
 h1,
@@ -58,11 +64,15 @@ code {
 }
 
 blockquote > p {
-  @apply my-0 #{!important};
+  @apply my-0!;
 }
 
 ::selection {
   @apply bg-secondary text-primary;
+}
+
+button {
+  @apply cursor-pointer;
 }
 
 /* change input autofield color */
@@ -70,5 +80,5 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 50px theme("colors.secondary") inset !important;
+  -webkit-box-shadow: 0 0 0 50px var(--color-secondary) inset !important;
 }

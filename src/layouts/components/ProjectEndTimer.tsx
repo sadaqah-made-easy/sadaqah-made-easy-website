@@ -38,8 +38,8 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
   if (!mounted) {
     return (
       <div className="mb-6">
-        <h3 className="h6 text-dark/80 mb-4">Project Will End</h3>
-        <div className="flex gap-5 justify-between border p-3">
+        <h3 className="h6 text-text-dark/80 mb-4">Project Will End</h3>
+        <div className="flex gap-5 justify-between border border-border p-3">
           {[...Array(4)].map((_, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
               <div className="size-6 bg-gray-100 animate-pulse" />
@@ -53,29 +53,29 @@ const ProjectEndTimer = ({ endDate }: { endDate: string }) => {
 
   return (
     <div className="mb-6">
-      <h3 className="h6 text-dark/80 mb-4">Project Will End</h3>
-      <div className="flex gap-5 justify-between border p-4">
+      <h3 className="h6 text-text-dark/80 mb-4">Project Will End</h3>
+      <div className="flex gap-5 justify-between border border-border p-4">
         <div className="text-center">
           <h5>{timeLeft ? timeLeft.days : "0"}</h5>
-          <p className="text-xs text-light">
+          <p className="text-xs text-text-light">
             {timeLeft?.days === 1 ? "Day" : "Days"}
           </p>
         </div>
         <div className="text-center">
           <h5>{timeLeft ? timeLeft.hours : "0"}</h5>
-          <p className="text-xs text-light">
+          <p className="text-xs text-text-light">
             {timeLeft?.hours === 1 ? "Hour" : "Hours"}
           </p>
         </div>
         <div className="text-center">
           <h5>{timeLeft ? timeLeft.minutes : "0"}</h5>
-          <p className="text-xs text-light">
+          <p className="text-xs text-text-light">
             {timeLeft?.minutes === 1 ? "Minute" : "Minutes"}
           </p>
         </div>
         <div className="text-center">
           <h5>{timeLeft ? timeLeft.seconds : "0"}</h5>
-          <p className="text-xs text-light">
+          <p className="text-xs text-text-light">
             {timeLeft?.seconds === 1 ? "Second" : "Seconds"}
           </p>
         </div>

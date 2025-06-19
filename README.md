@@ -9,12 +9,12 @@
 </h2>
 
 <p align=center>
-  <a href="https://github.com/vercel/next.js/releases/tag/v15.1.0" alt="Next.js Version">
-    <img src="https://img.shields.io/static/v1?label=NEXTJS&message=15.1&color=000&logo=nextjs" alt="Next.js Version" />
+  <a href="https://github.com/vercel/next.js/releases/tag/v15.3.4" alt="Next.js Version">
+    <img src="https://img.shields.io/static/v1?label=NEXTJS&message=15.3&color=000&logo=nextjs" alt="Next.js Version" />
   </a>
 
-  <a href="https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.0" alt="Tailwind Version">
-    <img src="https://img.shields.io/static/v1?label=TAILWIND&message=3.4.0&color=38BDF8&logo=tailwindcss" alt="Tailwind Version" />
+  <a href="https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.10" alt="Tailwind Version">
+    <img src="https://img.shields.io/static/v1?label=TAILWIND&message=4.1.10&color=38BDF8&logo=tailwindcss" alt="Tailwind Version" />
   </a>
 
   <a href="https://github.com/sadaqah-Made-Easy/sadaqah-made-easy-website/blob/main/LICENSE">
@@ -42,7 +42,7 @@
 
 ## Tech Stack
 
-- **Frontend**: Next.js 15, TypeScript, TailwindCSS
+- **Frontend**: Next.js v15, TypeScript v5, TailwindCSS v4
 - **Animations**: CSS Transitions (GSAP optimized for performance)
 - **Deployment**: Vercel
 - **CMS**: Sitepins CMS

@@ -1,5 +1,6 @@
 export const runtime = "edge";
 import DonationForm from "@/components/DonationForm";
+import GradientBg from "@/components/GradientBg";
 import SeoMeta from "@/partials/SeoMeta";
 
 const submit = () => {
@@ -8,8 +9,9 @@ const submit = () => {
       <SeoMeta />
 
       <section className="section-sm">
-        <div className="container">
+        <div className="container relative">
           <DonationForm />
+          <GradientBg className="opacity-15" />
         </div>
       </section>
     </>

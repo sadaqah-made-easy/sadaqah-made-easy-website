@@ -27,13 +27,18 @@ const Header = () => {
   // Handle scroll without GSAP for better performance
   useEffect(() => {
     // Only run on client-side
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const handleScroll = () => {
       const position = window.scrollY;
 
       // Apply inline styles directly instead of using GSAP
-      if (headerRef.current && navMenuRef.current && logoRef.current && buttonRef.current) {
+      if (
+        headerRef.current &&
+        navMenuRef.current &&
+        logoRef.current &&
+        buttonRef.current
+      ) {
         const header = headerRef.current;
         const navMenu = navMenuRef.current;
         const logo = logoRef.current;
@@ -76,14 +81,14 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', scrollListener, { passive: true });
+    window.addEventListener("scroll", scrollListener, { passive: true });
 
     // Initial call to set correct styles
     handleScroll();
 
     // Cleanup function
     return () => {
-      window.removeEventListener('scroll', scrollListener);
+      window.removeEventListener("scroll", scrollListener);
     };
   }, [pathname]); // Re-run the effect on pathname change
 
@@ -131,7 +136,7 @@ const Header = () => {
         />
         <label
           htmlFor="nav-toggle"
-          className="order-3 cursor-pointer flex items-center lg:hidden text-dark lg:order-1"
+          className="order-3 cursor-pointer flex items-center lg:hidden text-text-dark lg:order-1"
         >
           <svg
             id="show-button"
@@ -192,7 +197,7 @@ const Header = () => {
                       <li key={`child-${i}`} className="nav-dropdown-item mb-2">
                         <Link
                           href={child.url}
-                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${isActive(child.url) ? "active" : ""
+                          className={`nav-dropdown-link block py-1 font-semibold text-text-dark transition hover:text-primary ${isActive(child.url) ? "active" : ""
                             }`}
                         >
                           {child.name}
