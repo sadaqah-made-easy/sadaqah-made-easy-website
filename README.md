@@ -1,3 +1,57 @@
+<h1 align=center>Sadaqah Made Easy Website</h1>
+
+<p align=center>A modern donation platform built with Next.js, TailwindCSS & TypeScript, making charity and sadaqah accessible to everyone.</p>
+
+<p align=center>Empowering Muslims to make a difference through simple, transparent donations.</p>
+<p align=center>If you find this project useful, please give it a ⭐ to show your support.</p>
+
+<h2 align="center"><a target="_blank" href="https://sadaqah-made-easy.vercel.app" rel="nofollow">👀 Live Website</a> | <a target="_blank" href="https://pagespeed.web.dev/analysis/https-sadaqah-made-easy-vercel-app/zttnq0z42d?form_factor=desktop">Page Speed (95%+)🚀</a>
+</h2>
+
+<p align=center>
+  <a href="https://github.com/vercel/next.js/releases/tag/v15.1.0" alt="Next.js Version">
+    <img src="https://img.shields.io/static/v1?label=NEXTJS&message=15.1&color=000&logo=nextjs" alt="Next.js Version" />
+  </a>
+
+  <a href="https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.0" alt="Tailwind Version">
+    <img src="https://img.shields.io/static/v1?label=TAILWIND&message=3.4.0&color=38BDF8&logo=tailwindcss" alt="Tailwind Version" />
+  </a>
+
+  <a href="https://github.com/sadaqah-Made-Easy/sadaqah-made-easy-website/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/zeon-studio/nextplate" alt="license">
+  </a>
+
+  <img src="https://img.shields.io/github/languages/code-size/sadaqah-Made-Easy/sadaqah-made-easy-website" alt="code size">
+
+  <a href="https://github.com/sadaqah-made-easy/sadaqah-made-easy-website/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/sadaqah-Made-Easy/sadaqah-made-easy-website" alt="contributors"></a>
+
+</p>
+
+## Features
+
+- 🚀 **High Performance**: Optimized with 95%+ PageSpeed score
+- 📱 **Responsive**: Mobile-first design approach
+- 🔍 **SEO Optimized**: Meta tags, sitemap, and SEO best practices
+- 📊 **Analytics Ready**: Easy integration with analytics platforms
+- 🌙 **Donation Projects**: Browse and support various charity projects
+- 👥 **Organizer Profiles**: Learn about the organizations behind each project
+- 🔄 **Content Management**: Connected with Sitepins CMS for easy updates
+- 🔁 **Automatic Deployment**: CI/CD pipeline with GitHub and Vercel
+- 📊 **API for Mobile Apps**: Structured JSON data for mobile app integration
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, TypeScript, TailwindCSS
+- **Animations**: CSS Transitions (GSAP optimized for performance)
+- **Deployment**: Vercel
+- **CMS**: Sitepins CMS
+- **Performance Optimization**:
+  - Lazy-loaded components and images
+  - Server-side rendering
+  - Static site generation where appropriate
+  - Optimized asset loading
+
 # Steps to Set Up the Project
 
 ## 1. Create a Gmail Account with 2FA
@@ -47,7 +101,7 @@ You're done! 🎉
 
 ---
 
-## Optimized JSON Data Files for Mobile App
+## JSON Data Files for Mobile App
 
 This project provides optimized, structured JSON data files for a mobile app to consume the website's content:
 
@@ -77,7 +131,7 @@ This project provides optimized, structured JSON data files for a mobile app to 
 
 ### Usage
 
-1. **Generate the optimized JSON data files**:
+1. **Generate the JSON data files**:
 
    ```bash
    yarn generate-json
@@ -97,6 +151,6 @@ The optimized data structure provides:
 
 ### Mobile App Development
 
-These optimized JSON data files provide all the necessary information for building a performant mobile app that mirrors the website's functionality. The data structure is designed for efficient consumption in mobile app frameworks like React Native or Flutter.
+These JSON data files provide all the necessary information for building a performant mobile app that mirrors the website's functionality. The data structure is designed for efficient consumption in mobile app frameworks like React Native or Flutter.
 
 For implementation details, see the public data documentation at `/public-data-docs` on your deployed site.

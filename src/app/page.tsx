@@ -16,7 +16,7 @@ const Home = () => {
   } = frontmatter;
 
   const posts: Project[] = getSinglePage("projects");
-  const sortedPosts = sortByDate(posts);
+  const sortedProjects = sortByDate(posts);
 
   return (
     <>
@@ -28,9 +28,9 @@ const Home = () => {
           <h2 className="text-center mb-16">Projects</h2>
 
           <div className="row g-4 max-md:justify-center relative z-20">
-            {sortedPosts.length > 0 ? (
-              sortedPosts.map((post: Project) => (
-                <ProjectCard key={post.slug} project={post} />
+            {sortedProjects.length > 0 ? (
+              sortedProjects.map((project: Project) => (
+                <ProjectCard key={project.slug} project={project} />
               ))
             ) : (
               <p className="text-center text-gray-500">
