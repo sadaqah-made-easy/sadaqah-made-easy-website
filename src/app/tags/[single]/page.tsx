@@ -34,13 +34,11 @@ const TagSingle = async (props: { params: Promise<{ single: string }> }) => {
     <>
       <SeoMeta title={humanize(params.single)} />
       <PageHeader title={humanize(params.single)} />
-      <div className="section-sm pb-0">
+      <div className="section-sm">
         <div className="container">
           <div className="row">
-            {sortedPosts.map((project: Project, index: number) => (
-              <div className="mb-20" key={index}>
-                <ProjectCard project={project} />
-              </div>
+            {sortedPosts.map((project: Project) => (
+              <ProjectCard project={project} key={project.slug} />
             ))}
           </div>
         </div>

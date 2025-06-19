@@ -4,20 +4,16 @@ import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { INavigationLink } from "@/types";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef } from "react";
 import { IoSearch } from "react-icons/io5";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Header = () => {
-  const headerRef = useRef(null);
-  const navMenuRef = useRef(null);
-  const logoRef = useRef(null);
-  const buttonRef = useRef(null);
+  const headerRef = useRef<HTMLElement | null>(null);
+  const navMenuRef = useRef<HTMLUListElement | null>(null);
+  const logoRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLLIElement | null>(null);
   const pathname = usePathname();
 
   // scroll to top on route change
@@ -28,93 +24,88 @@ const Header = () => {
   const { main }: { main: INavigationLink[] } = menu;
   const { navigation_button, settings } = config;
 
-  // Function to setup the scroll-triggered animation for the header
-  const setupAnimation = (
-    header: HTMLElement,
-    navMenu: HTMLElement,
-    logo: HTMLElement,
-    button: HTMLElement,
-  ) => {
-    const updateStyles = (progress: number) => {
-      const isSmallScreen = window.innerWidth <= 1024;
-      const bgOpacity = Math.min(progress * 1.5, 1);
-      const yOffset = isSmallScreen ? 0 : Math.min(progress * 20, 20);
-      const shadowOpacity = Math.min(progress * 0.1, 0.1);
-      const scale = 1 - progress * 0.1;
-      const fontSize = 1.125 - progress * 0.125;
-      const paddingX = 1.75 - progress * 0.75;
+  // Handle scroll without GSAP for better performance
+  useEffect(() => {
+    // Only run on client-side
+    if (typeof window === 'undefined') return;
 
-      gsap.to(header, {
-        backgroundColor: `rgba(255, 255, 255, ${bgOpacity})`,
-        boxShadow: `0 0px 30px 5px rgba(0, 0, 0, ${shadowOpacity})`,
-        y: yOffset,
-        duration: 0.2,
-        ease: "power1.out",
-      });
+    const handleScroll = () => {
+      const position = window.scrollY;
 
-      if (!isSmallScreen) {
-        gsap.to(navMenu, {
-          padding: `${0}rem ${paddingX}rem`,
-          duration: 0.2,
-        });
+      // Apply inline styles directly instead of using GSAP
+      if (headerRef.current && navMenuRef.current && logoRef.current && buttonRef.current) {
+        const header = headerRef.current;
+        const navMenu = navMenuRef.current;
+        const logo = logoRef.current;
+        const button = buttonRef.current;
+
+        // Calculate values based on scroll position
+        const progress = Math.min(position / 500, 1); // 500px is our animation distance
+        const isSmallScreen = window.innerWidth <= 1024;
+        const bgOpacity = Math.min(progress * 1.5, 1);
+        const yOffset = isSmallScreen ? 0 : Math.min(progress * 20, 20);
+        const shadowOpacity = Math.min(progress * 0.1, 0.1);
+        const scale = 1 - progress * 0.1;
+        const fontSize = 1.125 - progress * 0.125;
+        const paddingX = 1.75 - progress * 0.75;
+
+        // Apply styles directly to DOM - more performant than GSAP for simple animations
+        header.style.backgroundColor = `rgba(255, 255, 255, ${bgOpacity})`;
+        header.style.boxShadow = `0 0px 30px 5px rgba(0, 0, 0, ${shadowOpacity})`;
+        header.style.transform = `translateY(${yOffset}px)`;
+
+        if (!isSmallScreen) {
+          navMenu.style.padding = `0rem ${paddingX}rem`;
+        }
+
+        logo.style.transform = `scale(${scale})`;
+        button.style.fontSize = `${fontSize}rem`;
       }
-
-      gsap.to(logo, { scale, duration: 0.2 });
-      gsap.to(button, { fontSize: `${fontSize}rem`, duration: 0.2 });
     };
 
-    // Initialize ScrollTrigger for header
-    const scrollTrigger = ScrollTrigger.create({
-      start: "top top",
-      end: "top+=500",
-      onUpdate: (self) => updateStyles(self.progress),
-    });
+    // Use requestAnimationFrame for smoother scrolling
+    let ticking = false;
 
-    // Cleanup ScrollTrigger on unmount or when pathname changes
-    return scrollTrigger;
-  };
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-  useEffect(() => {
-    const header = headerRef.current;
-    const navMenu = navMenuRef.current;
-    const logo = logoRef.current;
-    const button = buttonRef.current;
+    window.addEventListener('scroll', scrollListener, { passive: true });
 
-    if (!header || !navMenu || !logo || !button) return;
+    // Initial call to set correct styles
+    handleScroll();
 
-    // Kill any existing ScrollTrigger on the header before setting up a new one
-    ScrollTrigger.getAll().forEach((trigger) => {
-      if (trigger.vars.trigger === header) trigger.kill();
-    });
-
-    // Set up new animation
-    const scrollTrigger = setupAnimation(header, navMenu, logo, button);
-    ScrollTrigger.refresh(); // Ensure ScrollTrigger recalculates when pathname changes
-
-    // Cleanup on unmount or pathname change
+    // Cleanup function
     return () => {
-      scrollTrigger.kill();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener('scroll', scrollListener);
     };
   }, [pathname]); // Re-run the effect on pathname change
 
   const toggleMenu = (isOpen: boolean) => {
     const navMenu = navMenuRef.current;
-    const tl = gsap.timeline();
+    if (!navMenu) return;
 
+    // Use CSS classes for animation instead of GSAP
     if (isOpen) {
-      tl.set(navMenu, { display: "block" }).fromTo(
-        navMenu,
-        { y: -20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
-      );
+      navMenu.style.display = "block";
+      // Use setTimeout to ensure display block takes effect before animation
+      setTimeout(() => {
+        navMenu.classList.add("menu-open");
+        navMenu.classList.remove("menu-closed");
+      }, 10);
     } else {
-      tl.to(navMenu, {
-        y: -20,
-        opacity: 0,
-        duration: 0.4,
-        ease: "power2.in",
-      }).set(navMenu, { display: "none" });
+      navMenu.classList.remove("menu-open");
+      navMenu.classList.add("menu-closed");
+      // Wait for animation to finish before hiding
+      setTimeout(() => {
+        navMenu.style.display = "none";
+      }, 400); // Match this to the CSS transition duration
     }
   };
 
@@ -127,7 +118,7 @@ const Header = () => {
     >
       <nav className="navbar relative flex flex-wrap items-center justify-between px-4 py-3">
         {/* Logo */}
-        <div ref={logoRef} className="order-0">
+        <div ref={logoRef} className="order-0 logo-container">
           <Logo src={config.site.logo} />
         </div>
 
@@ -186,11 +177,10 @@ const Header = () => {
               {menu.hasChildren ? (
                 <li className="nav-item nav-dropdown group relative">
                   <span
-                    className={`nav-link inline-flex items-center ${
-                      menu.children?.some((child) => isActive(child.url))
+                    className={`nav-link inline-flex items-center ${menu.children?.some((child) => isActive(child.url))
                         ? "active"
                         : ""
-                    }`}
+                      }`}
                   >
                     {menu.name}
                     <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
@@ -202,9 +192,8 @@ const Header = () => {
                       <li key={`child-${i}`} className="nav-dropdown-item mb-2">
                         <Link
                           href={child.url}
-                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${
-                            isActive(child.url) ? "active" : ""
-                          }`}
+                          className={`nav-dropdown-link block py-1 font-semibold text-dark transition hover:text-primary ${isActive(child.url) ? "active" : ""
+                            }`}
                         >
                           {child.name}
                         </Link>
@@ -216,9 +205,8 @@ const Header = () => {
                 <li className="nav-item">
                   <Link
                     href={menu.url}
-                    className={`nav-link block font-semibold transition px-4 lg:px-2 lg:py-3 ${
-                      isActive(menu.url) ? "active" : ""
-                    }`}
+                    className={`nav-link block font-semibold transition px-4 lg:px-2 lg:py-3 ${isActive(menu.url) ? "active" : ""
+                      }`}
                   >
                     {menu.name}
                   </Link>

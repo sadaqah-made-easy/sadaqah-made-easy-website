@@ -7,17 +7,14 @@ import menu from "@/config/menu.json";
 import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
 import { TMenuItem } from "@/types";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Footer = () => {
-  const footerRef = useRef(null);
-  const bgRef = useRef(null);
+  const footerRef = useRef<HTMLElement | null>(null);
+  const bgRef = useRef<HTMLDivElement | null>(null);
+  const animationRef = useRef<{ cleanup: () => void } | null>(null);
   const pathname = usePathname();
 
   const filteredMenu = useMemo(
@@ -25,46 +22,86 @@ const Footer = () => {
     [],
   );
 
-  const setupAnimation = (footer: HTMLElement, bg: HTMLElement) => {
-    gsap.set(bg, {
-      width: "100%",
-      position: "absolute",
-      top: 0,
-      left: "50%",
-      transform: "translateX(-50%)",
-      height: "100%",
-      backgroundColor: "#294E4A",
-      maxWidth: "1320px",
-    });
-
-    gsap.to(bg, {
-      maxWidth: "100vw",
-      scrollTrigger: {
-        trigger: footer,
-        start: "top bottom-=100",
-        end: "bottom bottom",
-        scrub: true,
-        invalidateOnRefresh: true,
-      },
-    });
-  };
-
   useEffect(() => {
-    const footer = footerRef.current;
-    const bg = bgRef.current;
+    // Only run on client-side and if IntersectionObserver is supported
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
 
-    if (!footer || !bg) return;
+    // Use intersection observer to only load GSAP when footer is visible
+    const observer = new IntersectionObserver(
+      async (entries) => {
+        if (entries[0].isIntersecting) {
+          observer.disconnect();
 
-    ScrollTrigger.getAll().forEach((trigger) => {
-      if (trigger.vars.trigger === footer) trigger.kill();
-    });
+          // Dynamically import GSAP only when needed
+          const gsapModule = await import('gsap');
+          const ScrollTriggerModule = await import('gsap/ScrollTrigger');
+          const gsap = gsapModule.default;
+          const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
 
-    const timeoutId = setTimeout(() => setupAnimation(footer, bg), 100);
-    ScrollTrigger.refresh();
+          gsap.registerPlugin(ScrollTrigger);
 
+          const footer = footerRef.current;
+          const bg = bgRef.current;
+
+          if (!footer || !bg) return;
+
+          // Kill any existing ScrollTriggers first
+          const triggers = ScrollTrigger.getAll().filter(
+            (trigger: any) => trigger.vars.trigger === footer
+          );
+          triggers.forEach((trigger: any) => trigger.kill());
+
+          // Apply animations with reduced motion where possible
+          gsap.set(bg, {
+            width: "100%",
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            xPercent: -50, // More efficient than translateX
+            height: "100%",
+            backgroundColor: "#294E4A",
+            maxWidth: "1320px",
+          });
+
+          // Create animation with better performance settings
+          const animation = gsap.to(bg, {
+            maxWidth: "100vw",
+            scrollTrigger: {
+              trigger: footer,
+              start: "top bottom-=100",
+              end: "bottom bottom",
+              scrub: 0.5, // Smoother scrubbing
+              markers: false,
+              invalidateOnRefresh: true,
+              fastScrollEnd: true, // Performance improvement
+              preventOverlaps: true, // Performance improvement
+            },
+          });
+
+          // Store cleanup function for later
+          animationRef.current = {
+            cleanup: () => {
+              animation.kill();
+              ScrollTrigger.getAll()
+                .filter((trigger: any) => trigger.vars.trigger === footer)
+                .forEach((trigger: any) => trigger.kill());
+            }
+          };
+        }
+      },
+      { threshold: 0.1 } // Trigger when footer is 10% visible
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    // Cleanup function
     return () => {
-      clearTimeout(timeoutId);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      observer.disconnect();
+      if (animationRef.current) {
+        animationRef.current.cleanup();
+      }
     };
   }, [pathname]);
 

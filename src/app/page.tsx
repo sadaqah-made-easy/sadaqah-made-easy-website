@@ -27,7 +27,7 @@ const Home = () => {
         <div className="container">
           <h2 className="text-center mb-16">Projects</h2>
 
-          <div className="row mx-auto g-4 relative z-20">
+          <div className="row g-4 max-md:justify-center relative z-20">
             {sortedPosts.length > 0 ? (
               sortedPosts.map((post: Project) => (
                 <ProjectCard key={post.slug} project={post} />

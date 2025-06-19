@@ -13,6 +13,36 @@ input#nav-toggle:checked ~ #nav-menu {
 
 .header {
   @apply bg-transparent;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Menu animation classes */
+.navbar-nav {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    padding 0.3s ease;
+}
+
+.menu-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-closed {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Logo and button transitions */
+.logo-container,
+.navbar-nav li {
+  transition:
+    transform 0.3s ease,
+    font-size 0.3s ease;
 }
 
 /* Navbar styles */
