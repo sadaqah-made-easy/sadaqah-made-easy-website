@@ -8,6 +8,14 @@
 
   "Navigation": [
     {
+      "name": "Categories",
+      "url": "/categories"
+    },
+    {
+      "name": "Tags",
+      "url": "/tags"
+    },
+    {
       "name": "About Us",
       "url": "/about"
     },

@@ -47,22 +47,37 @@ You're done! 🎉
 
 ---
 
-## Public JSON Data Files for Mobile App
+## Optimized JSON Data Files for Mobile App
 
-This project provides structured JSON data files for a mobile app to consume the website's content:
+This project provides optimized, structured JSON data files for a mobile app to consume the website's content:
 
 ### Available Data Files
 
-1. **Projects**: `/data/projects.json` - All published projects
-2. **Organizers**: `/data/organizers.json` - All organizers
-3. **Taxonomies**: `/data/taxonomies.json` - Categories and tags
-4. **Config**: `/data/config.json` - Website configuration
-5. **Search**: `/data/search.json` - Combined projects and organizers data for search
-6. **Manifest**: `/data/manifest.json` - Version information and available data files
+#### Full Data Files
+
+- **Projects**: `/data/projects.json` - All published projects
+- **Organizers**: `/data/organizers.json` - All organizers
+
+#### Lightweight Indexes
+
+- **Projects Index**: `/data/projects-index.json` - Lightweight list of projects
+- **Organizers Index**: `/data/organizers-index.json` - Lightweight list of organizers
+
+#### Chunked Data (for Pagination)
+
+- **Project Chunks**: `/data/chunks/projects/{page}.json` - Paginated project data
+- **Organizer Chunks**: `/data/chunks/organizers/{page}.json` - Paginated organizer data
+
+#### Supporting Data
+
+- **Taxonomies**: `/data/taxonomies.json` - Categories and tags
+- **Config**: `/data/config.json` - Website configuration
+- **Search**: `/data/search.json` - Combined lightweight index for search
+- **Manifest**: `/data/manifest.json` - Version information and available data endpoints
 
 ### Usage
 
-1. **Generate the JSON data files**:
+1. **Generate the optimized JSON data files**:
 
    ```bash
    yarn generate-json
@@ -71,6 +86,17 @@ This project provides structured JSON data files for a mobile app to consume the
 2. **Documentation**:  
    Visit `/public-data-docs` on your deployed website for detailed documentation.
 
+### Performance Benefits
+
+The optimized data structure provides:
+
+- Reduced server load with smaller payloads
+- Faster initial page loads with lightweight indexes
+- Efficient pagination with pre-chunked data
+- Better caching with granular data files
+
 ### Mobile App Development
 
-These JSON data files provide all the necessary information for building a mobile app that mirrors the website's functionality. The data is structured in a way that makes it easy to consume in mobile app frameworks like React Native or Flutter.
+These optimized JSON data files provide all the necessary information for building a performant mobile app that mirrors the website's functionality. The data structure is designed for efficient consumption in mobile app frameworks like React Native or Flutter.
+
+For implementation details, see the public data documentation at `/public-data-docs` on your deployed site.

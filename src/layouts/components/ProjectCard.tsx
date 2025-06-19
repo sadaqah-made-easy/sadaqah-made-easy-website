@@ -1,12 +1,12 @@
 import dateFormat from "@/lib/utils/dateFormat";
 import { plainify } from "@/lib/utils/textConverter";
-import { Post } from "@/types";
+import { Project } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
 interface ProjectCardProps {
-  project: Post;
+  project: Project;
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {

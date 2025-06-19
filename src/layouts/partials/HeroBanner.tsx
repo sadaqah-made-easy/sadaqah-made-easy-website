@@ -1,5 +1,6 @@
 import { markdownify } from "@/lib/utils/textConverter";
 import Image from "next/image";
+import Link from "next/link";
 import { FaPlusCircle } from "react-icons/fa";
 
 const HeroBanner = ({ banner }: any) => {
@@ -31,9 +32,9 @@ const HeroBanner = ({ banner }: any) => {
                     className="text-2xl text-dark mt-2 mb-4"
                     dangerouslySetInnerHTML={markdownify(content)}
                   />
-                  <div className="flex items-center gap-6">
+                  <div className="flex flex-wrap items-center gap-6">
                     {button.enable && (
-                      <a
+                      <Link
                         href={button.link}
                         className="btn btn-primary py-1 px-3 -mb-5 font-normal text-base"
                       >
@@ -41,11 +42,11 @@ const HeroBanner = ({ banner }: any) => {
                           <FaPlusCircle />
                           {button.label}
                         </span>
-                      </a>
+                      </Link>
                     )}
 
                     {google_play.enable && (
-                      <a
+                      <Link
                         href={google_play.link}
                         target="__blank"
                         rel="noreferrer"
@@ -56,7 +57,7 @@ const HeroBanner = ({ banner }: any) => {
                           width={160}
                           height={45}
                         />
-                      </a>
+                      </Link>
                     )}
                   </div>
                   <div className="grid sm:grid-cols-3 mt-14 text-[12px] gap-6 lg:gap-4">

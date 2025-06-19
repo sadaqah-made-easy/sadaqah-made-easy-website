@@ -70,12 +70,12 @@ const Footer = () => {
 
   const renderMenuItem = (item: TMenuItem, index: number) => (
     <li key={index}>
-      <a
+      <Link
         className="flex items-center gap-2 text-white transition-all hover:text-secondary"
         href={item.url}
       >
         {item.name}
-      </a>
+      </Link>
     </li>
   );
 

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import path from "path";
 
 const contentPath = "src/content";
+const dataPath = "public/data";
 
 // Helper function to read file content
 const readFile = (filePath: string) => {
@@ -69,4 +70,78 @@ export const getSinglePage = (folder: string) => {
   );
 
   return filterByDate;
+};
+
+// get paginated JSON data
+export const getPagedData = (contentType: string, page: number = 1) => {
+  try {
+    const manifestPath = path.join(
+      dataPath,
+      "chunks",
+      contentType,
+      "manifest.json",
+    );
+
+    if (!fs.existsSync(manifestPath)) {
+      return { data: [], totalItems: 0, totalPages: 0 };
+    }
+
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+
+    if (page > manifest.chunks) {
+      return { data: [], totalItems: 0, totalPages: manifest.chunks };
+    }
+
+    const chunkPath = path.join(
+      dataPath,
+      "chunks",
+      contentType,
+      `${page}.json`,
+    );
+    const chunkData = JSON.parse(fs.readFileSync(chunkPath, "utf-8"));
+
+    return {
+      data: chunkData,
+      totalItems: manifest.total,
+      totalPages: manifest.chunks,
+    };
+  } catch (error) {
+    console.error(`Error loading paged data for ${contentType}:`, error);
+    return { data: [], totalItems: 0, totalPages: 0 };
+  }
+};
+
+// get index data only (lightweight data without content)
+export const getIndexData = (contentType: string) => {
+  try {
+    const indexPath = path.join(dataPath, `${contentType}-index.json`);
+
+    if (!fs.existsSync(indexPath)) {
+      return [];
+    }
+
+    return JSON.parse(fs.readFileSync(indexPath, "utf-8"));
+  } catch (error) {
+    console.error(`Error loading index data for ${contentType}:`, error);
+    return [];
+  }
+};
+
+// get single content by slug from JSON data
+export const getContentBySlug = (contentType: string, slug: string) => {
+  try {
+    const dataFilePath = path.join(dataPath, `${contentType}.json`);
+
+    if (!fs.existsSync(dataFilePath)) {
+      return null;
+    }
+
+    const allData = JSON.parse(fs.readFileSync(dataFilePath, "utf-8"));
+    const content = allData.find((item: any) => item.slug === slug);
+
+    return content || null;
+  } catch (error) {
+    console.error(`Error loading content for ${contentType}/${slug}:`, error);
+    return null;
+  }
 };

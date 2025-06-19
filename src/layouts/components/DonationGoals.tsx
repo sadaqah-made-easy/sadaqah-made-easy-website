@@ -91,7 +91,7 @@ const DonationGoals = ({
             },
           )}
 
-        {hasBank && (
+          {hasBank && (
             <div className="flex items-start gap-4 p-4 bg-gray-50">
               <Image
                 src={donationGoals.payment_methods.bank.image}
@@ -111,7 +111,7 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm">A/C:</span>{" "}
+                        <span className="font-normal text-sm text-light">A/C:</span>{" "}
                         {donationGoals.payment_methods.bank.details.account}
                       </div>
                     </CopyToClipboardTooltip>
@@ -123,7 +123,7 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm">Name:</span>{" "}
+                        <span className="font-normal text-sm text-light">Name:</span>{" "}
                         {donationGoals.payment_methods.bank.details.name}
                       </div>
                     </CopyToClipboardTooltip>
@@ -135,7 +135,7 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm">Account Name:</span>{" "}
+                        <span className="font-normal text-sm text-light">Account Name:</span>{" "}
                         {donationGoals.payment_methods.bank.details.accountName}
                       </div>
                     </CopyToClipboardTooltip>
@@ -147,7 +147,7 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm">Branch:</span>{" "}
+                        <span className="font-normal text-sm text-light">Branch:</span>{" "}
                         {donationGoals.payment_methods.bank.details.branch}
                       </div>
                     </CopyToClipboardTooltip>
@@ -159,7 +159,7 @@ const DonationGoals = ({
                       className="w-full text-left"
                     >
                       <div className="text-left w-full break-words">
-                        <span className="font-normal text-sm">Reference:</span>{" "}
+                        <span className="font-normal text-sm text-light">Reference:</span>{" "}
                         {donationGoals.payment_methods.bank.details.reference}
                       </div>
                     </CopyToClipboardTooltip>

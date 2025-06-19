@@ -1,4 +1,3 @@
-import config from "@/config/config.json";
 import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader";
@@ -6,9 +5,8 @@ import SeoMeta from "@/partials/SeoMeta";
 import Link from "next/link";
 
 const tags = () => {
-  const { blog_folder } = config.settings;
-  const tags = getTaxonomy(blog_folder, "tags");
-  const alltags = getAllTaxonomy(blog_folder, "tags");
+  const tags = getTaxonomy("projects", "tags");
+  const alltags = getAllTaxonomy("projects", "tags");
 
   return (
     <>

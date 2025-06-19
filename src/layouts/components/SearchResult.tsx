@@ -2,6 +2,7 @@
 
 import { plainify, titleify } from "@/lib/utils/textConverter";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface ISearchItem {
   group: string;
@@ -156,12 +157,12 @@ const SearchResult = ({
                       </div>
                     )}
                     <div className="search-result-item-body">
-                      <a
+                      <Link
                         href={`/${item.slug}`}
                         className="search-result-item-title search-result-item-link"
                       >
                         {matchUnderline(item.frontmatter.title, searchString)}
-                      </a>
+                      </Link>
                       {item.frontmatter.description && (
                         <p className="search-result-item-description">
                           {matchUnderline(
@@ -192,8 +193,8 @@ const SearchResult = ({
                                   {matchUnderline(category, searchString)}
                                   {item.frontmatter.categories &&
                                     index !==
-                                      item.frontmatter.categories.length -
-                                        1 && <>, </>}
+                                    item.frontmatter.categories.length -
+                                    1 && <>, </>}
                                 </span>
                               ),
                             )}
@@ -215,7 +216,7 @@ const SearchResult = ({
                                 {matchUnderline(tag, searchString)}
                                 {item.frontmatter.tags &&
                                   index !==
-                                    item.frontmatter.tags.length - 1 && <>, </>}
+                                  item.frontmatter.tags.length - 1 && <>, </>}
                               </span>
                             ))}
                           </div>

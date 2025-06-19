@@ -1,4 +1,5 @@
 import DynamicIcon from "@/helpers/DynamicIcon";
+import Link from "next/link";
 
 export interface ISocial {
   name: string;
@@ -17,7 +18,7 @@ const Social = ({
     <ul className={className}>
       {source.map((social) => (
         <li key={social.name}>
-          <a
+          <Link
             aria-label={social.name}
             href={social.link}
             target="_blank"
@@ -25,7 +26,7 @@ const Social = ({
           >
             <span className="sr-only">{social.name}</span>
             <DynamicIcon className="inline-block" icon={social.icon} />
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

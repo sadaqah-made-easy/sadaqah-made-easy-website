@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "yarn generate-json && next dev --turbopack",
     "build": "yarn generate-json && next build",
-    "generate-json": "node scripts/jsonGenerator.mjs",
+    "generate-json": "node scripts/generate-json.mjs",
     "preview": "next start",
     "postbuild": "next-sitemap",
     "format": "prettier -w ./src",

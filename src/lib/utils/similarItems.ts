@@ -1,11 +1,11 @@
-import { Post } from "@/types";
+import { Project } from "@/types";
 
 // similar products
 const similarItems = (
-  currentItem: Post,
-  allItems: Post[],
+  currentItem: Project,
+  allItems: Project[],
   slug: string,
-): Post[] => {
+): Project[] => {
   let categories: string[] = [];
   let tags: string[] = [];
 

@@ -1,7 +1,7 @@
 "use client";
 
-import searchData from "../../../public/data/search.json" assert { type: "json" };
 import React, { useEffect, useState } from "react";
+import searchData from "../../../public/data/search.json" assert { type: "json" };
 import SearchResult, { type ISearchItem } from "./SearchResult";
 
 const SearchModal = () => {
@@ -31,7 +31,7 @@ const SearchModal = () => {
           ?.join(" ")
           .toLowerCase()
           .match(regex);
-        const content = item.content.toLowerCase().match(regex);
+        const content = item.content?.toLowerCase().match(regex);
 
         if (title || content || description || categories || tags) {
           return item;
