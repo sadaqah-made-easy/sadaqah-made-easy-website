@@ -5,34 +5,34 @@ description: >-
   রমাদান মাসে অনেকে রিলায়েবল সোর্স ও যথার্থ জায়গা খুজেন দান-সাদাকা করার জন্য।
   এবার  Ahmad Kaoser ভাই উদ্যোগ নিয়েছেন লক্ষীপুরের কয়েকটা মাদ্রাসার ছাত্রদের
   ইফতারের আয়োজন এর। আগ্রহীরা কন্ট্রিবিউট করতে পারেন ইন শা আল্লাহ।
-date: "2025-03-03"
+date: '2025-03-03'
 image: /images/2000iftar.jpg
 organizer: ahmad-kaoser
 project_end_date:
   enable: true
-  end_date: "2025-03-30"
+  end_date: '2025-03-30'
 donation_goals:
   enable: false
-  amount: ""
+  amount: ''
   payment_methods:
     mobile_banking:
       - type: Bkash
         image: /images/projects/bkash.png
-        number: "01711074688"
+        number: '01711074688'
         reference: Sadaqah Made Easy
         accountType: Personal
         categories:
-          - ""
+          - ''
         tags:
-          - ""
+          - ''
       - type: Nagad
         image: /images/projects/nagad.png
-        number: "01711074688"
+        number: '01711074688'
         reference: Sadaqah Made Easy
         accountType: Personal
       - type: Rocket
         image: /images/rocket.png
-        number: "017110746885"
+        number: '017110746885'
         reference: Sadaqah Made Easy
         accountType: Personal
     bank:
@@ -42,23 +42,22 @@ donation_goals:
         name: Dhaka Bank PLC
         account: 005.214.0000063
         accountName: Ahmad Naser
-        branch: "Lakshmipur Sadar "
+        branch: 'Lakshmipur Sadar '
         reference: Sadaqah Made Easy
         categories:
-          - ""
-          - ""
+          - ''
+          - ''
         tags:
-          - ""
+          - ''
 categories:
   - Iftar
 tags:
   - Ramadan
   - ইফতার
   - মাদরাসা
-draft: false
+draft: true
 ---
-
-রমাদান মাসে অনেকে রিলায়েবল সোর্স ও যথার্থ জায়গা খুজেন দান-সাদাকা করার জন্য। এবার [Ahmad Kaoser](https://www.facebook.com/ahmad.bhuiyan?__cft__[0]=AZUJwlHwooUNOn0d3ktcItPTebxCDHf8ljSejaDcfZ-lsTMcTC_pcRqGnugYQ5qJDQrl4thvwyomenpOTGz2qbizdu6EVGAgdeXDLh9PQ5C6enHEw4pzR3UA6HjXemfQWmoCeaV5AeIeNRR47pbWUWybrTq07ZHHarZeTmtJtXtI4w&__tn__=-]K-R) ভাই উদ্যোগ নিয়েছেন লক্ষীপুরের কয়েকটা মাদ্রাসার ছাত্রদের ইফতারের আয়োজন এর। আগ্রহীরা কন্ট্রিবিউট করতে পারেন ইন শা আল্লাহ।
+রমাদান মাসে অনেকে রিলায়েবল সোর্স ও যথার্থ জায়গা খুজেন দান-সাদাকা করার জন্য। এবার [Ahmad Kaoser](https://www.facebook.com/ahmad.bhuiyan?__cft__\[0]=AZUJwlHwooUNOn0d3ktcItPTebxCDHf8ljSejaDcfZ-lsTMcTC_pcRqGnugYQ5qJDQrl4thvwyomenpOTGz2qbizdu6EVGAgdeXDLh9PQ5C6enHEw4pzR3UA6HjXemfQWmoCeaV5AeIeNRR47pbWUWybrTq07ZHHarZeTmtJtXtI4w&__tn__=-]K-R) ভাই উদ্যোগ নিয়েছেন লক্ষীপুরের কয়েকটা মাদ্রাসার ছাত্রদের ইফতারের আয়োজন এর। আগ্রহীরা কন্ট্রিবিউট করতে পারেন ইন শা আল্লাহ।
 
 রমজানের বারাকাহ ভাগ করে নিন!
 
