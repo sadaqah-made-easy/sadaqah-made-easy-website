@@ -47,4 +47,6 @@ draft: false
 • পর্যাপ্ত ফান্ড পেলে, তার বাবার পায়ে টানা ভ্যানে একটি ব্যাটারি সংযোজন করা, যেন আয়-রোজগার আবার শুরু হয়, ইনশা আল্লাহ।
 
 অনুদান পাঠাতে:
+
+
 Website: [https://www.moshalalo.org/urgent-causes/PE25?purpose=PE25](https://www.moshalalo.org/urgent-causes/PE25?purpose=PE25)
