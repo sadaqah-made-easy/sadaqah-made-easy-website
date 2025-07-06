@@ -14,6 +14,9 @@
     "format": "prettier -w ./src",
     "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-label": "^2.1.7",

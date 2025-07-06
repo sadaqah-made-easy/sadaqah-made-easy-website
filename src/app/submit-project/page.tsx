@@ -9,7 +9,7 @@ const submit = () => {
       <SeoMeta />
 
       <section className="section-sm">
-        <div className="container relative">
+        <div className="container relative overflow-x-clip">
           <DonationForm />
           <GradientBg className="opacity-15" />
         </div>
