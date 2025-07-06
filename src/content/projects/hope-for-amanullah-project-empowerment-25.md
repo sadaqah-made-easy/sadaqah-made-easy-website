@@ -15,7 +15,17 @@ donation_goals:
   enable: false
   amount: ''
   payment_methods:
-    mobile_banking: []
+    mobile_banking:
+      - type: Bkash
+        image: /images/projects/bkash.png
+        number: '01636817977'
+        reference: Sadaqah Made Easy
+        accountType: Personal
+      - type: Nagad
+        image: /images/projects/nagad.png
+        number: '01636817977'
+        reference: Sadaqah Made Easy
+        accountType: Personal
     bank:
       type: Bank
       image: /images/projects/bank.png
@@ -47,6 +57,5 @@ draft: false
 • পর্যাপ্ত ফান্ড পেলে, তার বাবার পায়ে টানা ভ্যানে একটি ব্যাটারি সংযোজন করা, যেন আয়-রোজগার আবার শুরু হয়, ইনশা আল্লাহ।
 
 অনুদান পাঠাতে:
-
 
 Website: [https://www.moshalalo.org/urgent-causes/PE25?purpose=PE25](https://www.moshalalo.org/urgent-causes/PE25?purpose=PE25)
