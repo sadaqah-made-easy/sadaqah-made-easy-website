@@ -14,26 +14,16 @@ donation_goals:
   enable: false
   amount: ''
   payment_methods:
-    mobile_banking:
-      - type: Bkash
-        image: /images/projects/bkash.png
-        number: '01636817977'
-        reference: Sadaqah Made Easy
-        accountType: Personal
-      - type: Nagad
-        image: /images/projects/nagad.png
-        number: '01636817977'
-        reference: Sadaqah Made Easy
-        accountType: Personal
+    mobile_banking: []
     bank:
       type: Bank
       image: /images/projects/bank.png
       details:
-        name: Moshal Alo Trust
-        account: '0200021485744'
-        accountName: Agrani Bank PLC
-        branch: Karatia Branch, Tangail
-        reference: Sadaqah Made Easy
+        name: ''
+        account: ''
+        accountName: ''
+        branch: ''
+        reference: ''
 categories:
   - Bangladesh
 tags:
