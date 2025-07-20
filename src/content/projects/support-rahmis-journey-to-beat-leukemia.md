@@ -3,25 +3,25 @@ title: Support Rahmi's Journey to Beat Leukemia
 meta_title: >-
   আমাদের আইইউটিয়ান ফ্রেন্ড এর ভাগ্নী, রাহমি, সাত বছর বয়সী মেধাবী ও সাহসী ছোট
   মেয়ে, এখন সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালে (NUH) সংকটাপন্ন অবস্থায়
-  আছে।
+  আছে
 description: >-
   আমাদের আইইউটিয়ান ফ্রেন্ড এর ভাগ্নী, রাহমি, সাত বছর বয়সী মেধাবী ও সাহসী ছোট
   মেয়ে, এখন সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালে (NUH) সংকটাপন্ন অবস্থায়
   আছে।
-date: "2025-05-19"
+date: '2025-05-19'
 image: /images/supportrahmi.png
-organizer: ""
+organizer: ''
 project_end_date:
   enable: true
-  end_date: ""
+  end_date: ''
 donation_goals:
   enable: false
-  amount: ""
+  amount: ''
   payment_methods:
     mobile_banking:
       - type: Bkash
         image: /images/projects/bkash.png
-        number: "01316055720"
+        number: '01316055720'
         reference: Sadaqah Made Easy - Rahmi
         accountType: Personal
     bank:
@@ -29,7 +29,7 @@ donation_goals:
       image: /images/projects/bank.png
       details:
         name: Pubali Bank PLC
-        account: "2905101051044"
+        account: '2905101051044'
         accountName: Syed Abdul Mazid
         branch: Foreign Exchange Branch, Motijheel
         reference: Sadaqah Made Easy - Rahmi
@@ -42,7 +42,7 @@ tags:
   - Baby
   - Kid
   - Donate
-draft: false
+draft: true
 ---
 
 রাহমি, সাত বছর বয়সী এক মেধাবী ও সাহসী ছোট্ট মেয়ে, বর্তমানে সিঙ্গাপুরের ন্যাশনাল ইউনিভার্সিটি হাসপাতালের (NUH) নিবিড় পরিচর্যা কেন্দ্রে সংকটাপন্ন অবস্থায় রয়েছে। তার লিউকেমিয়া ধরা পড়েছে এবং কেমোথেরাপি দেয়া শুরু হয়েছিল। কিন্তু মাত্র কয়েক সপ্তাহের মধ্যেই তার শরীরে মারাত্মক জটিলতা দেখা দেয় — প্যানক্রিয়াটাইটিস, সংক্রমণ এবং অঙ্গ-সংক্রান্ত বিভিন্ন সমস্যা।
