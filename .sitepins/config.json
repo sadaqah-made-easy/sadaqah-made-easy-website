@@ -7,7 +7,7 @@
     "root": "src/content"
   },
   "code": {
-    "root": "src"
+    "root": "src/layouts"
   },
   "themeConfig": [
     "src/config/config.json",
