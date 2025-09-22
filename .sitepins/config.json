@@ -6,32 +6,15 @@
   "content": {
     "root": "src/content"
   },
+  "code": {
+    "root": "src"
+  },
   "themeConfig": [
     "src/config/config.json",
     "src/config/menu.json",
     "src/config/social.json",
     "src/config/theme.json"
   ],
-  "arrangement": [
-    {
-      "type": "folder",
-      "targetPath": "src/content/projects",
-      "groupName": "Projects",
-      "include": "*.md",
-      "exclude": "_*.md"
-    },
-    {
-      "type": "folder",
-      "targetPath": "src/content/organizer",
-      "groupName": "Organizers",
-      "include": "*.md",
-      "exclude": "-*.md"
-    },
-    {
-      "type": "file",
-      "targetPath": "src/content/pages/about.md",
-      "groupName": "About Us"
-    }
-  ],
-  "showCommitModal": false
+  "arrangement": [],
+  "showCommitModal": true
 }
