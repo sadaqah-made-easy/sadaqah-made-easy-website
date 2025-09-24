@@ -6,7 +6,7 @@ description: >-
   মাআরিফ” (প্রতিষ্ঠা: ২০২১ সন) বহুল প্রতীক্ষিত বিশেষায়িত ইলমি লাইব্রেরি
   প্রতিষ্ঠার পথে এক ঐতিহাসিক সুযোগের মুখোমুখি হয়েছে।
 date: 24-09-2025
-image: media/public/images/libraryshipment.jpg
+image: /images/libraryshipment.jpg
 organizer: almaarif
 project_end_date:
   enable: false
