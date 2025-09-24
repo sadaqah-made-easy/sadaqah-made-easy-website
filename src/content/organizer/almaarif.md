@@ -1,10 +1,10 @@
 ---
 title: AlMaarif
-email: ""
+email: ''
 website: https://almaarifweb.com/
-twitter: ""
+twitter: ''
 facebook: https://almaarifweb.com/
-description: ""
-image: ""
-draft: false
+description: ''
+image: ''
+draft: true
 ---
