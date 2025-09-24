@@ -1,9 +1,9 @@
 ---
-title: Ikram Suraz
+title: AlMaarif
 email: ""
-website: https://www.facebook.com/share/p/1Az36S9hr7/
+website: https://almaarifweb.com/
 twitter: ""
-facebook: https://www.facebook.com/ikram.suraz
+facebook: https://almaarifweb.com/
 description: ""
 image: ""
 draft: false
