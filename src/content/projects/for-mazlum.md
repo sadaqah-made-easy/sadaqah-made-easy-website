@@ -27,7 +27,7 @@ donation_goals:
 categories:
   - Bangladesh
 tags:
-  - মযলুম
+  - Majlum
   - Oppressed
 draft: false
 ---
