@@ -53,8 +53,6 @@ categories:
   - Iftar
 tags:
   - Ramadan
-  - ইফতার
-  - মাদরাসা
 draft: true
 ---
 রমাদান মাসে অনেকে রিলায়েবল সোর্স ও যথার্থ জায়গা খুজেন দান-সাদাকা করার জন্য। এবার [Ahmad Kaoser](https://www.facebook.com/ahmad.bhuiyan?__cft__\[0]=AZUJwlHwooUNOn0d3ktcItPTebxCDHf8ljSejaDcfZ-lsTMcTC_pcRqGnugYQ5qJDQrl4thvwyomenpOTGz2qbizdu6EVGAgdeXDLh9PQ5C6enHEw4pzR3UA6HjXemfQWmoCeaV5AeIeNRR47pbWUWybrTq07ZHHarZeTmtJtXtI4w&__tn__=-]K-R) ভাই উদ্যোগ নিয়েছেন লক্ষীপুরের কয়েকটা মাদ্রাসার ছাত্রদের ইফতারের আয়োজন এর। আগ্রহীরা কন্ট্রিবিউট করতে পারেন ইন শা আল্লাহ।

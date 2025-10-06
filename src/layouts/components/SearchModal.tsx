@@ -19,17 +19,17 @@ const SearchModal = () => {
     if (searchString === "") return [];
 
     return searchData.filter((item) => {
-      const title = item.frontmatter.title.toLowerCase().match(regex);
-      const description = item.frontmatter.description
+      const title = item.frontmatter?.title?.toLowerCase().match(regex);
+      const description = item.frontmatter?.description
         ?.toLowerCase()
         .match(regex);
-      const categories = item.frontmatter.categories
+      const categories = item.frontmatter?.categories
         ?.join(" ")
-        .toLowerCase()
+        ?.toLowerCase()
         .match(regex);
-      const tags = item.frontmatter.tags
+      const tags = item.frontmatter?.tags
         ?.join(" ")
-        .toLowerCase()
+        ?.toLowerCase()
         .match(regex);
       const content = item.content?.toLowerCase().match(regex);
 
@@ -38,14 +38,16 @@ const SearchModal = () => {
   };
 
   const startTime = performance.now();
-  const searchResult = doSearch(searchData);
+  const searchResult = doSearch(searchData as ISearchItem[]);
   const endTime = performance.now();
   const totalTime = ((endTime - startTime) / 1000).toFixed(3);
 
   useEffect(() => {
     const searchModal = document.getElementById("searchModal");
     const searchModalOverlay = document.getElementById("searchModalOverlay");
-    const searchModalTriggers = document.querySelectorAll("[data-search-trigger]");
+    const searchModalTriggers = document.querySelectorAll(
+      "[data-search-trigger]",
+    );
 
     const handleOpenModal = () => {
       searchModal?.classList.add("show");
@@ -67,10 +69,14 @@ const SearchModal = () => {
     const updateSelection = () => {
       const items = document.querySelectorAll("#searchItem");
       items.forEach((item, index) => {
-        item.classList.toggle("search-result-item-active", index === selectedIndex);
+        item.classList.toggle(
+          "search-result-item-active",
+          index === selectedIndex,
+        );
       });
 
-      const selectedItem = document.querySelectorAll("#searchItem")[selectedIndex];
+      const selectedItem =
+        document.querySelectorAll("#searchItem")[selectedIndex];
       selectedItem?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     };
 
@@ -96,10 +102,15 @@ const SearchModal = () => {
 
       if (event.key === "ArrowUp" && selectedIndex > 0) {
         selectedIndex--;
-      } else if (event.key === "ArrowDown" && selectedIndex < items.length - 1) {
+      } else if (
+        event.key === "ArrowDown" &&
+        selectedIndex < items.length - 1
+      ) {
         selectedIndex++;
       } else if (event.key === "Enter") {
-        const activeLink = document.querySelector(".search-result-item-active a") as HTMLAnchorElement;
+        const activeLink = document.querySelector(
+          ".search-result-item-active a",
+        ) as HTMLAnchorElement;
         if (activeLink) {
           activeLink.click();
           searchModal?.classList.remove("show");
@@ -171,7 +182,8 @@ const SearchModal = () => {
         <SearchResult searchResult={searchResult} searchString={searchString} />
         <div className="search-wrapper-footer">
           <span className="flex items-center">
-            <kbd>↑</kbd><kbd>↓</kbd> to navigate
+            <kbd>↑</kbd>
+            <kbd>↓</kbd> to navigate
           </span>
           <span className="flex items-center">
             <kbd>⏎</kbd> to select

@@ -13,17 +13,17 @@ project_end_date:
   end_date: 25-07-2025
 donation_goals:
   enable: false
-  amount: ''
+  amount: ""
   payment_methods:
     mobile_banking:
       - type: Bkash
         image: /images/projects/bkash.png
-        number: '01636817977'
+        number: "01636817977"
         reference: Sadaqah Made Easy
         accountType: Personal
       - type: Nagad
         image: /images/projects/nagad.png
-        number: '01636817977'
+        number: "01636817977"
         reference: Sadaqah Made Easy
         accountType: Personal
     bank:
@@ -31,17 +31,18 @@ donation_goals:
       image: /images/projects/bank.png
       details:
         name: Agrani Bank PLC
-        account: '0200021485744'
+        account: "0200021485744"
         accountName: Moshal Alo Trust
         branch: Karatia Branch, Tangail
         reference: Sadaqah Made Easy
 categories:
   - Treatment
 tags:
-  - ক্যান্সার
+  - Cancer
   - Income
 draft: false
 ---
+
 মরণব্যাধি ‘ক্যান্সারে’ আক্রান্ত আমানুল্লার খরচের ভার বইতে পারছে না পরিবার। টাকার অভাবে বন্ধ হয়ে গেছে আয়ের একমাত্র উৎস ছোট্ট মুদি দোকানটিও। দোকানটি পুনরায় চালু করতে এগিয়ে আসুন।
 
 আমানুল্লাহ— ১৬/১৭ বছর বয়সী এক তরুণ, দীর্ঘদিন ধরে ক্যান্সারের সঙ্গে লড়াই করে এখন পুরোপুরি শয্যাশায়ী। সম্প্রতি কোমরে অপারেশন হলেও দুঃখজনকভাবে ক্যান্সার পুরোপুরি অপসারণ করা সম্ভব হয়নি। তার পরিবারের সঞ্চয় ও সামর্থ্য ইতোমধ্যেই শেষ হয়ে গেছে চিকিৎসার খরচ মেটাতে গিয়ে। তার বৃদ্ধ বাবা একসময় ভ্যান চালিয়ে যা আয় করতেন, এখন বয়সের ভারে সেটিও আর সম্ভব নয়। 

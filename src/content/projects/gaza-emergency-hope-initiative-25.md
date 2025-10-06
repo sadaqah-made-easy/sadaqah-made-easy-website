@@ -43,8 +43,7 @@ categories:
   - Ummah
 tags:
   - Palestine
-  - ফিলিস্তিন
-  - মযলুম
+  - Mazlum
 draft: true
 ---
 

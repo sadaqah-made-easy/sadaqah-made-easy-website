@@ -55,7 +55,6 @@ categories:
   - Dawah
 tags:
   - Mosque
-  - মসজিদ
 draft: false
 ---
 

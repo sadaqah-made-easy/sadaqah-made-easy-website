@@ -26,10 +26,9 @@ donation_goals:
         reference: ""
 categories:
   - Fitra
-  - ফিতরা
   - Eid al-fitr
 tags:
-  - ফিতরা
+  - Fitra
 draft: true
 ---
 

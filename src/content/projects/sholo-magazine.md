@@ -33,12 +33,7 @@ donation_goals:
 categories:
   - Magazine
   - Youth
-  - সামাজিক
-tags:
-  - তরুণ
-  - ""
-  - কিশোর
-  - কিশোরী
+tags: []
 draft: false
 ---
 

@@ -41,8 +41,6 @@ categories:
   - Mosque
 tags:
   - Mosque
-  - মসজিদ
-  - দাওয়াহ
 draft: false
 ---
 

@@ -9,33 +9,30 @@ description: >-
   world is uniting today to besiege and boycott them. Hence, they hold a
   collective right to the wealth of Muslims." - Shaykh Muhammad Ould Dedew,
   Shinqiti.
-date: '2025-07-22'
+date: "2025-07-22"
 image: /images/sanabilgaza.jpg
 organizer: saba-sanabil-foundation
 project_end_date:
   enable: false
-  end_date: '2025-03-03'
+  end_date: "2025-03-03"
 donation_goals:
   enable: false
-  amount: ''
+  amount: ""
   payment_methods:
     mobile_banking: []
     bank:
       type: Bank
-      image: ''
+      image: ""
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
+        name: ""
+        account: ""
+        accountName: ""
+        branch: ""
+        reference: ""
 categories:
   - Sadaqah
 tags:
   - Sadaqah
-  - সাদাকাহ
-  - গাজা
-  - Gaza
 draft: false
 ---
 

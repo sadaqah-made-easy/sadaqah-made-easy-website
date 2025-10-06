@@ -36,7 +36,6 @@ donation_goals:
 categories:
   - Treatment
   - Leukemia
-  - চিকিৎসা
 tags:
   - Treatment
   - Baby

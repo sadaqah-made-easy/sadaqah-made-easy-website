@@ -45,7 +45,6 @@ categories:
   - Sadaqah
 tags:
   - Madrasa
-  - মাদরাসা
 draft: false
 ---
 
