@@ -16,5 +16,5 @@
     "src/config/theme.json"
   ],
   "arrangement": [],
-  "showCommitModal": true
+  "showCommitModal": false
 }
