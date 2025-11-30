@@ -24,14 +24,14 @@ donation_goals:
         reference: UD-Sadaqah Made Easy
         accountType: Personal
     bank:
-      type: ''
-      image: ''
+      type: Bank
+      image: /images/projects/bank.png
       details:
-        name: ''
-        account: ''
-        accountName: ''
-        branch: ''
-        reference: ''
+        name: Agrani Bank PLC
+        account: '0200021485744'
+        accountName: Moshal Alo Trust
+        branch: Karatia Branch, Tangail
+        reference: UD-Sadaqah Made Easy
 categories:
   - Education
 tags:
