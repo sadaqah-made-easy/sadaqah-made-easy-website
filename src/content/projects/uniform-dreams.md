@@ -7,12 +7,12 @@ description: >-
   সেখানে নতুন স্কুল ড্রেস কেনা যেন একপ্রকার স্বপ্নের মতো। এই বাস্তবতায় প্রতি বছর
   অনেক মেধাবী শিক্ষার্থী পড়াশোনার প্রতি আগ্রহ হারিয়ে ফেলে এবং প্রাথমিক শিক্ষার
   গণ্ডিও পেরোতে পারে না।
-date: 30-11-2025
+date: '2025-11-30'
 image: media/public/images/mosharalo.jpeg
 organizer: moshal-alo-trust
 project_end_date:
   enable: true
-  end_date: 30-11-2025
+  end_date: '2025-11-30'
 donation_goals:
   enable: false
   amount: ''
